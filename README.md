@@ -29,7 +29,7 @@ leaderboard and the results for every task.
 | Chicago Skyline Survey | drone survey planning | Shared | [`tasks/chicago-skyline-survey`](tasks/chicago-skyline-survey) |
 | Spectrum to Molecule | mass spectrometry | Shared | [`tasks/spectrum-to-molecule`](tasks/spectrum-to-molecule) |
 | RNA Secondary Structure | computational biology | Shared | [`tasks/rna-secondary-structure`](tasks/rna-secondary-structure) |
-| SOTA Compressor | algorithm engineering | Shared | coming soon |
+| SOTA Compressor | algorithm engineering | Shared | [`tasks/compressor-sprint`](tasks/compressor-sprint) |
 
 In a **shared** task all agents start with the same information and actions. In a **distributed** task the
 environment gives each agent its own part of the system to see or control.
