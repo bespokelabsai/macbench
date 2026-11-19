@@ -78,7 +78,7 @@ harbor run -p build-mah/caverescue-m$K \
   sealed order log and plays out the rest of the 36-hour storm with no new orders.
 - Every agent box runs as root, so `build.sh` ships the scenario, photos and seal key encrypted; only
   `build-mah/cr_board.py` (the hub's plugin, never in an agent image) has the passphrase. Don't publish
-  `build-mah/`. The builds split 16 CPUs and 32 GB over the k agent boxes.
+  `build-mah/`.
 - To use a Claude plan instead of an API key, put `CLAUDE_CODE_OAUTH_TOKEN` (from `claude setup-token`) in `.env`
   and add `--ek model_upstream=subscription`. On the Docker backend also `export MULTI_AGENT_HARNESS_CLAUDE_ENV_SCRUB=0`:
   Claude Code's shell sandbox cannot start in a Docker agent box, and this runs it without (the agents' shell
