@@ -1,0 +1,36 @@
+{
+  "_about": "Falcon 9 Block 5 first stage recovery numbers used by models/recovery. Each block names its source. Values marked 'estimate' are not published by SpaceX as such; they are derived from public figures and say how.",
+
+  "stage": {
+    "_source": "SpaceX Falcon 9 user's guide (Rev 2, 2021) and public Block 5 summaries: first stage propellant about 395,700 kg (LOX/RP-1), dry mass about 25,600 kg, nine Merlin 1D, Isp about 282 s at sea level and 311 s in vacuum. The dry mass is an estimate quoted by several secondary sources, SpaceX does not publish it.",
+    "propellant_kg": 395700.0,
+    "dry_kg": 25600.0,
+    "isp_sl_s": 282.0,
+    "isp_vac_s": 311.0
+  },
+
+  "burns": {
+    "_source": "estimate. Per-burn delta-v chosen so that Falcon 9's own numbers give the commonly quoted reserves: about 10 to 15% of the first stage load for a return to the launch site (RTLS) and about 4 to 6% for a drone ship landing. Public anchors: SpaceX's listed LEO payload of 22.8 t expendable against about 15.6 to 17.4 t on reusable Starlink flights; boostback reverses about 1,500 to 2,000 m/s of downrange velocity on RTLS (staging near 1.7 to 2.0 km/s); the entry burn and the landing burn are each a few hundred m/s. Boostback and entry burns are flown near vacuum (vacuum Isp), the landing burn near sea level (sea level Isp).",
+    "rtls":      {"boostback_mps": 2100.0, "entry_mps": 650.0, "landing_mps": 350.0},
+    "droneship": {"boostback_mps": 300.0,  "entry_mps": 1000.0, "landing_mps": 350.0},
+    "expected_reserve_fraction": {"rtls": [0.10, 0.15], "droneship": [0.03, 0.07]}
+  },
+
+  "hardware": {
+    "_source": "estimate. Four landing legs (carbon fiber and aluminium honeycomb, commonly quoted at about 2,000 kg together), four titanium grid fins (a few hundred kg together), and nitrogen cold-gas thrusters and recovery avionics. Taken together as about 9% of the stage dry mass; the model scales it with the team's stage dry mass.",
+    "fraction_of_dry": 0.09
+  },
+
+  "landing": {
+    "_source": "Falcon 9 landing record. SpaceX reached its 500th booster landing in mid 2025 and 527 landings by late October 2025 (Spaceflight Now, 2025-07-01; UPI, 2025-10-31). Public tallies (spacexnow.com/stats, read Oct 27, 2026) give 499 of 502 and 569 of 572 recent attempts, about 99.4 to 99.5%. Counting the early attempts from 2013 to 2016 the lifetime rate is about 98%. Exact counts differ between tallies by date; the rates are stable. Drone ship and land landings are not separated here because their recent rates are within a fraction of a percent of each other.",
+    "success_probability": {"rtls": 0.994, "droneship": 0.994},
+    "early_era_success_probability": 0.98
+  },
+
+  "reuse": {
+    "_source": "SpaceX statements: refurbishment of a flown booster costs well under 10% of a new one (Gwynne Shotwell, 2018 to 2020 interviews); the first stage is about 60% of the cost of a Falcon 9 (Elon Musk, 2017). The fleet leader's flight count passed 30 in 2025 (sources differ on the exact number), and SpaceX said in 2024 that it was certifying boosters for 40 flights.",
+    "refurbish_fraction": 0.10,
+    "reuse_limit_flights": 40,
+    "flown_record_flights_at_least": 30
+  }
+}

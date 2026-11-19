@@ -1,0 +1,64 @@
+{
+  "_about": "Propellant gauging, loading spread, low level cutoff and running dry. Every value has its source. 'My arithmetic' marks a number computed from published values. Percent values are of the tank's full load. Page references follow the authors' research notes, copied into results/issue-72/sources.md.",
+
+  "load_spread_sd": {
+    "value": 0.0027,
+    "clip_sd": 3.0,
+    "source": "Root mean square of loaded-against-predicted deviations over nine Saturn V stage flights, 18 values (S-IC, S-II, S-IVB on AS-504, AS-505 and AS-506; my arithmetic): MPR-SAT-FE-69-4 Table 5-2 and 6-3, MPR-SAT-FE-69-7 Table 5-2 and p. 6-10, MPR-SAT-FE-69-9 Table 5-2 and p. 6-9. Range -0.24% to +0.50%. The gauging model uses 0.26% from the S-IVB rows; the two agree."
+  },
+
+  "gauges": {
+    "capacitance": {
+      "sd_floor": 0.0005,
+      "sd_per_fill": 0.0025,
+      "needs_settling": true,
+      "settle_s": 15.0,
+      "probe_bottom_fill": 0.03,
+      "source": "Continuous capacitance probes (S-II and S-IVB PU systems, Centaur). Error 1 sigma = sd_floor + sd_per_fill x fill, of full load: about 0.30% at ignition and 0.05% near empty. Fit by eye to the PU-indicated against best-estimate values: S-IVB AS-504 to AS-506, liftoff -0.01% to -0.42%, first cutoff -0.07% to -0.56%, second or third cutoff -0.09% to +0.03% (MPR-SAT-FE-69-4 Table 7-12, -69-7 Table 7-3, -69-9 Table 7-3); S-II at ground ignition -0.37% to +0.30% (Table 6-3, 6-2, 6-2); Centaur LH2 left at LOX depletion under 0.15% of load over nine flights and probes within 0.2% in 1 g tests (NASA TN D-4848, abstract and p. 12 to 13). Needs settled liquid: Shuttle OMS gauging updates only while an engine burns and has no probe data for the first 15 s of a burn (USA006500 Rev. A, OMS Workbook, p. 33 to 35). Probes do not reach the tank bottom; Centaur valves are nulled 15 s to 25 s before cutoff (TN D-4848 p. 14; TM X-1989 p. 60), which is about 3% to 5% of a Centaur load (my arithmetic), so the probe is blind below 3% of load. Not used: the S-II open-loop PU-probe readings at the valve step on AS-505 and AS-506 (+2.4% and +4.7% of load), which the reports do not explain and which the transient model's notes flag as unchecked."
+    },
+    "point_sensors": {
+      "levels": [0.95, 0.80, 0.60, 0.40, 0.20, 0.10, 0.05, 0.02],
+      "sd_at_level": 0.0003,
+      "sd_per_consumed": 0.005,
+      "needs_settling": true,
+      "settle_s": 15.0,
+      "source": "Discrete level sensors with flowmeter integration between them (S-IC and S-II). At a sensor the level is known to about 0.03% of load: the S-II point-sensor mass is the best estimate the reports use, and the S-IC level sensors agree with the reconstruction within 0.07% to 0.12% (MPR-SAT-FE-69-4 Table 5-2 and Sec. 6.5). Between sensors the reading is flowmeter integration, whose error against the best estimate is 0.29% (LOX) and 0.66% (LH2) of load (MPR-SAT-FE-69-4 Table 6-3); here 0.5% of the mass used since the last sensor. The sensor heights are an assumption (the reports give the number of sensors, not their heights)."
+    },
+    "pvt": {
+      "fill": [1.0, 0.5, 0.0],
+      "sd_fuel": [0.00967, 0.0110, 0.0130],
+      "sd_ox": [0.0110, 0.0140, 0.0180],
+      "needs_settling": false,
+      "source": "Pressure-volume-temperature gauging of the helium pressurant; works in zero g. Shuttle RCS gaging module design analysis, 3 sigma of maximum deliverable propellant: fuel 2.9%, 3.3%, 3.9% and oxidizer 3.3%, 4.2%, 5.4% at 100%, 50% and 0% remaining (Duhon, Design Note 1.4-2-9, NASA-CR-150966, NTRS 19760025152, Table I, PDF p. 11); divided by 3 here. The larger Shuttle OMS is worse, 8.0% to 9.5% 3 sigma (Design Note 1.4-2-10, NTRS 19770003201, Table II, PDF p. 11). NASA Glenn ground tests: under 2% of tank volume in steady state (NASA/TP-2014-218083)."
+    }
+  },
+  "default_gauge": {
+    "value": "capacitance",
+    "source": "The gauge of the Saturn S-II and S-IVB, Centaur and the Shuttle OMS."
+  },
+
+  "low_level_cutoff": {
+    "default": true,
+    "trip_fill": 0.0015,
+    "source": "Depletion sensors stop the engines before a pump runs dry: S-IC LOX level sensors start the outboard cutoff timer, S-II cuts off when 2 of 5 sensors in one tank go dry, S-IVB depletion sensors, Shuttle ECO sensors (MSFC-MAN-503 p. 63, 105, 123; NTRS 20110015703). The trip level is usable propellant left above the unusable residual the stage mass already carries (vehicle.py, 0.5% of capacity): 0.15% of load, from S-II LOX residuals at cutoff of 665 kg to 816 kg out of about 372 t (0.18% to 0.22%, MPR-SAT-FE-69-4 p. 117, -69-7 p. 6-10, -69-9 p. 6-9) and the AS-504 S-IC early trip that left 2,561 kg usable LOX (0.17%, -69-4 Sec. 5.1). Every flown stage of these vehicles carries them, so a stage has them unless its design sets low_level_cutoff false."
+  },
+
+  "running_dry": {
+    "pressure_fed": {"outcome": "shutdown", "restart": true,
+      "source": "No pump. Pressurant gas follows the last liquid into the chamber and the engine stops; nothing turns, so nothing overspeeds."},
+    "electric_pump": {"outcome": "shutdown", "restart": false,
+      "source": "The motor controller limits speed, but a pump that ran without liquid has lost its liquid-cooled bearings (Proton Breeze M, Yamal 402, 2012: pump ran without normal liquid cooling and the bearing failed; ILS statement)."},
+    "expander": {"outcome": "shutdown", "restart": false,
+      "source": "No combustion in the turbine drive, so no hot gas when a propellant runs out, but gas flow overspeeds the pumps: RL10 tests avoided gas flow 'to avoid damage due to overspeed from gas flow' (NASA CR-174914, p. 32 to 36)."},
+    "gas_generator": {"ox_first": "shutdown", "fuel_first": "destroyed", "restart": false,
+      "source": "Fuel-rich gas generator. When oxidizer runs out first the gas generator goes leaner and colder and the engine stops: the Atlas sustainer was cut off by LOX depletion on every flight, with the PU valve driven oxidizer-rich-stop 'to make sure LOX ran out first' (NASA TM X-1989, AC-16, p. 59). When fuel runs out first the gas generator burns oxidizer-rich and the turbine burns."},
+    "staged_fuel": {"outcome": "destroyed",
+      "source": "SSME: low-level cutoff exists 'to preclude the catastrophic consequences of an LO2 depletion shutdown' (HPOTP overspeed; Worlund et al., NASA CP-2342 Part 2, p. 26 to 27). The HPOTP may 'unload and overspeed causing a catastrophic shutdown' if the prevalves close late (JSC-19041, SSME Overview, p. 97)."},
+    "staged_ox": {"outcome": "destroyed", "source": "As staged_fuel: a staged-combustion turbopump unloads and overspeeds when its liquid runs out."},
+    "full_flow": {"outcome": "destroyed", "source": "As staged_fuel; both turbopumps run on preburner gas."}
+  },
+
+  "flight_performance_reserve": {
+    "source": "Saturn V AS-503: FPR 2,390 lb (1,084 kg), the root-sum-square of 3 sigma vehicle dispersions at TLI, about 1% of the S-IVB load; FPR plus the flight geometry reserve gives 99.865% assurance (MSFC-MAN-503, p. 2-2). Atlas-Centaur Surveyor: 3 sigma reserve of 175 lb to 255 lb (JPL TR 32-1265, Table VIII-3). Not a simulator rule: a team carries it by loading more than its burns need."
+  }
+}

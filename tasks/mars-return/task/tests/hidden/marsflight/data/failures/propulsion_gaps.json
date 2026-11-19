@@ -1,0 +1,95 @@
+{
+ "_about": "Propulsion failure modes that marsflight could not produce before (gates F3 to F7). Each mode's prior chance on a new, untested design is the FAA first-flight loss rate of experienced developers (5/18, the same base as rates.json latent_flaw_prior) times the share of known-cause failures in history.csv whose subcategory is the mode's subcategory (the failures atlas, 584 rows with a known cause), times the mode's split of that subcategory. The split is a game value when one subcategory feeds several modes; it is marked. models/failures/propulsion_gaps.py does the sums from the CSV at load time, so the rate moves when the atlas changes.",
+ "first_flight_loss_rate": 0.27778,
+ "_first_flight_loss_rate": "FAA: 5 of 18 first flights by experienced developers were lost (the base of rates.json latent_flaw_prior)",
+ "modes": {
+  "feed_line_leak": {
+   "subcategory": "leak_or_depletion",
+   "split": 1.0,
+   "applies_to": "a pump-fed upper stage",
+   "test": "feed_leak_test",
+   "coverage": 0.9,
+   "case": "Falcon 9 Starlink Group 9-3, July 11 2024: a cracked sense line for a pressure sensor on the second stage leaked LOX during the first burn; the Merlin Vacuum ran fuel rich and the relight failed (SpaceX, July 2024 and FAA closure, July 25 2024)",
+   "leak_frac_of_ox": [0.03, 0.12],
+   "_leak_frac_of_ox": "game: share of the stage's oxidizer lost over the first burn; the flight only needs the restart to fail",
+   "atlas_id": "gcat:2024-129"
+  },
+  "regulator_stuck_open": {
+   "subcategory": "valve_or_regulator",
+   "split": 0.34,
+   "_split": "game: the 23 valve_or_regulator rows split evenly over the three valve modes",
+   "applies_to": "a pressure-fed stage",
+   "test": "propulsion_checkout",
+   "coverage": 0.85,
+   "case": "Peregrine Mission One, January 8 2024: a helium pressure control valve failed to reseal, the oxidizer tank over-pressurized and ruptured, and most of the oxidizer was lost (Astrobotic review board summary, April 2024)",
+   "window_s": [300.0, 1800.0],
+   "_window_s": "game: time from the pressure rise in telemetry to the tank rupture, for flight software to isolate",
+   "ox_left_frac": [0.05, 0.3],
+   "_ox_left_frac": "game: share of oxidizer left after the rupture (Peregrine lost most of its oxidizer)",
+   "cruise_days": 30.0,
+   "_cruise_days": "the valve fails at a hidden time within the first 30 days of the first cruise (Peregrine: about 7 h after launch)",
+   "atlas_id": "deep_space:2024-01-08:Peregrine Mission One"
+  },
+  "check_valve_migration": {
+   "subcategory": "valve_or_regulator",
+   "split": 0.33,
+   "_split": "game: see regulator_stuck_open",
+   "applies_to": "a pressure-fed stage without pyro isolation valves (design field pyro_isolation_valves on the element)",
+   "test": "long_duration_prop_test",
+   "coverage": 0.8,
+   "case": "Mars Observer, August 21 1993: oxidizer vapor crept through check valves over the 11 month cruise and reacted with fuel in the pressurization line when the tanks were pressurized before orbit insertion (JPL review board, January 1994)",
+   "min_cruise_days": 60.0,
+   "_min_cruise_days": "game: the migration needs a long cruise before the first pressurization; Mars Observer cruised 330 days",
+   "atlas_id": "mars:1993-08-21:Mars Observer"
+  },
+  "check_valve_stuck": {
+   "subcategory": "valve_or_regulator",
+   "split": 0.33,
+   "_split": "game: see regulator_stuck_open",
+   "applies_to": "a pressure-fed stage that burns for orbit insertion at Mars",
+   "test": "valve_qualification",
+   "coverage": 0.9,
+   "case": "Akatsuki, December 7 2010: a check valve in the pressurization line stuck (salt deposits), the fuel ran lean, the throat overheated and the orbit insertion burn ended after about 152 s of a planned 720 s; the craft got into orbit five years later on its attitude thrusters (JAXA, 2011)",
+   "cut_s": [100.0, 200.0],
+   "_cut_s": "Akatsuki's burn ended at about 152 s; the range around it is game",
+   "lockout_s": 86400.0,
+   "_lockout_s": "game: the engine cannot be fired again for one day after the cut, so a retry needs a later pass",
+   "atlas_id": "deep_space:2010-12-07:Akatsuki"
+  },
+  "srm_nozzle_erosion": {
+   "subcategory": "nozzle_or_chamber",
+   "split": 1.0,
+   "applies_to": "a solid motor (engine cycle solid)",
+   "test": "srm_lot_static_fire",
+   "coverage": 0.7,
+   "case": "Vega C VV22, December 21 2022: a carbon-carbon throat insert from a bad lot eroded too fast and the Zefiro 40 second stage lost pressure about 2.5 min into flight (ESA and Arianespace inquiry, March 2023)",
+   "burn_frac": [0.3, 0.9],
+   "_burn_frac": "game: when in the burn the throat erodes through, as a share of 100 s",
+   "atlas_id": "gcat:2022-F06"
+  },
+  "srm_case_burst": {
+   "subcategory": "solid_motor",
+   "split": 1.0,
+   "applies_to": "a solid motor (engine cycle solid)",
+   "test": "srm_lot_static_fire",
+   "coverage": 0.7,
+   "case": "Titan 34D-9, April 18 1986: insulation in a solid motor segment came loose, hot gas burned through the case and the motor burst about 8.5 s after liftoff (Air Force investigation; history.csv gcat:1986-F03)",
+   "t_s": [1.0, 20.0],
+   "_t_s": "game: seconds after ignition at which the case fails (Titan 34D-9: 8.5 s)",
+   "atlas_id": "gcat:1986-F03"
+  }
+ },
+ "tests": {
+  "feed_leak_test": {"facility": "stage_stand", "cost_usd": 0.5e6, "minutes": 4.0,
+                     "lesson": "a sense line on the stage's LOX feed cracked under vibration and leaks at flight pressure"},
+  "propulsion_checkout": {"facility": "stage_stand", "cost_usd": 0.6e6, "minutes": 5.0,
+                          "lesson": "a pressurant control valve does not reseal and lets the tank pressure climb"},
+  "long_duration_prop_test": {"facility": "thermal_vacuum", "cost_usd": 1.5e6, "minutes": 10.0,
+                              "lesson": "oxidizer vapor creeps through the check valves over months and would react in the pressurization line"},
+  "valve_qualification": {"facility": "structures_lab", "cost_usd": 0.4e6, "minutes": 4.0,
+                          "lesson": "a check valve in the pressurization line sticks after propellant vapor exposure"},
+  "srm_lot_static_fire": {"facility": "stage_stand", "cost_usd": 3.0e6, "minutes": 10.0,
+                          "lesson": "a motor from the same lot showed a throat insert that eroded too fast or a debonded case insulation"}
+ },
+ "_tests": "Costs and durations are game values, set near program.py's and program_tests.py's tests of similar size. A static fire of a motor from the same lot finds both solid motor flaws."
+}

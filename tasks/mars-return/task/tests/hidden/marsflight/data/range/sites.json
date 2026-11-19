@@ -1,0 +1,16 @@
+{
+  "_source": "FAA Office of Commercial Space Transportation, 'Spaceports by State' (https://www.faa.gov/space/spaceports_by_state, read Oct 27, 2026): Cape Canaveral SFS and Kennedy Space Center 'Launch Azimuths Typically 37 deg-114 deg with recent options to support polar orbits'; Space Florida LC-46 'Flight azimuths from 35 to 120 degrees'; Vandenberg SFB 'Launch Azimuths 153 deg-240 deg (typical range, others possible pending analysis)'. Pad coordinates from public pad surveys (Wikipedia / NASA KSC). Range safety rules: SSCMAN 91-710 (2022, replacing AFSPCMAN 91-710 and EWR 127-1): the instantaneous impact point (IIP) of a vehicle in powered flight and the impact of spent stages must stay inside the approved corridor and off populated land.",
+  "sites": {
+    "LC-39A":  {"range": "Eastern Range", "lat": 28.6082, "lon": -80.6041, "azimuth_deg": [37.0, 114.0], "launch_area_km": 10.0, "weather": "lcc_ksc", "name": "Kennedy LC-39A"},
+    "LC-39B":  {"range": "Eastern Range", "lat": 28.6272, "lon": -80.6209, "azimuth_deg": [37.0, 114.0], "launch_area_km": 10.0, "weather": "lcc_ksc", "name": "Kennedy LC-39B"},
+    "SLC-40":  {"range": "Eastern Range", "lat": 28.5618, "lon": -80.5772, "azimuth_deg": [37.0, 114.0], "launch_area_km": 10.0, "weather": "lcc_ksc", "name": "Cape Canaveral SLC-40"},
+    "SLC-41":  {"range": "Eastern Range", "lat": 28.5834, "lon": -80.5829, "azimuth_deg": [37.0, 114.0], "launch_area_km": 10.0, "weather": "lcc_ksc", "name": "Cape Canaveral SLC-41"},
+    "LC-46":   {"range": "Eastern Range", "lat": 28.4585, "lon": -80.5284, "azimuth_deg": [35.0, 120.0], "launch_area_km": 10.0, "weather": "lcc_ksc", "name": "Cape Canaveral LC-46"},
+    "SLC-4E":  {"range": "Western Range", "lat": 34.6321, "lon": -120.6106, "azimuth_deg": [153.0, 240.0], "launch_area_km": 10.0, "weather": "lcc_vsfb", "name": "Vandenberg SLC-4E"}
+  },
+  "iip_check_downrange_km": 2000.0,
+  "_iip_note": "Powered-flight IIP and stage impacts are checked for land out to 2,000 km from the pad. Farther out the IIP of an orbital vehicle sweeps over other continents at orbital speed (the Eastern Range accepts the African overflight of Mars launches); that part is not modeled.",
+  "ground_wind_limit_ms": 17.5,
+  "_ground_wind_note": "Peak wind at the 60 ft level: 19 to 34 kt depending on direction for the Space Shuttle (NASA KSC Weather Launch Commit Criteria, 2011). The direction-free upper value, 34 kt (17.5 m/s), is the default; a design can set its own with 'launch': {'ground_wind_limit_ms': ...}.",
+  "scrub_recycle_h": 24.0
+}

@@ -1,0 +1,15 @@
+{
+ "_about": "Inputs of the SP-106 slosh parameters used by models/slosh/basilisk.py. Basilisk flies the slosh pendulums; it does not compute their parameters. Every number is the one the slosh model uses, with its source.",
+ "xi": {"value": 1.841, "source": "First root of J1'(x) = 0. NASA SP-106 (Abramson, ed., 1966), p. 56; Table 6.1 (p. 204) uses 2 xi = 3.68."},
+ "wall_k": {"value": 5.23, "source": "SP-106 eq. (4.10b), p. 111: smooth-wall damping constant (Stephens et al.)."},
+ "miles_k": {"value": 2.83, "source": "SP-106 eq. (4.16), p. 123: Miles' ring-baffle damping."},
+ "break_zeta": {"value": 1.0, "source": "A rule: extra damping ratio once the wave at the wall is taller than the tank radius."},
+ "a_settled_m_s2": {"value": 0.01, "source": "A rule: below this axial acceleration the liquid is not held at the tank bottom and the pendulum is frozen."},
+ "dome_height_per_radius": {"value": 0.7071067811865476, "source": "vehicle.py: tank domes are half oblate spheroids of height R / sqrt(2)."},
+ "kinematic_viscosity_m2_s": {
+  "value": {"LOX": 1.707e-7, "LH2": 1.92e-7, "LCH4": 2.75e-7, "RP1": 1.87e-6, "NTO": 2.8e-7, "MMH": 8.9e-7},
+  "source": "Cryogens: NIST Chemistry WebBook, saturated liquid at the normal boiling point (LOX 194.8 uPa s / 1141.3 kg/m3 at 90.16 K; LH2 13.6 uPa s / 70.95 kg/m3 at 20.27 K; CH4 116.2 uPa s / 422.0 kg/m3 at 111.9 K). RP-1: NISTIR 6646 (2007), Table 11, 298.15 K. MMH 0.78 mPa s and N2O4 0.40 mPa s at 25 C: Martin Marietta MCR-74-27 (NASA CR, NAS9-13709, 1974), Figures 6 and 7."},
+ "dome_omega_ratio": {
+  "value": [[0.12, 3.482], [0.2, 2.200], [0.3, 1.573], [0.4, 1.277], [0.5, 1.123], [0.6, 1.048], [0.707, 1.021], [0.8, 1.015], [1.0, 1.007], [1.3, 1.002], [2.0, 1.0]],
+  "source": "First slosh frequency of the domed tank over the flat-bottomed cylinder with the same liquid volume, against free-surface height / radius. Linear potential-flow solver, results/issue-62/dome_slosh.json (checked against SP-106's flat cylinder within 0.4% to 0.9%)."}
+}

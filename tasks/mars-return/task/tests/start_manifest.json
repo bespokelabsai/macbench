@@ -1,0 +1,13 @@
+{
+".gitignore": "670eb88f324c3030e46eb13d450d910c0292ad5f05db40c4de6c28a78050693b",
+"README.md": "6d135f2d51497d21291740555b8a375238acdb1e69ec78a892e7d13d99bc4b84",
+"data/terrain/jezero.npz": "35e37597e5e8151e028f701eac0f52515b379dc37bca96ca1fde653dc22eec52",
+"data/terrain/utah.npz": "c4f4cb895a688f50ee48b027e4c3c37c4a100211aabc46ed07d98df0482a05ad",
+"design/vehicle.sysml": "ee69e31b2dd112757e0ce5f103b080f7784cc73e0dd0fe6331dc24fa78d03915",
+"docs/.keep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+"docs/REFERENCE.md": "8f5e088a2a09cd689e964c81cb65030459931264724bf11c67cf401e25a9f72f",
+"examples/ascent_guidance.py": "14cfa9b975ea8c9b9ea36b02914d347d8db8a622361cc0a2cc5839a9914a1ef0",
+"examples/ascent_vehicle.sysml": "f79b2e05fcfb9b989d80023141995488f757bd6b879e18e671c9ceac871ffc77",
+"flight/guidance.py": "d89c234889780c74cb5e6b4cacdc254f94fa81396eb88fce24eb57abd7dcf072",
+"program/test_results.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+}

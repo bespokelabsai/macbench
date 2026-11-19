@@ -1,0 +1,124 @@
+{
+ "description": "Engine dry mass correlation . m = (F / (g0 tw) * k_H2[cycle] + nozzle_kg_per_m2 * (Ae - 40 At) above 40:1) * pintle_factor + igniter, with tw = tw_at_pc_ref[cycle] * (F / 1 MN)^thrust_exponent * (pc / pc_ref_bar[cycle])^pc_exponent. k_H2 applies to LH2-fuelled engines only.",
+ "form": "per-cycle hydrogen factor + pc term per cycle (pooled)",
+ "tw_at_pc_ref": {
+  "pressure_fed": 30.82,
+  "electric_pump": 55.0,
+  "gas_generator": 85.46,
+  "expander": 70.77,
+  "staged_fuel": 79.89,
+  "staged_ox": 97.85,
+  "full_flow": 130.7
+ },
+ "thrust_exponent": 0.08,
+ "pc_exponent": {
+  "pressure_fed": -0.2626,
+  "electric_pump": -0.2431,
+  "gas_generator": -0.1874,
+  "expander": -0.2439,
+  "staged_fuel": -0.2351,
+  "staged_ox": -0.2869,
+  "full_flow": -0.2433
+ },
+ "pc_ref_bar": {
+  "pressure_fed": 15.0,
+  "electric_pump": 36.0,
+  "gas_generator": 72.0,
+  "expander": 66.0,
+  "staged_fuel": 138.0,
+  "staged_ox": 162.0,
+  "full_flow": 210.0
+ },
+ "hydrogen_factor": {
+  "gas_generator": 1.309,
+  "expander": 1.261,
+  "staged_fuel": 1.276
+ },
+ "hydrogen_factor_pooled": 1.281,
+ "hydrogen_engines_per_cycle": {
+  "pressure_fed": 0,
+  "electric_pump": 0,
+  "gas_generator": 5,
+  "expander": 4,
+  "staged_fuel": 4,
+  "staged_ox": 0,
+  "full_flow": 0
+ },
+ "nozzle_kg_per_m2": 15.0,
+ "pintle_factor": 1.1,
+ "igniter": "marsflight.data.IGNITERS, unchanged",
+ "fit": {
+  "n_engines": 36,
+  "loo_abs_err_pct": {
+   "mean": 21.3,
+   "median": 19.6,
+   "max": 88.1
+  },
+  "in_sample_abs_err_pct": {
+   "mean": 16.9,
+   "median": 16.3,
+   "max": 70.9
+  },
+  "v3_model_abs_err_pct": {
+   "mean": 26.1,
+   "median": 18.5,
+   "max": 107.9
+  },
+  "prior": "each tw_cycle pulled toward the v3 value (data.CYCLES tw) with the weight of one engine; each hydrogen cycle factor pulled toward the pooled factor with a log prior of width 0.25; each cycle's pc exponent pulled toward a common exponent with a prior of width 0.5; a cycle with no engine (electric_pump) gets the common exponent and keeps its v3 tw"
+ },
+ "year_form_comparison": {
+  "form": "per-cycle hydrogen factor + year term per cycle (pooled)",
+  "params": {
+   "tw": {
+    "pressure_fed": 36.48,
+    "electric_pump": 55.0,
+    "gas_generator": 88.42,
+    "expander": 74.17,
+    "staged_fuel": 79.28,
+    "staged_ox": 87.03,
+    "full_flow": 117.5
+   },
+   "b": 0.08,
+   "k0": 1.321,
+   "k": {
+    "pressure_fed": 1.321,
+    "electric_pump": 1.321,
+    "gas_generator": 1.353,
+    "expander": 1.297,
+    "staged_fuel": 1.317,
+    "staged_ox": 1.321,
+    "full_flow": 1.321
+   },
+   "c_pc": 0.0,
+   "c_year": 0.02855,
+   "c_year_cycle": {
+    "pressure_fed": 0.02519,
+    "electric_pump": 0.02855,
+    "gas_generator": 0.01919,
+    "expander": 0.03419,
+    "staged_fuel": 0.02859,
+    "staged_ox": 0.03422,
+    "full_flow": 0.0299
+   }
+  },
+  "loo_abs_err_pct": {
+   "mean": 21.0,
+   "median": 12.7,
+   "max": 96.4
+  },
+  "note": "lower leave-one-out error than the pc form, but a design has no year, so the function uses the pc form"
+ },
+ "sources": {
+  "engines": "the flown engines table of the validation work; every published value there carries its own source URL",
+  "fit_script": "a least-squares fit to the flown engines (not shipped)",
+  "results": "the coefficients above"
+ },
+ "known_outliers": {
+  "Merlin 1D (sea level)": {
+   "why": "production-scale, low-margin design; +139% to +185% under every form tried (held out); the catalog engine 'Merlin 1D' carries its published 470 kg",
+   "published_kg": 470.0,
+   "predicted_kg": 1307.8,
+   "error_pct": 178.2
+  }
+ }
+}

@@ -1,0 +1,4 @@
+# Basilisk astrodynamics framework (AVS Lab, University of Colorado Boulder), ISC license.
+# Used by marsflight/models/slosh/basilisk.py, models/avionics/basilisk_*.py and models/power/basilisk.py
+#. The wheel is self-contained (no system packages needed). Basilisk 2.12.1 needs numpy 2.
+bsk==2.12.1

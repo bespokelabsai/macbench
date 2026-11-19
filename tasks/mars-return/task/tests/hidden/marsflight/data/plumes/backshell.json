@@ -1,0 +1,29 @@
+{
+  "about": "Backshell (afterbody) heating as a share of the stagnation-point heating of the heat shield, and the backshell TPS sizing point. ",
+  "fraction": {
+    "Mars": {
+      "value": 0.10,
+      "about": "Mars 2020 flight (MEDLI2): peak total heat flux on the backshell 4.47 W/cm2 (thermocouple plug), 5.10 W/cm2 (heat flux gauge), 6.01 W/cm2 (Kalman blend of the three co-located sensors; 0.86 convective + 5.16 radiative). The simulator's own Sutton-Graves stagnation heating on the Mars 2020 reconstructed trajectory peaks at 54.5 W/cm2 (t = 76.8 s, Edquist et al. 2022 Table 4). 4.47 to 6.01 over 54.5 is 0.082 to 0.110; 0.10 is used. CO2 radiation in the wake carries most of it, so the share does not fall with the convective heating.",
+      "sources": [
+        "K. T. Edquist et al., 'Mars 2020 Reconstructed Aerothermal Environments', AIAA SciTech 2022, NTRS 20210024709, Table 4 (p. 15) and Section V.B (p. 22).",
+        "Data fusion of in-flight aerothermodynamic heating measurements using Kalman filtering, NTRS 20220006196, Section III (peak values quoted in the abstract and results).",
+        "R. A. Miller et al., 'Aftbody Heat Flux Measurements During Mars 2020 Entry', J. Spacecraft Rockets, 2023, doi:10.2514/1.A35783."
+      ],
+      "check": "MSL design: laminar afterbody heating 3% of the laminar forebody nose (Edquist, AIAA 2005-4817), times 3 for the 200% design uncertainty (Edquist et al. AIAA 2009-4078, Eq. 1) is 9%."
+    },
+    "Earth": {
+      "value": 0.03,
+      "about": "Laminar convective afterbody heating near 3% of the forebody nose (Edquist, AIAA 2005-4817, for MSL). Earth afterbody radiation is smaller than in CO2. Not checked against Earth flight data in this PR."
+    }
+  },
+  "sizing": {
+    "about": "MSL backshell, SLA-561V: 0.32 in (8.1 mm) needed at the heatshield/backshell seal for the design heat load of 377 J/cm2 (6.3 W/cm2 peak) to keep the bondline below its limit; 0.5 in was flown (Edquist et al. AIAA 2009-4078, NTRS 20090024230, Section E, p. 9). The needed areal mass scales with the heat load to the same power as the heat shield correlation (data.TPS_EXPONENT = 0.51575).",
+    "material": "SLA561V",
+    "thickness_m": 0.008128,
+    "rho_kg_m3": 260.0,
+    "heat_load_Jcm2": 377.0,
+    "flown_thickness_m": 0.0127,
+    "peak_flux_Wcm2": 6.3
+  },
+  "license": "Published NASA reports; values quoted with citation."
+}

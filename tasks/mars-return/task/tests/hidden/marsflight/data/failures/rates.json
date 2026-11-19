@@ -1,0 +1,67 @@
+{
+ "_about": "Failure rates for the in-flight failure model and the priors of the flown-failure replicas. Every number has its source. 'opened' means the number was read in the source itself; 'excerpt' means it was read in a quoted passage of it. Rates that are not published are marked 'game' and say how they were set.",
+ "weibull_subsystems": {
+  "_about": "On-orbit reliability of 1,584 Earth-orbiting spacecraft launched Jan 1990 to Oct 2008 (SpaceTrak), 98 total-loss failures. R(t) = exp(-(t/theta)^beta), t in years from launch. Maximum-likelihood fits of Castet and Saleh (2009, RESS 94(11):1718-1728), as tabled in J.-F. Castet, PhD thesis, Georgia Tech 2012, Table 2.3 p.33 (hdl.handle.net/1853/45871). Opened. These are fleet rates of satellites that mostly fly redundant units already, so per string they are a lower bound.",
+  "control_processor": {"beta": 1.4560, "theta_years": 408.0},
+  "gyro_sensor_reaction_wheel": {"beta": 0.7182, "theta_years": 3831.0},
+  "ttc": {"beta": 0.3939, "theta_years": 400982.0},
+  "thruster_fuel": {"beta": 0.3375, "theta_years": 6206945.0},
+  "battery_cell": {"beta": 0.7460, "theta_years": 7733.0},
+  "electrical_distribution": {"beta": 0.5021, "theta_years": 169272.0},
+  "solar_array_operating": {"beta": 0.4035, "theta_years": 1965868.0},
+  "payload_instrument": {"beta": 0.8874, "theta_years": 7983.0},
+  "whole_spacecraft": {"beta": 0.4521, "theta_years": 2607.0, "_check": "Kaplan-Meier 0.964 at 2 years (thesis p.22)"}
+ },
+ "part_classes": {
+  "avionics_string": {"units": ["control_processor", "gyro_sensor_reaction_wheel", "ttc"], "law": "weibull per unit, a string fails when any unit fails",
+                      "flown": "MSL RCE-A NAND flash fault on sol 200, swap to RCE-B within 16 h (NASA LLIS 11201)"},
+  "rcs_leak": {"units": ["thruster_fuel"], "law": "weibull", "leak_kg_per_s_fraction": 0.001,
+               "_leak": "game: a fail-open valve drains 0.1% of the element's RCS load per second until isolated",
+               "flown": "Shuttle primary RCS: about 1.5 thruster fail-leak or fail-off per flight in the early 1990s, 38 primary thrusters (Saulsberry and McCartney 1993, NTRS 19950009917, excerpt)"},
+  "battery": {"units": ["battery_cell", "electrical_distribution"], "law": "weibull",
+              "flown": "Li-ion cell thermal runaway about 1 in 10 million cells for experienced makers (Delafuente, NASA JSC, NTRS 20200003008, opened)"},
+  "isru_plant": {"units": ["payload_instrument"], "law": "weibull, from the sol the plant starts",
+                 "flown": "MOXIE on Perseverance: 16 runs, 122 g O2, no failures (NASA, Sep 6 2023; Hecht et al. 2024). Too few hours to set a rate on its own."},
+  "landing_radar": {"law": "per demand", "demands": 34, "failures": 4, "prior": "Jeffreys, Beta(0.5, 0.5)", "p": 0.1286,
+                    "p_90": [0.0503, 0.2311],
+                    "_p": "Posterior mean (4 + 0.5) / (34 + 1) over every radar- or lidar-guided powered landing with a published outcome and a sensor record, in data/failures/landing_sensors.json: Apollo 11 to 17, Surveyor, Chang'e-3 to 6, Chandrayaan-3, SLIM, the commercial lunar landers and 11 Mars landers. Sensor failures (class a, 4): Apollo 14 (no lock for 400 s, crew recovered), Surveyor 3 (lost lock at 37 ft), IM-2 Athena (laser altimeter noise), ispace Resilience (no valid measurements in time). Not counted as sensor failures: IM-1 (rangefinders never enabled, an integration error; class b) and HAKUTO-R M1 (software rejected good data; class c), both still counted as demands. Left out: 11 landings with no sensor record (8 Luna, Surveyor 4, Chandrayaan-2, Mars Polar Lander). Other fits on the same record: loss-causing failures only (Resilience, IM-2) 0.071; Mars only (0 in 11) 0.042; with about 600 Falcon 9 landings added as demands with no sensor failure 0.0071, but no public source confirms Falcon 9 lands on a radar altimeter, so they are not in the fit.",
+                    "flown": "Phoenix: in Dec 2006 a simulation showed the radar could lock on the falling heat shield; fixed by a 40 s later power-on (NTRS 20080034655, excerpt)"},
+  "separation": {"law": "per separation event",
+                 "p_event": 0.00176,
+                 "_p_event": "Chang, Crosslink Winter 2000/2001 (Aerospace Corp), 1980-1999 world: 11 separation failures in 2,091 launches (opened). 0.53% per launch over about 3 separation events per launch (two stagings and a fairing).",
+                 "initiation_share": 0.452,
+                 "_initiation_share": "Bement, Pyrotechnic System Failures (NTRS 19880017010, excerpt): of 84 pyro system failures over 23 years, 30 initiation and 8 firing circuit (38, 45%), 32 mechanism and 14 separation (46). A second initiator covers the initiation share only.",
+                 "flown": "NASA standard initiators: none failed in flight; 135 Shuttle flights fired 102 each (Hinkel, NTRS 20150002925, excerpt). Taurus XL OCO (2009) and Glory (2011): fairing did not separate."}
+ },
+ "launch_failure_causes": {
+  "_about": "Chang, Space Launch Vehicle Reliability, Crosslink Winter 2000/2001, Aerospace Corp, tables for 1980-1999 (web.archive.org/web/2002/http://www.aero.org/publications/crosslink/winter2001/03.html). Opened.",
+  "launches": 2091, "failures": 114,
+  "by_subsystem": {"propulsion": 64, "avionics": 11, "separation": 11, "electrical": 2, "structural": 3, "other": 3, "unknown": 20}
+ },
+ "new_vehicle": {
+  "_about": "FAA/AST, Guide to Probability of Failure Analysis for New Expendable Launch Vehicles (Nov 2005), pp.4-7. Worldwide 1980-2002: experienced developers lost 5 of 18 first flights, first-time developers 8 of 11. Opened.",
+  "p_first_flight_experienced": 0.2778,
+  "p_first_flight_novice": 0.7273
+ },
+ "latent_flaw_prior": {
+  "_about": "Prior chance that a new, untested vehicle carries a flaw of each class: the FAA first-flight loss rate of experienced developers (5/18) times the class's share of launch failures in Chang 1980-1999. Avionics (11/114) is split evenly between integration errors (polarity, wiring, assembly) and software, since Chang counts guidance software failures such as Ariane 501 as avionics.",
+  "integration": 0.0134,
+  "software": 0.0134,
+  "structural_part": 0.0073,
+  "electrical_parts": 0.0049
+ },
+ "redundancy": {
+  "_about": "Mass of redundancy. A second avionics string is an identical copy of the first (MSL and Mars 2020 fly identical RCE-A and RCE-B; Toupet, AAS 2020, excerpt), so it doubles data.AVIONICS_PER_ELEMENT_KG. It is a cold spare and draws no power until switched in. The other masses are game estimates, marked.",
+  "second_string_mass_fraction": 1.0,
+  "cross_strap_mass_kg": 6.0,
+  "_cross_strap": "game: cross-strap harness and switching, 10% of one 60 kg string",
+  "rcs_branch_mass_kg": 2.0,
+  "_rcs_branch": "game: two latching isolation valves and the branch line",
+  "landing_radar_mass_kg": 12.0,
+  "_landing_radar": "game: one more radar electronics box and antenna",
+  "pyro_initiator_mass_kg": 0.1,
+  "_pyro": "game: a second initiator and firing circuit per separation plane",
+  "battery_string_overhead": 0.05,
+  "_battery": "game: a battery split into strings carries 5% more for the string switches and harness"
+ }
+}
