@@ -47,13 +47,13 @@ You need Docker and Python 3.12. Set up once, from this folder:
 ```bash
 python3 -m venv .venv && source .venv/bin/activate
 git clone https://github.com/bespokelabsai/multi-agent-coordination-bench ~/mac-bench
-git -C ~/mac-bench checkout cd6c6ce43168d531033699d1c3f3aefcbae791b9
+git -C ~/mac-bench checkout f834aee31c6148f63327d0ddb1a72cdc5074ed9b
 pip install -e "$HOME/mac-bench/harness[docker]"
 echo "ANTHROPIC_API_KEY=..." > .env
 python3 task/environment/hub/make_hub_plugin.py
 ```
 
-This installs [multi-agent-harness](https://github.com/bespokelabsai/multi-agent-coordination-bench/tree/cd6c6ce43168d531033699d1c3f3aefcbae791b9/harness) (this repository's `harness/`) at the commit the task was
+This installs [multi-agent-harness](https://github.com/bespokelabsai/multi-agent-coordination-bench/tree/f834aee31c6148f63327d0ddb1a72cdc5074ed9b/harness) (this repository's `harness/`) at the commit the task was
 prepared for, and Harbor with it. The clone can live anywhere, but keep it: the harness builds its hub from it.
 `make_hub_plugin.py` packs the game (`task/tests/hidden/`) into `task/build/holdout_hub_plugin.py` for the hub and
 `task/solution/hub_bundle.tar.gz` for the oracle; both carry the game, so don't publish them. All commands below run
@@ -88,11 +88,11 @@ harbor run -p task \
 - The task gives agents no network beyond the hub (`no-network`). The harness's cloud sandbox backend enforces that,
   and our reference runs used it; Docker cannot, so on Docker the harness runs the agents with internet access and
   logs `network_not_enforced`. With internet, agents could read this repository, which holds the game. For results
-  meant to be compared, use a backend that enforces it (see the [harness's README](https://github.com/bespokelabsai/multi-agent-coordination-bench/blob/cd6c6ce43168d531033699d1c3f3aefcbae791b9/harness/README.md)).
+  meant to be compared, use a backend that enforces it (see the [harness's README](https://github.com/bespokelabsai/multi-agent-coordination-bench/blob/f834aee31c6148f63327d0ddb1a72cdc5074ed9b/harness/README.md)).
 - To use a Claude plan instead of an API key, put `CLAUDE_CODE_OAUTH_TOKEN` (from `claude setup-token`) in `.env` and
   add `--ek model_upstream=subscription`. On the Docker backend also `export MULTI_AGENT_HARNESS_CLAUDE_ENV_SCRUB=0`:
   Claude Code's shell sandbox cannot start in a Docker agent box, and this runs it without (the agents' shell commands
-  can then read the token). Other harnesses (Codex, Antigravity) and backends are described in the [harness's README](https://github.com/bespokelabsai/multi-agent-coordination-bench/blob/cd6c6ce43168d531033699d1c3f3aefcbae791b9/harness/README.md).
+  can then read the token). Other harnesses (Codex, Antigravity) and backends are described in the [harness's README](https://github.com/bespokelabsai/multi-agent-coordination-bench/blob/f834aee31c6148f63327d0ddb1a72cdc5074ed9b/harness/README.md).
 
 ### Harbor
 
@@ -123,4 +123,4 @@ in `verifier/details.json`.
 
 The game, its world, rules and strangers, the verifier and the reference bot were written for this task. It runs on
 [Harbor](https://github.com/laude-institute/harbor) and
-[multi-agent-harness](https://github.com/bespokelabsai/multi-agent-coordination-bench/tree/cd6c6ce43168d531033699d1c3f3aefcbae791b9/harness).
+[multi-agent-harness](https://github.com/bespokelabsai/multi-agent-coordination-bench/tree/f834aee31c6148f63327d0ddb1a72cdc5074ed9b/harness).

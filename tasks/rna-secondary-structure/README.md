@@ -48,11 +48,11 @@ Set up once, from this folder:
 ```bash
 python3 -m venv .venv && source .venv/bin/activate
 git clone https://github.com/bespokelabsai/multi-agent-coordination-bench ~/mac-bench
-git -C ~/mac-bench checkout cd6c6ce43168d531033699d1c3f3aefcbae791b9
+git -C ~/mac-bench checkout f834aee31c6148f63327d0ddb1a72cdc5074ed9b
 pip install -e "$HOME/mac-bench/harness[docker]"
 ```
 
-This installs [multi-agent-harness](https://github.com/bespokelabsai/multi-agent-coordination-bench/tree/cd6c6ce43168d531033699d1c3f3aefcbae791b9/harness) (this repository's `harness/`) at the commit the task was
+This installs [multi-agent-harness](https://github.com/bespokelabsai/multi-agent-coordination-bench/tree/f834aee31c6148f63327d0ddb1a72cdc5074ed9b/harness) (this repository's `harness/`) at the commit the task was
 tested with, and Harbor with it. The clone can live anywhere, but keep it: the harness builds its hub from it. All
 commands below run from this folder.
 
