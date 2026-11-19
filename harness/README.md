@@ -302,7 +302,7 @@ Agent setup is mostly the Codex install, done in every sandbox in parallel. Each
 
 ## Citation
 
-If you use this harness, please cite it (GitHub's "Cite this repository" button gives the same, from `CITATION.cff`):
+If you use this harness, please cite it (the same entry is in `CITATION.cff`):
 
 ```bibtex
 @software{bespokelabs_multi_agent_harness_2026,
