@@ -1,0 +1,5 @@
+# generated: the photo library and built tasks (build-mah/ carries the data passphrase)
+task/build/
+task/build-mah/
+task/build-single/
+__pycache__/
