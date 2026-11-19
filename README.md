@@ -25,7 +25,7 @@ leaderboard and the results for every task.
 | Power Outage | power grid restoration | Distributed | [`tasks/power-outage`](tasks/power-outage) |
 | Seed to Profit | company management | Shared | coming soon |
 | Mindustry | factory and defense game | Distributed | [`tasks/mindustry`](tasks/mindustry) |
-| Dubai ATC | air traffic control | Shared | coming soon |
+| Dubai ATC | air traffic control | Shared | [`tasks/dxb-atc-live`](tasks/dxb-atc-live) |
 | Chicago Skyline Survey | drone survey planning | Shared | [`tasks/chicago-skyline-survey`](tasks/chicago-skyline-survey) |
 | Spectrum to Molecule | mass spectrometry | Shared | [`tasks/spectrum-to-molecule`](tasks/spectrum-to-molecule) |
 | RNA Secondary Structure | computational biology | Shared | [`tasks/rna-secondary-structure`](tasks/rna-secondary-structure) |
