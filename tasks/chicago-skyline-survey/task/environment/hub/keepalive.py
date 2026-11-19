@@ -52,7 +52,7 @@ woken again, with the time left and the team's spend, when a teammate messages y
 
 """
 GRADED_AT_END = "Main is graded exactly as pushed when the run ends."
-# With graded marks (the harness's --ak grade_at; run_sweep.sh MARKS), the manual states the schedule too.
+# With graded marks (the harness's --ak grade_at), the manual states the schedule too.
 GRADED_AT_MARKS = ("Main is graded exactly as pushed at {marks}; the grade {last} is your score, and you do not see "
                    "the earlier ones. Keep main ready to submit at all times.")
 
@@ -116,7 +116,7 @@ def duration(sec: float) -> str:
 
 class KeepAlive(Orchestration):
     name = "keepalive"
-    # Claude Code's Task/Agent tool, Codex's multi_agent and agy's subagents stay off: a team of k is k agents.
+    # Claude Code's Task/Agent tool, Codex's multi_agent and Antigravity's subagents stay off: a team of k is k agents.
     cli_subagents = False
 
     def __init__(self) -> None:

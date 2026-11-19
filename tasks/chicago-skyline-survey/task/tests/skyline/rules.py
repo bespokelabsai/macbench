@@ -5,7 +5,7 @@ hard-coded elsewhere. :class:`Rules` exposes the values as flat attributes
 (``rules.alt_min_m``, ``rules.battery_J``, ...) and keeps the parsed JSON in
 ``rules.raw``.
 
-v2 photo rules, all in the ``photo`` block:
+Photo rules, all in the ``photo`` block:
 
 * ``light = {"min", "max"}`` -> ``light_min``, ``light_max``: the sun-light factor
   of static photos (see :func:`skyline.scoring.light`; needs ``sun.json``).
@@ -16,7 +16,7 @@ v2 photo rules, all in the ``photo`` block:
   (static photos use ``repeat_multipliers``).
 
 All four keys are required: a rules file without any of them is an error
-(ValueError), so a damaged rules file can never fall back to easier v1 scoring.
+(ValueError).
 
 Photo quality: ``photo.quality = {"far_factor", "edge_factor"}`` ->
 ``quality_far_factor``, ``quality_edge_factor``, the factors of the photo
@@ -32,7 +32,7 @@ after the landing. Required (ValueError).
 Memory card: ``drone.card_capacity`` -> ``card_capacity``,
 the most captures (photos and scans) one sortie records. Required (ValueError).
 
-v2b blocks: ``mapping`` (landmark scans),
+Mapping and show blocks: ``mapping`` (landmark scans),
 ``shows`` (light shows) and ``scoring`` (``loss_fine``, points fined per lost
 drone). All three are required, with every key (ValueError otherwise; there is
 no fallback), and ``load_world`` requires ``landmarks.json``, ``noise.json``
@@ -40,8 +40,8 @@ and ``shows.json``. Flat attributes: ``scan_hover_s``,
 ``scan_range_m``, ``scan_fov_half_deg``, ``max_incidence_deg``,
 ``mapping_min_views``, ``mapping_min_spread_deg``, ``mapping_bonus`` (tuple of
 (threshold, bonus) pairs), ``mapping_min_drones``, ``mapping_sync_window_s``,
-``mapping_coverage_exponent``, ``show_slot_tol_m`` and ``loss_fine``; ``v2b`` is
-always True.
+``mapping_coverage_exponent``, ``show_slot_tol_m`` and ``loss_fine``; the flag
+``v2b`` (mapping and shows present) is always True.
 """
 
 from __future__ import annotations
@@ -87,7 +87,7 @@ class Rules:
     repeat_multipliers: tuple[float, ...]
     # plans
     max_rows_per_drone: int
-    # v2 photo rules (None / v1 values when absent from rules.json)
+    # photo rules (None or defaults when absent from rules.json)
     light_min: float | None = None
     light_max: float | None = None
     moving_sync_window_s: float | None = None
@@ -96,7 +96,7 @@ class Rules:
     # photo quality Q (None when rules.json has no photo.quality: Q = 1.0)
     quality_far_factor: float | None = None
     quality_edge_factor: float | None = None
-    # v2b: None when the rules have no mapping/shows blocks
+    # mapping and shows: None when the rules have no mapping/shows blocks
     v2b: bool = False
     scan_hover_s: float | None = None
     scan_range_m: tuple[float, float] | None = None
@@ -186,10 +186,10 @@ SCORING_KEYS = ("loss_fine",)
 
 
 def _v2b_fields(d: dict) -> dict:
-    """The v2b fields of :class:`Rules`. Both blocks are required (no fallback to v2 rules)."""
+    """The mapping and show fields of :class:`Rules`. Every block is required."""
     missing = [b for b in ("mapping", "shows", "scoring") if b not in d]
     if missing:
-        raise ValueError("rules.json: block missing: " + ", ".join(missing) + " (both are required)")
+        raise ValueError("rules.json: block missing: " + ", ".join(missing) + " (all are required)")
     m, s = d["mapping"], d["shows"]
     miss = ([f"mapping.{k}" for k in MAPPING_KEYS if k not in m] + [f"shows.{k}" for k in SHOWS_KEYS if k not in s]
             + [f"scoring.{k}" for k in SCORING_KEYS if k not in d["scoring"]])

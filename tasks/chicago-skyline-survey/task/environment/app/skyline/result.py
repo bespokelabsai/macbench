@@ -38,14 +38,14 @@ class SimResult:
         it is True when the photo is valid, banked and synced, else False.
     events : list[dict]
         ``{"t", "drone", "type", "detail"}`` in processing (time) order; type in
-        takeoff | land | queue | lost | photo; detail is a string (pad id, target id,
+        takeoff | land | queue | lost | photo | scan | show; detail is a string (pad id, target id,
         or for ``lost`` the reason optionally followed by ``": text"``).
     flightlog : dict or None
-        Viewer input (only when simulated with ``log=True``).
+        The flight log (only when simulated with ``log=True``).
     day : str
         Wind day label (``"forecast"``, ``"day1"``, ...).
 
-    v2b: ``points`` = max(0, ``photo_points`` + ``landmark_points`` + ``show_points``
+    ``points`` = max(0, ``photo_points`` + ``landmark_points`` + ``show_points``
     - ``loss_fine_points``), where ``loss_fine_points`` = ``scoring.loss_fine`` x ``lost_drones``
     (drones lost that day, any reason).
 
@@ -89,7 +89,7 @@ class SimResult:
         self.loss_fine_points = extra.get("loss_fine_points", 0.0)
 
     def to_dict(self) -> dict:
-        """Plain dict of the result (without the flight log). v2b fields follow the v2 ones."""
+        """Plain dict of the result (without the flight log). the mapping and show fields follow the photo ones."""
         return {"day": self.day, "points": self.points, "per_drone": self.per_drone,
                 "photos": self.photos, "events": self.events,
                 "photo_points": self.photo_points, "landmark_points": self.landmark_points,
@@ -138,7 +138,7 @@ def build_flightlog(sim, photos, events, points, day, extra=None) -> dict:
     """Flight log: per drone, samples every 5 s plus at its event times.
 
     ``photos`` are the result's photo dicts, so each carries ``light``,
-    ``quality`` and ``synced`` (added after the v1 fields; nothing else changed).
+    ``quality`` and ``synced``.
 
     Sample = ``[t, x, y, z, soc, state]`` with soc a battery fraction in [0, 1]
     and state ``"air"``, ``"pad"`` or ``"lost"``. A lost drone's samples stop at
@@ -180,7 +180,7 @@ def build_flightlog(sim, photos, events, points, day, extra=None) -> dict:
     out = {"day": day, "t_end": day_end, "drones": drones_out, "photos": photos,
            "events": events, "points": points}
     if extra:
-        # v2b, additive only: the viewer reads the keys above and ignores these.
+        # Mapping, show and noise fields.
         out["photo_points"] = extra["photo_points"]
         out["landmark_points"] = extra["landmark_points"]
         out["show_points"] = extra["show_points"]

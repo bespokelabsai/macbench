@@ -10,7 +10,7 @@ One 12-hour day, 06:00 to 18:00 local time, for a fleet of 8 identical drones (D
 
 Photos are not the only source of points. Some well-known buildings are **landmarks** to map in 3D: drones scan one from hovering positions, and a part of its surface counts as mapped once a rig of at least three drones has scanned it within 10 s of each other, from directions at least 20 degrees apart. Three **light shows** need drones holding formation slots at set times; a show pays only when every slot is held. Five **quiet zones** along the river and its bridges have a noise budget: it limits how many drone-seconds per hour may be spent in a zone below 60 m, and in an hour over the budget, photos and scans taken low in that zone score nothing. And each drone's **memory card** holds 80 captures (photos and scans) per sortie; it empties when the drone lands. Section 7 has the rules.
 
-What is on `main` is flown. Only pushed work counts, and the marks it is looked at are in your instructions.
+What is on `main` is flown. Only pushed work counts, and the times it is graded are in your instructions.
 
 ## 2. Files in `/app`
 
@@ -355,7 +355,7 @@ From `/app`:
 | `--data DIR` | `data` | World data directory. |
 | `--wind FILE` | `<data>/wind_forecast.json` | The wind day to fly. |
 | `--json FILE` | none | Write the full result (day, points, per-drone summary, photos, events, scans, show rows, landmark, show and noise results, plan errors) as JSON. |
-| `--log FILE` | none | Write a flight log that can be replayed (samples every 5 s plus event times). |
+| `--log FILE` | none | Write a flight log (JSON: positions every 5 s plus event times). |
 | `--photos` | off | Also list every banked photo: tp, drone, target, kind, L (static) or synced/unsynced (moving), Q, reason and points. |
 | `--landmarks` | off | Also list every scan (time, drone, landmark, position, patches seen, reason) and, per landmark, the unmapped patches with their views, the most drones in one 10 s window and the cross-drone spread. |
 | `--shows` | off | Also list every show row flown: show and slot, drone, arrival time, late, held, banked, reason (`filled` when it filled its slot). |

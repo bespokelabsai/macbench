@@ -14,4 +14,4 @@ printf '0\n' > "$OUT/reward.txt"
 rm -f "$OUT/reward.json" "$OUT/details.json"
 HERE=$(cd "$(dirname "$0")" && pwd)
 # -I: no PYTHONPATH, user site or current-directory imports; the checker is the pristine copy next to this file.
-python3 -I "$HERE/grade.py" --app "$APP" --out "$OUT" || echo "verifier failed; reward stays 0"
+python3 -I "$HERE/verify.py" --app "$APP" --out "$OUT" || echo "verifier failed; reward stays 0"

@@ -2,7 +2,7 @@
 
 ``load_world(data_dir)`` reads ``rules.json``, ``city.json``, ``targets.json``,
 ``pads.json``, ``nofly.json``, ``sun.json`` and, when the rules have the
-v2b ``mapping``/``shows`` blocks, ``landmarks.json``, ``noise.json`` and
+the ``mapping``/``shows`` blocks, ``landmarks.json``, ``noise.json`` and
 ``shows.json`` (formats in docs/MANUAL.md
 section 3) and returns a :class:`World`. ``load_wind(path)`` reads one wind day (see ``wind.py``).
 
@@ -271,10 +271,10 @@ class World:
     nofly : list[NoFlyZone]
     index : BuildingIndex, uniform-grid spatial index used by ``geometry``
     sun : Sun or None, the sun table (None when the rules have no light factor)
-    landmarks : dict[str, Landmark], in file order (empty without the v2b rules)
+    landmarks : dict[str, Landmark], in file order (empty without the mapping/shows rules)
     noise_alt_m : float or None, the noise ceiling from noise.json
-    noise_zones : list[NoiseZone] (empty without the v2b rules)
-    shows : dict[str, Show], in file order (empty without the v2b rules)
+    noise_zones : list[NoiseZone] (empty without the mapping/shows rules)
+    shows : dict[str, Show], in file order (empty without the mapping/shows rules)
     """
 
     rules: Rules

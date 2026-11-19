@@ -1,4 +1,4 @@
-# Notices and data licences
+# Notices and data licenses
 
 The world data ships twice, identical: in `task/environment/app/data/` (what the agents see) and in
 `task/tests/data/` (the grader's pristine copy). The hidden wind days and their normalisation are in
@@ -7,9 +7,9 @@ The world data ships twice, identical: in `task/environment/app/data/` (what the
 ## OpenStreetMap (buildings, river and rail geometry)
 
 `city.json` (buildings, river and rail) and the files built on its buildings and river (`targets.json`,
-`landmarks.json`) contain information from OpenStreetMap, © OpenStreetMap contributors, which is made available under the Open Database
+`landmarks.json`, `pads.json`, `nofly.json`, `noise.json`, `shows.json`) contain information from OpenStreetMap, © OpenStreetMap contributors, which is made available under the Open Database
 License (ODbL) 1.0: https://opendatacommons.org/licenses/odbl/1-0/ (summary and attribution guidelines:
-https://www.openstreetmap.org/copyright). These derived files are made available under the same licence.
+https://www.openstreetmap.org/copyright). These derived files are made available under the same license.
 
 ## Open-Meteo and ERA5 (wind forecast)
 
@@ -29,3 +29,8 @@ provided as is, and the CTA does not endorse this task.
 
 `sun.json` holds computed sun vectors for the survey date (NOAA solar position equations, refraction-corrected
 elevation); it carries no third-party data.
+
+## Fictional parts
+
+The survey contractor, its client, the airspace rules, the no-fly and quiet zones, the light shows and the pads are
+invented for this task. They do not describe real flight restrictions or permissions in Chicago.
