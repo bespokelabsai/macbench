@@ -32,7 +32,7 @@ You need Docker, Python 3.12 or newer, and 8 CPUs and 16 GB of memory for every 
 
 ```bash
 git clone https://github.com/bespokelabsai/multi-agent-coordination-bench ~/mac-bench
-git -C ~/mac-bench checkout cd6c6ce43168d531033699d1c3f3aefcbae791b9
+git -C ~/mac-bench checkout ca9c5b0b26f94bda43e4ba155d37ba2680bfa30c
 pip install -e "$HOME/mac-bench/harness[docker]"
 ```
 
@@ -57,8 +57,8 @@ harbor run -p task \
 - Every team size uses `task/environment/hub/fixed_solo_resume.py`: every agent gets the whole task, the CLI's own subagents are off, and an agent whose session ends with an error is resumed in the same session.
 - `grade_at` grades the team's `main` at 30 minutes and at hours 1, 2 and 3. The grading after the agents stop is the score. The agents are told that `main` is graded at intervals; they never see a result.
 - The agents are stopped at 4 hours 15 minutes (`timeout_sec`); the prompt tells them they have 4 hours.
-- The task gives the agents no network. The Docker backend does not enforce that, so on it the agents can reach the internet, where compressors can be downloaded. Our reference runs used a backend with network isolation; the [harness's README](https://github.com/bespokelabsai/multi-agent-coordination-bench/blob/cd6c6ce43168d531033699d1c3f3aefcbae791b9/harness/README.md) lists the backends.
-- To use a Claude plan instead of an API key, put `CLAUDE_CODE_OAUTH_TOKEN` (from `claude setup-token`) in `.env` and add `--ek model_upstream=subscription`. On the Docker backend also `export MULTI_AGENT_HARNESS_CLAUDE_ENV_SCRUB=0`: Claude Code's shell sandbox cannot start in a Docker agent box, and this runs it without (the agents' shell commands can then read the token). Other harnesses (Codex, Antigravity) and backends are described in the [harness's README](https://github.com/bespokelabsai/multi-agent-coordination-bench/blob/cd6c6ce43168d531033699d1c3f3aefcbae791b9/harness/README.md).
+- The task gives the agents no network. The Docker backend does not enforce that, so on it the agents can reach the internet, where compressors can be downloaded. Our reference runs used a backend with network isolation; the [harness's README](https://github.com/bespokelabsai/multi-agent-coordination-bench/blob/ca9c5b0b26f94bda43e4ba155d37ba2680bfa30c/harness/README.md) lists the backends.
+- To use a Claude plan instead of an API key, put `CLAUDE_CODE_OAUTH_TOKEN` (from `claude setup-token`) in `.env` and add `--ek model_upstream=subscription`. On the Docker backend also `export MULTI_AGENT_HARNESS_CLAUDE_ENV_SCRUB=0`: Claude Code's shell sandbox cannot start in a Docker agent box, and this runs it without (the agents' shell commands can then read the token). Other harnesses (Codex, Antigravity) and backends are described in the [harness's README](https://github.com/bespokelabsai/multi-agent-coordination-bench/blob/ca9c5b0b26f94bda43e4ba155d37ba2680bfa30c/harness/README.md).
 
 ### Harbor
 
@@ -87,7 +87,7 @@ It scores 1.0. Its grading takes about 2 hours, because paq8px needs 1 to 8 minu
 | `task/task.toml` | Agents stop at 4 h 15 min and have no network while they work. 8 CPUs and 16 GB per sandbox. |
 | `task/environment/` | The image: Ubuntu 24.04 with Python and a C/C++ toolchain. `data/` becomes `/data`, read-only: `public/` (the twelve Silesia files, 210 MB), `samples/` (the practice files) and `samples.json` (their targets). `app/` becomes `/app`, the team repository, with a starter compressor that only copies bytes. |
 | `task/tests/` | `test.sh` and `grade.py` (the grader), `hidden/` (the 25 hidden files) and `targets.json`. |
-| `task/solution/` | The reference solution. `compressor/paq8px/` is the source of paq8px v217, with the zlib copy and the word lists it ships with, run at `-9LT`. `compressor/g16.cpp` is a coder for 16-bit pixel grids. For each file the smaller of the two outputs is kept. |
+| `task/solution/` | The reference solution. `reference/paq8px/` is the source of paq8px v217, with the zlib copy and the word lists it ships with, run at `-9LT`. `reference/g16.cpp` is a coder for 16-bit pixel grids. For each file the smaller of the two outputs is kept. |
 | `task/environment/hub/` | `fixed_solo_resume.py`, the orchestration the multi-agent harness loads. Not copied into the image. |
 | `task/environment/licenses/` | The licence texts of the data sources (see Credits). Not copied into the image. |
 
@@ -159,4 +159,4 @@ Every data file is cut from a public source and keeps that source's terms. The l
 | `xml` | The PubMed baseline file `pubmed26n0001.xml`, courtesy of the U.S. National Library of Medicine | NLM's terms. This copy does not reflect the most current data available from NLM, and some abstracts may be protected by copyright. | `NLM-PubMed-terms.txt` |
 | `xray` | pydicom-data `RG1_UNCI.dcm`, from the NEMA WG04 compression samples | MIT for the repository; the NEMA set states no terms | `MIT-pydicom-data.txt` |
 
-**Reference solution**, `task/solution/compressor/paq8px/`: paq8px v217 by Matt Mahoney and the paq8px contributors, GPL 2 or later (`LICENSE` in that folder), with the zlib copy (zlib licence, in `zlib/zlib.h`) and the word lists it ships with.
+**Reference solution**, `task/solution/reference/paq8px/`: paq8px v217 by Matt Mahoney and the paq8px contributors, GPL 2 or later (`LICENSE` in that folder), with the zlib copy (zlib licence, in `zlib/zlib.h`) and the word lists it ships with.
