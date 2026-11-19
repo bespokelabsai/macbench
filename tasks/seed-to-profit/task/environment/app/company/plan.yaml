@@ -1,0 +1,9 @@
+# The company's setup (docs/REFERENCE.md, "What you deliver"). This is an example: choose your own products.
+company: Example Goods
+credit_line: 250000
+products:
+  - id: k1
+    channels: [site, marketplace]
+    supplier: A
+  - id: o2
+    channels: [marketplace]
