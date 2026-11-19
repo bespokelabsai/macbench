@@ -40,6 +40,16 @@ Each task is a [Harbor](https://github.com/harbor-framework/harbor) task folder.
 single agent, and with [multi-agent-harness](harness/) for a team. The
 README in each task's folder has the setup and the exact commands.
 
+## License
+
+The code written by Bespoke Labs in this repository, the tasks and [multi-agent-harness](harness/), is licensed under
+the [Apache License 2.0](LICENSE). See [NOTICE](NOTICE).
+
+Some tasks bundle or download third-party data and code, which keep their own licenses and are not covered by the
+Apache License 2.0. Among them are GPL code (paq8px in SOTA Compressor; the Mindustry server that the Mindustry task
+builds against), CC BY-SA files (the 0 A.D. Petra AI) and ODbL data (the OpenStreetMap-derived files in Dubai ATC and
+Chicago Skyline Survey). Each task's `NOTICE.md` or the Credits section of its README lists its sources and their terms.
+
 ## Citation
 
 ```bibtex

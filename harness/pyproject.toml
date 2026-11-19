@@ -3,8 +3,8 @@ name = "multi-agent-harness"
 version = "0.1.0"
 description = "Multi-agent harness: N coding agents in SDK sandboxes on a shared message board, run through Harbor"
 requires-python = ">=3.12"
-license = "MIT"
-license-files = ["LICENSE"]
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
 dependencies = []
 
 [project.optional-dependencies]
