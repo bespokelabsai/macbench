@@ -40,15 +40,15 @@ Set up once, from this folder:
 
 ```bash
 python3 -m venv .venv && source .venv/bin/activate
-git clone https://github.com/bespokelabsai/multi-agent-harness ~/multi-agent-harness
-git -C ~/multi-agent-harness checkout 0f7ac9583906b998772245c41d799f7b2264dd4f
-pip install -e "$HOME/multi-agent-harness[docker]"
+git clone https://github.com/bespokelabsai/multi-agent-coordination-bench ~/mac-bench
+git -C ~/mac-bench checkout cd6c6ce43168d531033699d1c3f3aefcbae791b9
+pip install -e "$HOME/mac-bench/harness[docker]"
 pip install numpy Pillow       # for the photos
 cd task
 echo "ANTHROPIC_API_KEY=..." > .env
 ```
 
-This installs [multi-agent-harness](https://github.com/bespokelabsai/multi-agent-harness) at the commit the task was
+This installs [multi-agent-harness](https://github.com/bespokelabsai/multi-agent-coordination-bench/tree/cd6c6ce43168d531033699d1c3f3aefcbae791b9/harness) (this repository's `harness/`) at the commit the task was
 tested with, and Harbor with it. The clone can live anywhere, but keep it: the harness builds its hub from it. All commands below run from `task/`. The first build renders the photo library
 (285 MB, about an hour) into `task/build/s5`; later builds reuse it.
 
@@ -83,7 +83,7 @@ harbor run -p build-mah/caverescue-m$K \
   and add `--ek model_upstream=subscription`. On the Docker backend also `export MULTI_AGENT_HARNESS_CLAUDE_ENV_SCRUB=0`:
   Claude Code's shell sandbox cannot start in a Docker agent box, and this runs it without (the agents' shell
   commands can then read the token). Other harnesses (Codex, Antigravity) and backends are described in
-  the harness's README.
+  the [harness's README](https://github.com/bespokelabsai/multi-agent-coordination-bench/blob/cd6c6ce43168d531033699d1c3f3aefcbae791b9/harness/README.md).
 
 ### Harbor
 
