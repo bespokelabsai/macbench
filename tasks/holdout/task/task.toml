@@ -1,0 +1,35 @@
+schema_version = "1.3"
+# Captured after the agents end: the team repo (their notes and scripts), for the record. The grade does not read it.
+artifacts = ["/app"]
+
+[task]
+name = "bespokelabsai/holdout"
+description = "Holdout: zombie survival. A team plays one live zombie-survival game for 4 hours, each agent one survivor, and is graded on how far up a ladder of twelve buildings its stronghold gets"
+authors = [{ name = "Bespoke Labs" }]
+keywords = ["multi-agent", "zombie-survival", "real-time", "partial-observability", "embodied", "long-horizon"]
+
+[metadata]
+author_name = "Bespoke Labs"
+task_id = "holdout"
+display_title = "Holdout: zombie survival"
+category = "games"
+difficulty = "hard"
+language = "python"
+
+[agent]
+# The team has 4 hours (the harness's --ak timeout_sec=14400). Harbor's own timeout is 10 minutes later, so a team run
+# ends through environment/hub/keepalive.py, which freezes the world first.
+timeout_sec = 15000.0
+network_mode = "no-network"
+
+[verifier]
+# Reads the game's grading state; takes under a second.
+timeout_sec = 300.0
+network_mode = "no-network"
+
+[environment]
+network_mode = "public"
+build_timeout_sec = 1800.0
+cpus = 2
+memory_mb = 4096
+storage_mb = 10240

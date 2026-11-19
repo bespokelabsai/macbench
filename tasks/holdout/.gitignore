@@ -1,0 +1,9 @@
+# generated: the hidden game packed for the hub and the oracle (python3 task/environment/hub/make_hub_plugin.py)
+task/build/
+task/solution/hub_bundle.tar.gz
+# model credentials
+.env
+.venv/
+jobs/
+__pycache__/
+*.pyc
