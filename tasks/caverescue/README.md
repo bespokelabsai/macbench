@@ -41,7 +41,7 @@ Set up once, from this folder:
 ```bash
 python3 -m venv .venv && source .venv/bin/activate
 git clone https://github.com/bespokelabsai/multi-agent-coordination-bench ~/mac-bench
-git -C ~/mac-bench checkout f834aee31c6148f63327d0ddb1a72cdc5074ed9b
+git -C ~/mac-bench restore --source f834aee31c6148f63327d0ddb1a72cdc5074ed9b -- harness
 pip install -e "$HOME/mac-bench/harness[docker]"
 pip install numpy Pillow       # for the photos
 cd task
