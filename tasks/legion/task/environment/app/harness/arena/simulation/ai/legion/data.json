@@ -1,0 +1,7 @@
+{
+	"name": "LEGION",
+	"description": "The submitted LEGION AI, loaded through the referee's guard.",
+	"constructor": "LegionEntry",
+	"filename": "_entry.js",
+	"useShared": true
+}

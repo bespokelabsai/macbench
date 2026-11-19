@@ -1,0 +1,8 @@
+{
+	"name": "legion_arena",
+	"version": "1.0.0",
+	"label": "LEGION arena",
+	"url": "",
+	"description": "Match rules for the LEGION task: cheats blocked, Petra handicaps applied by the referee, every command logged, a game-time limit, and a guard around the submitted AI.",
+	"dependencies": ["0ad=0.28.0"]
+}
