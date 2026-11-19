@@ -6,4 +6,4 @@ authors:
   - name: Bespoke Labs
 repository-code: "https://github.com/bespokelabsai/multi-agent-coordination-bench/tree/main/harness"
 url: "https://github.com/bespokelabsai/multi-agent-coordination-bench/tree/main/harness"
-license: MIT
+license: Apache-2.0
