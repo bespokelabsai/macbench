@@ -1,0 +1,3705 @@
+{
+ "note": "Positions are lat/lon (degrees); ground positions are metres east (x) and north (y) of the aerodrome reference point. query of=chart returns the fixes, holds, runways, runway exits and entries, and gates; the rest is only here. Here, entries are the entry fixes; ground.entries are the runway entries.",
+ "arp": [
+  25.252778,
+  55.364444
+ ],
+ "fixes": {
+  "12F05": [
+   25.307498,
+   55.271462
+  ],
+  "12F06": [
+   25.316067,
+   55.255663
+  ],
+  "12F07": [
+   25.324634,
+   55.239862
+  ],
+  "12F08": [
+   25.333199,
+   55.224058
+  ],
+  "12F09": [
+   25.341763,
+   55.208253
+  ],
+  "12F10": [
+   25.350326,
+   55.192445
+  ],
+  "12F11": [
+   25.358886,
+   55.176635
+  ],
+  "12F12": [
+   25.367445,
+   55.160823
+  ],
+  "12F13": [
+   25.376002,
+   55.145008
+  ],
+  "12F14": [
+   25.384557,
+   55.129192
+  ],
+  "12F15": [
+   25.393111,
+   55.113373
+  ],
+  "12F16": [
+   25.401663,
+   55.097552
+  ],
+  "12F17": [
+   25.410214,
+   55.081728
+  ],
+  "12F18": [
+   25.418762,
+   55.065902
+  ],
+  "12F19": [
+   25.427309,
+   55.050075
+  ],
+  "12F20": [
+   25.435854,
+   55.034244
+  ],
+  "12F21": [
+   25.444398,
+   55.018412
+  ],
+  "12F22": [
+   25.45294,
+   55.002577
+  ],
+  "12F23": [
+   25.46148,
+   54.98674
+  ],
+  "12F24": [
+   25.470019,
+   54.970901
+  ],
+  "12F25": [
+   25.478555,
+   54.95506
+  ],
+  "30F05": [
+   25.193008,
+   55.473767
+  ],
+  "30F06": [
+   25.18442,
+   55.489537
+  ],
+  "30F07": [
+   25.175831,
+   55.505306
+  ],
+  "30F08": [
+   25.16724,
+   55.521072
+  ],
+  "30F09": [
+   25.158648,
+   55.536836
+  ],
+  "30F10": [
+   25.150054,
+   55.552597
+  ],
+  "30F11": [
+   25.141458,
+   55.568357
+  ],
+  "30F12": [
+   25.132861,
+   55.584114
+  ],
+  "30F13": [
+   25.124262,
+   55.599869
+  ],
+  "30F14": [
+   25.115661,
+   55.615622
+  ],
+  "30F15": [
+   25.107059,
+   55.631372
+  ],
+  "30F16": [
+   25.098455,
+   55.647121
+  ],
+  "30F17": [
+   25.089849,
+   55.662867
+  ],
+  "30F18": [
+   25.081241,
+   55.678611
+  ],
+  "30F19": [
+   25.072632,
+   55.694353
+  ],
+  "30F20": [
+   25.064022,
+   55.710092
+  ],
+  "30F21": [
+   25.055409,
+   55.725829
+  ],
+  "30F22": [
+   25.046795,
+   55.741565
+  ],
+  "30F23": [
+   25.03818,
+   55.757297
+  ],
+  "30F24": [
+   25.029562,
+   55.773028
+  ],
+  "30F25": [
+   25.020943,
+   55.788757
+  ],
+  "ADVAX": [
+   25.110235,
+   55.053751
+  ],
+  "D12N1": [
+   25.398848,
+   55.35373
+  ],
+  "D12N2": [
+   25.415987,
+   55.322144
+  ],
+  "D12N3": [
+   25.43312,
+   55.29055
+  ],
+  "D12N4": [
+   25.450246,
+   55.258946
+  ],
+  "D12N5": [
+   25.467365,
+   55.227333
+  ],
+  "D12N6": [
+   25.484478,
+   55.195711
+  ],
+  "D12N7": [
+   25.501584,
+   55.164081
+  ],
+  "D12N8": [
+   25.518683,
+   55.132441
+  ],
+  "D12N9": [
+   25.535775,
+   55.100792
+  ],
+  "D12S1": [
+   25.198977,
+   55.220896
+  ],
+  "D12S2": [
+   25.216116,
+   55.189291
+  ],
+  "D12S3": [
+   25.233249,
+   55.157677
+  ],
+  "D12S4": [
+   25.250375,
+   55.126054
+  ],
+  "D12S5": [
+   25.267494,
+   55.094423
+  ],
+  "D12S6": [
+   25.284607,
+   55.062782
+  ],
+  "D12S7": [
+   25.301713,
+   55.031133
+  ],
+  "D12S8": [
+   25.318812,
+   54.999474
+  ],
+  "D12S9": [
+   25.335904,
+   54.967807
+  ],
+  "D30N1": [
+   25.301514,
+   55.524413
+  ],
+  "D30N2": [
+   25.284341,
+   55.555947
+  ],
+  "D30N3": [
+   25.267161,
+   55.587472
+  ],
+  "D30N4": [
+   25.249975,
+   55.618988
+  ],
+  "D30N5": [
+   25.232781,
+   55.650495
+  ],
+  "D30N6": [
+   25.215582,
+   55.681994
+  ],
+  "D30N7": [
+   25.198375,
+   55.713483
+  ],
+  "D30N8": [
+   25.181162,
+   55.744964
+  ],
+  "D30N9": [
+   25.163942,
+   55.776436
+  ],
+  "D30S1": [
+   25.101643,
+   55.391684
+  ],
+  "D30S2": [
+   25.08447,
+   55.423237
+  ],
+  "D30S3": [
+   25.06729,
+   55.454781
+  ],
+  "D30S4": [
+   25.050104,
+   55.486316
+  ],
+  "D30S5": [
+   25.032911,
+   55.517841
+  ],
+  "D30S6": [
+   25.015711,
+   55.549359
+  ],
+  "D30S7": [
+   24.998504,
+   55.580867
+  ],
+  "D30S8": [
+   24.981291,
+   55.612366
+  ],
+  "D30S9": [
+   24.964071,
+   55.643857
+  ],
+  "E30": [
+   25.654928,
+   55.483998
+  ],
+  "EGNOT": [
+   25.273005,
+   55.075667
+  ],
+  "F12N": [
+   25.390203,
+   55.476944
+  ],
+  "F12S": [
+   25.104673,
+   55.28726
+  ],
+  "F30N": [
+   25.395807,
+   55.458268
+  ],
+  "F30S": [
+   25.110277,
+   55.268576
+  ],
+  "FF12": [
+   25.316067,
+   55.255663
+  ],
+  "FF30": [
+   25.18442,
+   55.489537
+  ],
+  "GE": [
+   25.352645,
+   55.999713
+  ],
+  "GN": [
+   25.826819,
+   55.476902
+  ],
+  "GS": [
+   24.678652,
+   55.475844
+  ],
+  "GW": [
+   25.352645,
+   54.729175
+  ],
+  "IF12": [
+   25.367445,
+   55.160823
+  ],
+  "IF30": [
+   25.132861,
+   55.584114
+  ],
+  "IMPED": [
+   24.973333,
+   56.068333
+  ],
+  "ITLAP": [
+   25.823611,
+   55.836111
+  ],
+  "RIMOL": [
+   24.933068,
+   55.388343
+  ],
+  "S12": [
+   25.184157,
+   55.490584
+  ],
+  "S30": [
+   25.31628,
+   55.254584
+  ],
+  "TALTU": [
+   25.027212,
+   55.536452
+  ],
+  "VUTEB": [
+   25.6125,
+   54.863611
+  ],
+  "W12": [
+   24.850533,
+   55.24568
+  ],
+  "X12N": [
+   25.672633,
+   55.062946
+  ],
+  "X12S": [
+   25.301445,
+   54.815867
+  ],
+  "X30N": [
+   25.197866,
+   55.927727
+  ],
+  "X30S": [
+   24.826678,
+   55.681611
+  ]
+ },
+ "holds": {
+  "VUTEB": {
+   "fix": "VUTEB",
+   "inbound": 107.0,
+   "turn": "R",
+   "leg_min": 1.0
+  },
+  "IMPED": {
+   "fix": "IMPED",
+   "inbound": 298.0,
+   "turn": "R",
+   "leg_min": 1.0
+  },
+  "ITLAP": {
+   "fix": "ITLAP",
+   "inbound": 204.0,
+   "turn": "L",
+   "leg_min": 1.0
+  },
+  "F30N": {
+   "fix": "F30N",
+   "inbound": 121.0,
+   "turn": "L",
+   "leg_min": 1.0
+  },
+  "F30S": {
+   "fix": "F30S",
+   "inbound": 121.0,
+   "turn": "R",
+   "leg_min": 1.0
+  },
+  "EGNOT": {
+   "fix": "EGNOT",
+   "inbound": 301.0,
+   "turn": "R",
+   "leg_min": 1.0
+  },
+  "ADVAX": {
+   "fix": "ADVAX",
+   "inbound": 301.0,
+   "turn": "R",
+   "leg_min": 1.0
+  },
+  "F12N": {
+   "fix": "F12N",
+   "inbound": 301.0,
+   "turn": "R",
+   "leg_min": 1.0
+  },
+  "F12S": {
+   "fix": "F12S",
+   "inbound": 301.0,
+   "turn": "L",
+   "leg_min": 1.0
+  },
+  "TALTU": {
+   "fix": "TALTU",
+   "inbound": 121.0,
+   "turn": "R",
+   "leg_min": 1.0
+  },
+  "RIMOL": {
+   "fix": "RIMOL",
+   "inbound": 121.0,
+   "turn": "R",
+   "leg_min": 1.0
+  }
+ },
+ "entries": {
+  "VUTEB": {
+   "pos": [
+    25.6125,
+    54.86361111111111
+   ],
+   "inbound": 107.0,
+   "turn": "R"
+  },
+  "IMPED": {
+   "pos": [
+    24.973333333333333,
+    56.068333333333335
+   ],
+   "inbound": 298.0,
+   "turn": "R"
+  },
+  "ITLAP": {
+   "pos": [
+    25.82361111111111,
+    55.836111111111116
+   ],
+   "inbound": 204.0,
+   "turn": "L"
+  }
+ },
+ "runways": {
+  "12L": {
+   "threshold": [
+    25.26462777777778,
+    55.35042222222222
+   ],
+   "heading": 121.0,
+   "length_m": 4351,
+   "lda_m": 3600,
+   "displaced_m": 450
+  },
+  "30R": {
+   "threshold": [
+    25.247708333333335,
+    55.38093055555556
+   ],
+   "heading": 301.0,
+   "length_m": 4351,
+   "lda_m": 4000,
+   "displaced_m": 300
+  },
+  "12R": {
+   "threshold": [
+    25.25283611111111,
+    55.364375
+   ],
+   "heading": 121.0,
+   "length_m": 4447,
+   "lda_m": 3600,
+   "displaced_m": 715
+  },
+  "30L": {
+   "threshold": [
+    25.235919444444445,
+    55.39488055555555
+   ],
+   "heading": 301.0,
+   "length_m": 4447,
+   "lda_m": 4315,
+   "displaced_m": 132
+  }
+ },
+ "configs": {
+  "30": {
+   "arr": "30L",
+   "dep": "30R"
+  },
+  "12": {
+   "arr": "12L",
+   "dep": "12R"
+  }
+ },
+ "gates": {
+  "NORTH": [
+   25.826819377822115,
+   55.47690166731479
+  ],
+  "EAST": [
+   25.35264508993007,
+   55.99971299117249
+  ],
+  "SOUTH": [
+   24.67865225742621,
+   55.47584364557906
+  ],
+  "WEST": [
+   25.35264508993007,
+   54.7291750088275
+  ]
+ },
+ "procedures": {
+  "30L": {
+   "sides": {
+    "N": {
+     "feeder": "F30N",
+     "downwind": [
+      "D30N1",
+      "D30N2",
+      "D30N3",
+      "D30N4",
+      "D30N5",
+      "D30N6",
+      "D30N7",
+      "D30N8",
+      "D30N9"
+     ],
+     "via": {
+      "IMPED": [
+       "X30N"
+      ]
+     }
+    },
+    "S": {
+     "feeder": "F30S",
+     "downwind": [
+      "D30S1",
+      "D30S2",
+      "D30S3",
+      "D30S4",
+      "D30S5",
+      "D30S6",
+      "D30S7",
+      "D30S8",
+      "D30S9"
+     ],
+     "via": {
+      "IMPED": [
+       "X30S"
+      ]
+     }
+    }
+   },
+   "if": "IF30",
+   "missed_hold": "EGNOT",
+   "missed_hold2": "ADVAX"
+  },
+  "12L": {
+   "sides": {
+    "N": {
+     "feeder": "F12N",
+     "downwind": [
+      "D12N1",
+      "D12N2",
+      "D12N3",
+      "D12N4",
+      "D12N5",
+      "D12N6",
+      "D12N7",
+      "D12N8",
+      "D12N9"
+     ],
+     "via": {
+      "VUTEB": [
+       "X12N"
+      ]
+     }
+    },
+    "S": {
+     "feeder": "F12S",
+     "downwind": [
+      "D12S1",
+      "D12S2",
+      "D12S3",
+      "D12S4",
+      "D12S5",
+      "D12S6",
+      "D12S7",
+      "D12S8",
+      "D12S9"
+     ],
+     "via": {
+      "VUTEB": [
+       "X12S"
+      ]
+     }
+    }
+   },
+   "if": "IF12",
+   "missed_hold": "TALTU",
+   "missed_hold2": "RIMOL"
+  }
+ },
+ "arrival_flows": {
+  "30L": {
+   "VUTEB": "B",
+   "ITLAP": "N",
+   "IMPED": "S"
+  },
+  "12L": {
+   "VUTEB": "B",
+   "ITLAP": "N",
+   "IMPED": "N"
+  }
+ },
+ "alternates": {
+  "OMDW": {
+   "name": "Al Maktoum (DWC)",
+   "pos": [
+    24.896,
+    55.161
+   ],
+   "ils": "III",
+   "free_stands": 30,
+   "a380": true,
+   "dist_nm": 24.1
+  },
+  "OMSJ": {
+   "name": "Sharjah",
+   "pos": [
+    25.3286,
+    55.5172
+   ],
+   "ils": "I",
+   "free_stands": 12,
+   "a380": false,
+   "dist_nm": 9.5
+  },
+  "OMAA": {
+   "name": "Abu Dhabi",
+   "pos": [
+    24.433,
+    54.6511
+   ],
+   "ils": "III",
+   "free_stands": 20,
+   "a380": true,
+   "dist_nm": 62.7
+  },
+  "OMRK": {
+   "name": "Ras Al Khaimah",
+   "pos": [
+    25.6135,
+    55.9388
+   ],
+   "ils": "I",
+   "free_stands": 6,
+   "a380": false,
+   "dist_nm": 37.9
+  },
+  "OOMS": {
+   "name": "Muscat",
+   "pos": [
+    23.5933,
+    58.2844
+   ],
+   "ils": "II",
+   "free_stands": 25,
+   "a380": true,
+   "dist_nm": 188.2
+  },
+  "OTHH": {
+   "name": "Doha",
+   "pos": [
+    25.2731,
+    51.6081
+   ],
+   "ils": "III",
+   "free_stands": 999,
+   "a380": true,
+   "dist_nm": 204.0
+  },
+  "OBBI": {
+   "name": "Bahrain",
+   "pos": [
+    26.2708,
+    50.6336
+   ],
+   "ils": "II",
+   "free_stands": 999,
+   "a380": true,
+   "dist_nm": 263.0
+  }
+ },
+ "ground": {
+  "exits": {
+   "12L": [
+    {
+     "node": 2390,
+     "dist_m": 1117,
+     "rapid": false
+    },
+    {
+     "node": 2391,
+     "dist_m": 1223,
+     "rapid": false
+    },
+    {
+     "node": 1122,
+     "dist_m": 1367,
+     "rapid": true
+    },
+    {
+     "node": 21,
+     "dist_m": 1717,
+     "rapid": false
+    },
+    {
+     "node": 19,
+     "dist_m": 1840,
+     "rapid": false
+    },
+    {
+     "node": 1474,
+     "dist_m": 2257,
+     "rapid": false
+    },
+    {
+     "node": 3492,
+     "dist_m": 2618,
+     "rapid": false
+    },
+    {
+     "node": 716,
+     "dist_m": 2856,
+     "rapid": false
+    },
+    {
+     "node": 3497,
+     "dist_m": 3433,
+     "rapid": false
+    },
+    {
+     "node": 1947,
+     "dist_m": 3623,
+     "rapid": false
+    },
+    {
+     "node": 1926,
+     "dist_m": 3745,
+     "rapid": false
+    },
+    {
+     "node": 3490,
+     "dist_m": 3882,
+     "rapid": false
+    },
+    {
+     "node": 2004,
+     "dist_m": 4119,
+     "rapid": false
+    }
+   ],
+   "30R": [
+    {
+     "node": 3492,
+     "dist_m": 978,
+     "rapid": false
+    },
+    {
+     "node": 1474,
+     "dist_m": 1339,
+     "rapid": false
+    },
+    {
+     "node": 19,
+     "dist_m": 1756,
+     "rapid": false
+    },
+    {
+     "node": 21,
+     "dist_m": 1880,
+     "rapid": false
+    },
+    {
+     "node": 1122,
+     "dist_m": 2229,
+     "rapid": true
+    },
+    {
+     "node": 2391,
+     "dist_m": 2374,
+     "rapid": false
+    },
+    {
+     "node": 2390,
+     "dist_m": 2479,
+     "rapid": false
+    },
+    {
+     "node": 118,
+     "dist_m": 2846,
+     "rapid": false
+    },
+    {
+     "node": 1426,
+     "dist_m": 3222,
+     "rapid": true
+    },
+    {
+     "node": 2161,
+     "dist_m": 3558,
+     "rapid": false
+    },
+    {
+     "node": 734,
+     "dist_m": 4032,
+     "rapid": false
+    }
+   ],
+   "12R": [
+    {
+     "node": 612,
+     "dist_m": 1115,
+     "rapid": false
+    },
+    {
+     "node": 2383,
+     "dist_m": 1484,
+     "rapid": false
+    },
+    {
+     "node": 861,
+     "dist_m": 1644,
+     "rapid": true
+    },
+    {
+     "node": 3491,
+     "dist_m": 2004,
+     "rapid": false
+    },
+    {
+     "node": 1142,
+     "dist_m": 2244,
+     "rapid": false
+    },
+    {
+     "node": 3500,
+     "dist_m": 2585,
+     "rapid": false
+    },
+    {
+     "node": 523,
+     "dist_m": 2824,
+     "rapid": false
+    },
+    {
+     "node": 3493,
+     "dist_m": 3516,
+     "rapid": false
+    },
+    {
+     "node": 3494,
+     "dist_m": 3714,
+     "rapid": false
+    },
+    {
+     "node": 2177,
+     "dist_m": 3776,
+     "rapid": false
+    },
+    {
+     "node": 3499,
+     "dist_m": 3887,
+     "rapid": false
+    }
+   ],
+   "30L": [
+    {
+     "node": 3500,
+     "dist_m": 1011,
+     "rapid": false
+    },
+    {
+     "node": 1142,
+     "dist_m": 1352,
+     "rapid": false
+    },
+    {
+     "node": 3491,
+     "dist_m": 1592,
+     "rapid": false
+    },
+    {
+     "node": 861,
+     "dist_m": 1952,
+     "rapid": true
+    },
+    {
+     "node": 2383,
+     "dist_m": 2112,
+     "rapid": false
+    },
+    {
+     "node": 612,
+     "dist_m": 2481,
+     "rapid": true
+    },
+    {
+     "node": 610,
+     "dist_m": 2856,
+     "rapid": true
+    },
+    {
+     "node": 509,
+     "dist_m": 3451,
+     "rapid": true
+    },
+    {
+     "node": 1147,
+     "dist_m": 3597,
+     "rapid": false
+    },
+    {
+     "node": 837,
+     "dist_m": 3723,
+     "rapid": false
+    },
+    {
+     "node": 1118,
+     "dist_m": 4107,
+     "rapid": false
+    }
+   ]
+  },
+  "entries": {
+   "12L": [
+    {
+     "node": 734,
+     "start_m": 14,
+     "full_length": true
+    },
+    {
+     "node": 2161,
+     "start_m": 489,
+     "full_length": true
+    },
+    {
+     "node": 1426,
+     "start_m": 824,
+     "full_length": false
+    },
+    {
+     "node": 118,
+     "start_m": 1200,
+     "full_length": false
+    },
+    {
+     "node": 2390,
+     "start_m": 1567,
+     "full_length": false
+    },
+    {
+     "node": 2391,
+     "start_m": 1673,
+     "full_length": false
+    }
+   ],
+   "30R": [
+    {
+     "node": 3490,
+     "start_m": 15,
+     "full_length": true
+    },
+    {
+     "node": 1926,
+     "start_m": 151,
+     "full_length": true
+    },
+    {
+     "node": 1947,
+     "start_m": 274,
+     "full_length": true
+    },
+    {
+     "node": 3497,
+     "start_m": 463,
+     "full_length": true
+    },
+    {
+     "node": 716,
+     "start_m": 1040,
+     "full_length": false
+    },
+    {
+     "node": 3492,
+     "start_m": 1278,
+     "full_length": false
+    },
+    {
+     "node": 1474,
+     "start_m": 1639,
+     "full_length": false
+    }
+   ],
+   "12R": [
+    {
+     "node": 1118,
+     "start_m": 204,
+     "full_length": true
+    },
+    {
+     "node": 837,
+     "start_m": 588,
+     "full_length": false
+    },
+    {
+     "node": 1147,
+     "start_m": 714,
+     "full_length": false
+    },
+    {
+     "node": 509,
+     "start_m": 859,
+     "full_length": false
+    },
+    {
+     "node": 612,
+     "start_m": 1830,
+     "full_length": false
+    }
+   ],
+   "30L": [
+    {
+     "node": 2177,
+     "start_m": 0,
+     "full_length": true
+    },
+    {
+     "node": 3494,
+     "start_m": 14,
+     "full_length": true
+    },
+    {
+     "node": 3493,
+     "start_m": 211,
+     "full_length": true
+    },
+    {
+     "node": 523,
+     "start_m": 904,
+     "full_length": false
+    },
+    {
+     "node": 3500,
+     "start_m": 1143,
+     "full_length": false
+    },
+    {
+     "node": 1142,
+     "start_m": 1484,
+     "full_length": false
+    },
+    {
+     "node": 3491,
+     "start_m": 1724,
+     "full_length": false
+    }
+   ]
+  },
+  "stands": {
+   "A1": {
+    "node": 3123,
+    "area": "A",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     489.8,
+     -877.0
+    ]
+   },
+   "A10": {
+    "node": 3143,
+    "area": "A",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     1121.6,
+     -1188.6
+    ]
+   },
+   "A2": {
+    "node": 3125,
+    "area": "A",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     528.4,
+     -819.0
+    ]
+   },
+   "A3": {
+    "node": 3127,
+    "area": "A",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     586.9,
+     -858.9
+    ]
+   },
+   "A4": {
+    "node": 3130,
+    "area": "A",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     681.1,
+     -918.9
+    ]
+   },
+   "A5": {
+    "node": 3133,
+    "area": "A",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     758.4,
+     -963.6
+    ]
+   },
+   "A6": {
+    "node": 3135,
+    "area": "A",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     834.0,
+     -1009.2
+    ]
+   },
+   "A7": {
+    "node": 3136,
+    "area": "A",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     909.8,
+     -1056.7
+    ]
+   },
+   "A8": {
+    "node": 3138,
+    "area": "A",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     985.7,
+     -1102.0
+    ]
+   },
+   "A9": {
+    "node": 3140,
+    "area": "A",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     1062.4,
+     -1146.5
+    ]
+   },
+   "D1": {
+    "node": 3121,
+    "area": "A",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     440.5,
+     -942.7
+    ]
+   },
+   "D10": {
+    "node": 3145,
+    "area": "A",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     1102.9,
+     -1248.4
+    ]
+   },
+   "D2": {
+    "node": 3161,
+    "area": "A",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     503.2,
+     -975.7
+    ]
+   },
+   "D3": {
+    "node": 3159,
+    "area": "A",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     577.4,
+     -1021.0
+    ]
+   },
+   "D4": {
+    "node": 3157,
+    "area": "A",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     671.1,
+     -1081.1
+    ]
+   },
+   "D5": {
+    "node": 3155,
+    "area": "A",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     747.0,
+     -1126.2
+    ]
+   },
+   "D6": {
+    "node": 3153,
+    "area": "A",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     822.6,
+     -1172.0
+    ]
+   },
+   "D7": {
+    "node": 3151,
+    "area": "A",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     898.5,
+     -1220.0
+    ]
+   },
+   "D8": {
+    "node": 3149,
+    "area": "A",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     972.8,
+     -1268.3
+    ]
+   },
+   "D9": {
+    "node": 3147,
+    "area": "A",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     1044.9,
+     -1312.0
+    ]
+   },
+   "B12": {
+    "node": 3005,
+    "area": "B",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     -722.6,
+     -292.4
+    ]
+   },
+   "B14": {
+    "node": 3001,
+    "area": "B",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     -663.7,
+     -339.6
+    ]
+   },
+   "B15": {
+    "node": 3003,
+    "area": "B",
+    "contact": true,
+    "code": "E",
+    "xy": [
+     -598.9,
+     -374.7
+    ]
+   },
+   "B16": {
+    "node": 2999,
+    "area": "B",
+    "contact": true,
+    "code": "E",
+    "xy": [
+     -539.5,
+     -410.7
+    ]
+   },
+   "B17": {
+    "node": 2997,
+    "area": "B",
+    "contact": true,
+    "code": "E",
+    "xy": [
+     -476.6,
+     -445.3
+    ]
+   },
+   "B18L": {
+    "node": 2995,
+    "area": "B",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     -418.1,
+     -486.1
+    ]
+   },
+   "B18R": {
+    "node": 3451,
+    "area": "B",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     -422.1,
+     -495.8
+    ]
+   },
+   "B20": {
+    "node": 2993,
+    "area": "B",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     -274.3,
+     -572.1
+    ]
+   },
+   "B21L": {
+    "node": 3453,
+    "area": "B",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     -205.3,
+     -614.0
+    ]
+   },
+   "B21R": {
+    "node": 2991,
+    "area": "B",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     -203.0,
+     -616.6
+    ]
+   },
+   "B22": {
+    "node": 2989,
+    "area": "B",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     -124.2,
+     -663.8
+    ]
+   },
+   "B23": {
+    "node": 2987,
+    "area": "B",
+    "contact": true,
+    "code": "E",
+    "xy": [
+     -62.1,
+     -700.6
+    ]
+   },
+   "B24": {
+    "node": 2985,
+    "area": "B",
+    "contact": true,
+    "code": "E",
+    "xy": [
+     0.1,
+     -739.2
+    ]
+   },
+   "B25": {
+    "node": 2965,
+    "area": "B",
+    "contact": true,
+    "code": "E",
+    "xy": [
+     61.6,
+     -773.8
+    ]
+   },
+   "B26L": {
+    "node": 2963,
+    "area": "B",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     114.1,
+     -793.3
+    ]
+   },
+   "B26R": {
+    "node": 3444,
+    "area": "B",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     116.4,
+     -800.7
+    ]
+   },
+   "B27": {
+    "node": 2961,
+    "area": "B",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     149.1,
+     -748.0
+    ]
+   },
+   "F17": {
+    "node": 2984,
+    "area": "B",
+    "contact": true,
+    "code": "E",
+    "xy": [
+     -478.7,
+     -279.5
+    ]
+   },
+   "F18": {
+    "node": 2982,
+    "area": "B",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     -412.3,
+     -322.4
+    ]
+   },
+   "F19": {
+    "node": 2980,
+    "area": "B",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     -318.3,
+     -378.0
+    ]
+   },
+   "F20": {
+    "node": 2978,
+    "area": "B",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     -242.5,
+     -424.4
+    ]
+   },
+   "F21": {
+    "node": 2975,
+    "area": "B",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     -164.7,
+     -469.1
+    ]
+   },
+   "F22": {
+    "node": 2973,
+    "area": "B",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     -88.8,
+     -515.2
+    ]
+   },
+   "F23": {
+    "node": 2971,
+    "area": "B",
+    "contact": true,
+    "code": "E",
+    "xy": [
+     -20.7,
+     -554.4
+    ]
+   },
+   "F24": {
+    "node": 2970,
+    "area": "B",
+    "contact": true,
+    "code": "E",
+    "xy": [
+     40.8,
+     -591.9
+    ]
+   },
+   "F25": {
+    "node": 2967,
+    "area": "B",
+    "contact": true,
+    "code": "E",
+    "xy": [
+     104.0,
+     -630.6
+    ]
+   },
+   "F26L": {
+    "node": 2958,
+    "area": "B",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     162.4,
+     -654.4
+    ]
+   },
+   "F26R": {
+    "node": 3117,
+    "area": "B",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     166.8,
+     -650.7
+    ]
+   },
+   "F27": {
+    "node": 2959,
+    "area": "B",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     185.0,
+     -707.3
+    ]
+   },
+   "B1": {
+    "node": 3029,
+    "area": "C",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     -1411.2,
+     132.1
+    ]
+   },
+   "B10": {
+    "node": 3442,
+    "area": "C",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     -874.4,
+     -191.3
+    ]
+   },
+   "B11": {
+    "node": 3037,
+    "area": "C",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     -795.0,
+     -239.7
+    ]
+   },
+   "B2": {
+    "node": 3030,
+    "area": "C",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     -1365.0,
+     101.8
+    ]
+   },
+   "B3": {
+    "node": 3031,
+    "area": "C",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     -1307.6,
+     67.7
+    ]
+   },
+   "B4": {
+    "node": 3032,
+    "area": "C",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     -1243.0,
+     34.4
+    ]
+   },
+   "B5": {
+    "node": 3454,
+    "area": "C",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     -1182.1,
+     -5.5
+    ]
+   },
+   "B6": {
+    "node": 3033,
+    "area": "C",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     -1110.7,
+     -49.5
+    ]
+   },
+   "B8": {
+    "node": 3035,
+    "area": "C",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     -1039.4,
+     -99.3
+    ]
+   },
+   "B9": {
+    "node": 3440,
+    "area": "C",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     -958.3,
+     -139.8
+    ]
+   },
+   "F10": {
+    "node": 3012,
+    "area": "C",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     -893.3,
+     -24.9
+    ]
+   },
+   "F12": {
+    "node": 3010,
+    "area": "C",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     -820.6,
+     -79.5
+    ]
+   },
+   "F13": {
+    "node": 3008,
+    "area": "C",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     -748.0,
+     -123.7
+    ]
+   },
+   "F2": {
+    "node": 3027,
+    "area": "C",
+    "contact": true,
+    "code": "C",
+    "xy": [
+     -1428.4,
+     205.5
+    ]
+   },
+   "F3": {
+    "node": 3026,
+    "area": "C",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     -1392.6,
+     278.0
+    ]
+   },
+   "F4": {
+    "node": 3024,
+    "area": "C",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     -1333.2,
+     238.8
+    ]
+   },
+   "F5": {
+    "node": 3022,
+    "area": "C",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     -1269.2,
+     202.9
+    ]
+   },
+   "F6": {
+    "node": 3020,
+    "area": "C",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     -1198.4,
+     144.4
+    ]
+   },
+   "F7": {
+    "node": 3018,
+    "area": "C",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     -1120.3,
+     106.9
+    ]
+   },
+   "F8": {
+    "node": 3016,
+    "area": "C",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     -1043.7,
+     61.5
+    ]
+   },
+   "F9": {
+    "node": 3014,
+    "area": "C",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     -971.2,
+     15.5
+    ]
+   },
+   "C48": {
+    "node": 3323,
+    "area": "D",
+    "contact": true,
+    "code": "C",
+    "xy": [
+     -2439.8,
+     705.1
+    ]
+   },
+   "C49": {
+    "node": 3325,
+    "area": "D",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     -2397.2,
+     749.4
+    ]
+   },
+   "C50": {
+    "node": 3320,
+    "area": "D",
+    "contact": true,
+    "code": "E",
+    "xy": [
+     -2348.8,
+     804.6
+    ]
+   },
+   "C51": {
+    "node": 3316,
+    "area": "D",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     -2339.7,
+     862.0
+    ]
+   },
+   "C51L": {
+    "node": 3334,
+    "area": "D",
+    "contact": true,
+    "code": "C",
+    "xy": [
+     -2325.1,
+     872.7
+    ]
+   },
+   "C51R": {
+    "node": 3318,
+    "area": "D",
+    "contact": true,
+    "code": "C",
+    "xy": [
+     -2347.4,
+     880.3
+    ]
+   },
+   "C52": {
+    "node": 3314,
+    "area": "D",
+    "contact": true,
+    "code": "E",
+    "xy": [
+     -2272.7,
+     814.8
+    ]
+   },
+   "C53": {
+    "node": 3310,
+    "area": "D",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     -2200.0,
+     779.4
+    ]
+   },
+   "C53L": {
+    "node": 3308,
+    "area": "D",
+    "contact": true,
+    "code": "C",
+    "xy": [
+     -2176.7,
+     773.0
+    ]
+   },
+   "C53R": {
+    "node": 3312,
+    "area": "D",
+    "contact": true,
+    "code": "C",
+    "xy": [
+     -2225.6,
+     773.2
+    ]
+   },
+   "C54": {
+    "node": 3304,
+    "area": "D",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     -2122.9,
+     726.7
+    ]
+   },
+   "C54L": {
+    "node": 3302,
+    "area": "D",
+    "contact": true,
+    "code": "C",
+    "xy": [
+     -2100.1,
+     721.7
+    ]
+   },
+   "C54R": {
+    "node": 3306,
+    "area": "D",
+    "contact": true,
+    "code": "C",
+    "xy": [
+     -2144.1,
+     728.2
+    ]
+   },
+   "C55": {
+    "node": 3298,
+    "area": "D",
+    "contact": true,
+    "code": "F",
+    "xy": [
+     -2045.8,
+     676.2
+    ]
+   },
+   "C55L": {
+    "node": 3296,
+    "area": "D",
+    "contact": true,
+    "code": "C",
+    "xy": [
+     -2016.9,
+     684.5
+    ]
+   },
+   "C55R": {
+    "node": 3300,
+    "area": "D",
+    "contact": true,
+    "code": "C",
+    "xy": [
+     -2068.0,
+     676.9
+    ]
+   },
+   "C56": {
+    "node": 3294,
+    "area": "D",
+    "contact": true,
+    "code": "E",
+    "xy": [
+     -1963.2,
+     637.8
+    ]
+   },
+   "C57": {
+    "node": 3292,
+    "area": "D",
+    "contact": true,
+    "code": "E",
+    "xy": [
+     -1900.8,
+     601.6
+    ]
+   },
+   "C58": {
+    "node": 3290,
+    "area": "D",
+    "contact": true,
+    "code": "E",
+    "xy": [
+     -1838.7,
+     563.8
+    ]
+   },
+   "C59": {
+    "node": 3288,
+    "area": "D",
+    "contact": true,
+    "code": "E",
+    "xy": [
+     -1775.2,
+     527.9
+    ]
+   },
+   "C60": {
+    "node": 3286,
+    "area": "D",
+    "contact": true,
+    "code": "E",
+    "xy": [
+     -1713.1,
+     491.9
+    ]
+   },
+   "C61": {
+    "node": 3336,
+    "area": "D",
+    "contact": true,
+    "code": "E",
+    "xy": [
+     -1675.6,
+     467.0
+    ]
+   },
+   "C62": {
+    "node": 3338,
+    "area": "D",
+    "contact": true,
+    "code": "E",
+    "xy": [
+     -1673.4,
+     421.7
+    ]
+   },
+   "C63": {
+    "node": 3340,
+    "area": "D",
+    "contact": true,
+    "code": "E",
+    "xy": [
+     -1708.8,
+     358.9
+    ]
+   },
+   "C64": {
+    "node": 3342,
+    "area": "D",
+    "contact": true,
+    "code": "E",
+    "xy": [
+     -1743.4,
+     293.0
+    ]
+   },
+   "E10L": {
+    "node": 3465,
+    "area": "F",
+    "contact": true,
+    "code": "C",
+    "xy": [
+     -776.1,
+     1382.5
+    ]
+   },
+   "E10R": {
+    "node": 3467,
+    "area": "F",
+    "contact": true,
+    "code": "C",
+    "xy": [
+     -735.2,
+     1361.0
+    ]
+   },
+   "E11L": {
+    "node": 3477,
+    "area": "F",
+    "contact": true,
+    "code": "C",
+    "xy": [
+     -696.1,
+     1338.4
+    ]
+   },
+   "E11R": {
+    "node": 3475,
+    "area": "F",
+    "contact": true,
+    "code": "C",
+    "xy": [
+     -657.7,
+     1313.7
+    ]
+   },
+   "E12L": {
+    "node": 3473,
+    "area": "F",
+    "contact": true,
+    "code": "C",
+    "xy": [
+     -619.1,
+     1292.9
+    ]
+   },
+   "E12R": {
+    "node": 3471,
+    "area": "F",
+    "contact": true,
+    "code": "C",
+    "xy": [
+     -579.9,
+     1266.7
+    ]
+   },
+   "E13": {
+    "node": 3469,
+    "area": "F",
+    "contact": true,
+    "code": "C",
+    "xy": [
+     -541.7,
+     1246.9
+    ]
+   },
+   "E14": {
+    "node": 3455,
+    "area": "F",
+    "contact": true,
+    "code": "E",
+    "xy": [
+     -468.4,
+     1216.9
+    ]
+   },
+   "E4": {
+    "node": 3180,
+    "area": "F",
+    "contact": true,
+    "code": "C",
+    "xy": [
+     -1109.8,
+     1586.5
+    ]
+   },
+   "E5": {
+    "node": 3182,
+    "area": "F",
+    "contact": true,
+    "code": "C",
+    "xy": [
+     -1073.3,
+     1562.3
+    ]
+   },
+   "E6": {
+    "node": 3184,
+    "area": "F",
+    "contact": true,
+    "code": "C",
+    "xy": [
+     -1023.3,
+     1526.1
+    ]
+   },
+   "E7L": {
+    "node": 3186,
+    "area": "F",
+    "contact": true,
+    "code": "C",
+    "xy": [
+     -984.0,
+     1503.3
+    ]
+   },
+   "E7R": {
+    "node": 3188,
+    "area": "F",
+    "contact": true,
+    "code": "C",
+    "xy": [
+     -946.2,
+     1479.3
+    ]
+   },
+   "E8": {
+    "node": 3459,
+    "area": "F",
+    "contact": true,
+    "code": "C",
+    "xy": [
+     -888.7,
+     1454.5
+    ]
+   },
+   "E9L": {
+    "node": 3461,
+    "area": "F",
+    "contact": true,
+    "code": "C",
+    "xy": [
+     -849.6,
+     1431.1
+    ]
+   },
+   "E9R": {
+    "node": 3463,
+    "area": "F",
+    "contact": true,
+    "code": "C",
+    "xy": [
+     -810.6,
+     1409.0
+    ]
+   },
+   "C41": {
+    "node": 3061,
+    "area": "cargo",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     -2570.0,
+     1205.9
+    ]
+   },
+   "C42": {
+    "node": 3059,
+    "area": "cargo",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     -2506.5,
+     1163.9
+    ]
+   },
+   "C43": {
+    "node": 3115,
+    "area": "cargo",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     -2426.1,
+     1159.6
+    ]
+   },
+   "C44": {
+    "node": 3113,
+    "area": "cargo",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     -2463.3,
+     1096.3
+    ]
+   },
+   "C45": {
+    "node": 3042,
+    "area": "cargo",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     -2500.6,
+     1036.2
+    ]
+   },
+   "C46": {
+    "node": 3332,
+    "area": "cargo",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     -2537.9,
+     975.7
+    ]
+   },
+   "C47": {
+    "node": 3040,
+    "area": "cargo",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     -2575.4,
+     908.9
+    ]
+   },
+   "E15": {
+    "node": 3456,
+    "area": "cargo",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     -408.3,
+     1176.7
+    ]
+   },
+   "E16": {
+    "node": 3458,
+    "area": "cargo",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     -340.1,
+     1147.5
+    ]
+   },
+   "E17": {
+    "node": 3250,
+    "area": "cargo",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     -284.4,
+     1101.4
+    ]
+   },
+   "E18": {
+    "node": 3251,
+    "area": "cargo",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     -214.2,
+     1062.8
+    ]
+   },
+   "E19": {
+    "node": 3252,
+    "area": "cargo",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     -141.2,
+     1014.8
+    ]
+   },
+   "E20": {
+    "node": 3253,
+    "area": "cargo",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     -62.7,
+     975.6
+    ]
+   },
+   "E21": {
+    "node": 3254,
+    "area": "cargo",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     5.1,
+     933.5
+    ]
+   },
+   "E22": {
+    "node": 3255,
+    "area": "cargo",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     67.8,
+     896.5
+    ]
+   },
+   "E23": {
+    "node": 3256,
+    "area": "cargo",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     127.2,
+     855.5
+    ]
+   },
+   "E24": {
+    "node": 3257,
+    "area": "cargo",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     184.7,
+     811.3
+    ]
+   },
+   "E25": {
+    "node": 3258,
+    "area": "cargo",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     250.3,
+     779.1
+    ]
+   },
+   "E26": {
+    "node": 3259,
+    "area": "cargo",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     312.9,
+     742.9
+    ]
+   },
+   "E27": {
+    "node": 3260,
+    "area": "cargo",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     373.7,
+     703.7
+    ]
+   },
+   "E28": {
+    "node": 3261,
+    "area": "cargo",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     436.4,
+     666.2
+    ]
+   },
+   "C18": {
+    "node": 3075,
+    "area": "remote",
+    "contact": false,
+    "code": "C",
+    "xy": [
+     -2249.4,
+     1623.2
+    ]
+   },
+   "C19": {
+    "node": 3077,
+    "area": "remote",
+    "contact": false,
+    "code": "C",
+    "xy": [
+     -2212.4,
+     1600.4
+    ]
+   },
+   "C20": {
+    "node": 3079,
+    "area": "remote",
+    "contact": false,
+    "code": "C",
+    "xy": [
+     -2175.7,
+     1577.3
+    ]
+   },
+   "C21": {
+    "node": 3081,
+    "area": "remote",
+    "contact": false,
+    "code": "C",
+    "xy": [
+     -2138.2,
+     1555.1
+    ]
+   },
+   "C22": {
+    "node": 3083,
+    "area": "remote",
+    "contact": false,
+    "code": "C",
+    "xy": [
+     -2100.4,
+     1531.5
+    ]
+   },
+   "C23": {
+    "node": 3085,
+    "area": "remote",
+    "contact": false,
+    "code": "C",
+    "xy": [
+     -2064.2,
+     1508.4
+    ]
+   },
+   "C24": {
+    "node": 3063,
+    "area": "remote",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     -2350.7,
+     1402.0
+    ]
+   },
+   "C25": {
+    "node": 3065,
+    "area": "remote",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     -2275.1,
+     1355.9
+    ]
+   },
+   "C26": {
+    "node": 3068,
+    "area": "remote",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     -2199.2,
+     1310.6
+    ]
+   },
+   "C27": {
+    "node": 3070,
+    "area": "remote",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     -2123.9,
+     1263.1
+    ]
+   },
+   "C28": {
+    "node": 3445,
+    "area": "remote",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     -2028.4,
+     1139.5
+    ]
+   },
+   "C29": {
+    "node": 3072,
+    "area": "remote",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     -1962.4,
+     1103.3
+    ]
+   },
+   "C30": {
+    "node": 3074,
+    "area": "remote",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     -1899.7,
+     1066.8
+    ]
+   },
+   "C31": {
+    "node": 3449,
+    "area": "remote",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     -2443.2,
+     1418.6
+    ]
+   },
+   "C32": {
+    "node": 3043,
+    "area": "remote",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     -2384.7,
+     1375.2
+    ]
+   },
+   "C33": {
+    "node": 3045,
+    "area": "remote",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     -2322.1,
+     1339.2
+    ]
+   },
+   "C34": {
+    "node": 3048,
+    "area": "remote",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     -2265.4,
+     1299.8
+    ]
+   },
+   "C35": {
+    "node": 3050,
+    "area": "remote",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     -2202.4,
+     1263.8
+    ]
+   },
+   "C36": {
+    "node": 3052,
+    "area": "remote",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     -2136.3,
+     1226.6
+    ]
+   },
+   "C37": {
+    "node": 3330,
+    "area": "remote",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     -2067.4,
+     1130.4
+    ]
+   },
+   "C38": {
+    "node": 3054,
+    "area": "remote",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     -2009.8,
+     1089.7
+    ]
+   },
+   "C39": {
+    "node": 3056,
+    "area": "remote",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     -1945.6,
+     1052.9
+    ]
+   },
+   "C40": {
+    "node": 3058,
+    "area": "remote",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     -1886.7,
+     1013.5
+    ]
+   },
+   "E1": {
+    "node": 3118,
+    "area": "remote",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     -1289.5,
+     1710.2
+    ]
+   },
+   "E2": {
+    "node": 3119,
+    "area": "remote",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     -1228.8,
+     1673.2
+    ]
+   },
+   "E29": {
+    "node": 3262,
+    "area": "remote",
+    "contact": false,
+    "code": "C",
+    "xy": [
+     491.5,
+     626.7
+    ]
+   },
+   "E3": {
+    "node": 3120,
+    "area": "remote",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     -1165.8,
+     1637.8
+    ]
+   },
+   "E30": {
+    "node": 3263,
+    "area": "remote",
+    "contact": false,
+    "code": "D",
+    "xy": [
+     543.6,
+     598.1
+    ]
+   },
+   "E31": {
+    "node": 3264,
+    "area": "remote",
+    "contact": false,
+    "code": "C",
+    "xy": [
+     574.4,
+     557.3
+    ]
+   },
+   "E32": {
+    "node": 3265,
+    "area": "remote",
+    "contact": false,
+    "code": "C",
+    "xy": [
+     616.2,
+     551.7
+    ]
+   },
+   "E33": {
+    "node": 3266,
+    "area": "remote",
+    "contact": false,
+    "code": "C",
+    "xy": [
+     651.6,
+     530.3
+    ]
+   },
+   "E34": {
+    "node": 3267,
+    "area": "remote",
+    "contact": false,
+    "code": "C",
+    "xy": [
+     687.5,
+     512.8
+    ]
+   },
+   "E35": {
+    "node": 3268,
+    "area": "remote",
+    "contact": false,
+    "code": "C",
+    "xy": [
+     724.3,
+     489.2
+    ]
+   },
+   "E36": {
+    "node": 3269,
+    "area": "remote",
+    "contact": false,
+    "code": "D",
+    "xy": [
+     758.3,
+     467.8
+    ]
+   },
+   "E37": {
+    "node": 3270,
+    "area": "remote",
+    "contact": false,
+    "code": "C",
+    "xy": [
+     797.4,
+     451.7
+    ]
+   },
+   "E38": {
+    "node": 3271,
+    "area": "remote",
+    "contact": false,
+    "code": "C",
+    "xy": [
+     830.4,
+     431.0
+    ]
+   },
+   "E43": {
+    "node": 3222,
+    "area": "remote",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     1186.9,
+     206.1
+    ]
+   },
+   "E44": {
+    "node": 3200,
+    "area": "remote",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     903.4,
+     376.1
+    ]
+   },
+   "E44L": {
+    "node": 3202,
+    "area": "remote",
+    "contact": false,
+    "code": "C",
+    "xy": [
+     877.5,
+     377.1
+    ]
+   },
+   "E44R": {
+    "node": 3201,
+    "area": "remote",
+    "contact": false,
+    "code": "C",
+    "xy": [
+     916.3,
+     354.6
+    ]
+   },
+   "E45": {
+    "node": 3203,
+    "area": "remote",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     1041.9,
+     292.4
+    ]
+   },
+   "E45L": {
+    "node": 3204,
+    "area": "remote",
+    "contact": false,
+    "code": "C",
+    "xy": [
+     1017.1,
+     295.4
+    ]
+   },
+   "E45R": {
+    "node": 3205,
+    "area": "remote",
+    "contact": false,
+    "code": "C",
+    "xy": [
+     1054.9,
+     272.0
+    ]
+   },
+   "G1": {
+    "node": 3217,
+    "area": "remote",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     1362.3,
+     -1302.0
+    ]
+   },
+   "G10": {
+    "node": 3213,
+    "area": "remote",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     1690.0,
+     -1501.4
+    ]
+   },
+   "G11": {
+    "node": 3211,
+    "area": "remote",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     1748.7,
+     -1550.0
+    ]
+   },
+   "G12": {
+    "node": 3209,
+    "area": "remote",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     1814.0,
+     -1576.2
+    ]
+   },
+   "G13": {
+    "node": 3207,
+    "area": "remote",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     1875.0,
+     -1615.6
+    ]
+   },
+   "G14": {
+    "node": 3165,
+    "area": "remote",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     1839.9,
+     -1696.6
+    ]
+   },
+   "G15": {
+    "node": 3164,
+    "area": "remote",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     1800.5,
+     -1760.2
+    ]
+   },
+   "G17": {
+    "node": 3178,
+    "area": "remote",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     1963.8,
+     -1940.4
+    ]
+   },
+   "G18": {
+    "node": 3176,
+    "area": "remote",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     2001.7,
+     -1879.2
+    ]
+   },
+   "G19": {
+    "node": 3174,
+    "area": "remote",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     2041.6,
+     -1815.7
+    ]
+   },
+   "G2": {
+    "node": 3219,
+    "area": "remote",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     1423.2,
+     -1341.0
+    ]
+   },
+   "G20": {
+    "node": 3172,
+    "area": "remote",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     2078.9,
+     -1751.3
+    ]
+   },
+   "G21": {
+    "node": 3170,
+    "area": "remote",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     2119.7,
+     -1689.1
+    ]
+   },
+   "G22": {
+    "node": 3327,
+    "area": "remote",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     2419.7,
+     -1870.4
+    ]
+   },
+   "G3": {
+    "node": 3221,
+    "area": "remote",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     1484.0,
+     -1373.4
+    ]
+   },
+   "G4": {
+    "node": 3224,
+    "area": "remote",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     1408.2,
+     -1415.3
+    ]
+   },
+   "G5": {
+    "node": 3226,
+    "area": "remote",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     1369.9,
+     -1478.7
+    ]
+   },
+   "G6": {
+    "node": 3232,
+    "area": "remote",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     1539.2,
+     -1661.6
+    ]
+   },
+   "G7": {
+    "node": 3230,
+    "area": "remote",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     1576.5,
+     -1597.6
+    ]
+   },
+   "G8": {
+    "node": 3228,
+    "area": "remote",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     1615.9,
+     -1536.8
+    ]
+   },
+   "G9": {
+    "node": 3215,
+    "area": "remote",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     1629.0,
+     -1463.3
+    ]
+   },
+   "H1#1": {
+    "node": 3241,
+    "area": "remote",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     2458.0,
+     -1976.5
+    ]
+   },
+   "H1#2": {
+    "node": 3248,
+    "area": "remote",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     2887.7,
+     -2174.0
+    ]
+   },
+   "H2": {
+    "node": 3234,
+    "area": "remote",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     2501.6,
+     -2018.5
+    ]
+   },
+   "H3": {
+    "node": 3248,
+    "area": "remote",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     2887.7,
+     -2174.0
+    ]
+   },
+   "H4": {
+    "node": 2828,
+    "area": "remote",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     3236.9,
+     -2332.4
+    ]
+   },
+   "Q1": {
+    "node": 3189,
+    "area": "remote",
+    "contact": false,
+    "code": "C",
+    "xy": [
+     942.3,
+     461.1
+    ]
+   },
+   "Q10": {
+    "node": 3198,
+    "area": "remote",
+    "contact": false,
+    "code": "C",
+    "xy": [
+     1081.4,
+     380.9
+    ]
+   },
+   "Q11": {
+    "node": 3199,
+    "area": "remote",
+    "contact": false,
+    "code": "C",
+    "xy": [
+     1058.2,
+     342.3
+    ]
+   },
+   "Q2": {
+    "node": 3190,
+    "area": "remote",
+    "contact": false,
+    "code": "C",
+    "xy": [
+     965.8,
+     499.4
+    ]
+   },
+   "Q3": {
+    "node": 3191,
+    "area": "remote",
+    "contact": false,
+    "code": "C",
+    "xy": [
+     989.6,
+     537.5
+    ]
+   },
+   "Q4": {
+    "node": 3192,
+    "area": "remote",
+    "contact": false,
+    "code": "C",
+    "xy": [
+     1013.4,
+     576.1
+    ]
+   },
+   "Q5": {
+    "node": 3193,
+    "area": "remote",
+    "contact": false,
+    "code": "C",
+    "xy": [
+     1035.4,
+     616.5
+    ]
+   },
+   "Q6": {
+    "node": 3194,
+    "area": "remote",
+    "contact": false,
+    "code": "C",
+    "xy": [
+     1175.0,
+     534.7
+    ]
+   },
+   "Q7": {
+    "node": 3195,
+    "area": "remote",
+    "contact": false,
+    "code": "C",
+    "xy": [
+     1151.1,
+     495.9
+    ]
+   },
+   "Q8": {
+    "node": 3196,
+    "area": "remote",
+    "contact": false,
+    "code": "C",
+    "xy": [
+     1127.9,
+     457.8
+    ]
+   },
+   "Q9": {
+    "node": 3197,
+    "area": "remote",
+    "contact": false,
+    "code": "C",
+    "xy": [
+     1103.8,
+     420.0
+    ]
+   },
+   "S1": {
+    "node": 3350,
+    "area": "remote",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     3470.5,
+     -1504.8
+    ]
+   },
+   "S10": {
+    "node": 3354,
+    "area": "remote",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     3280.9,
+     -1659.6
+    ]
+   },
+   "S11": {
+    "node": 3355,
+    "area": "remote",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     3217.7,
+     -1622.6
+    ]
+   },
+   "S12": {
+    "node": 3356,
+    "area": "remote",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     3158.8,
+     -1581.8
+    ]
+   },
+   "S13": {
+    "node": 3357,
+    "area": "remote",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     3094.3,
+     -1546.1
+    ]
+   },
+   "S14": {
+    "node": 3358,
+    "area": "remote",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     3029.7,
+     -1513.2
+    ]
+   },
+   "S15": {
+    "node": 3438,
+    "area": "remote",
+    "contact": false,
+    "code": "D",
+    "xy": [
+     2982.8,
+     -1477.3
+    ]
+   },
+   "S2": {
+    "node": 3351,
+    "area": "remote",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     3531.8,
+     -1544.0
+    ]
+   },
+   "S3": {
+    "node": 3349,
+    "area": "remote",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     3568.8,
+     -1575.6
+    ]
+   },
+   "S8": {
+    "node": 3352,
+    "area": "remote",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     3416.5,
+     -1747.5
+    ]
+   },
+   "S9": {
+    "node": 3353,
+    "area": "remote",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     3354.2,
+     -1712.0
+    ]
+   },
+   "R4939": {
+    "node": 3087,
+    "area": "remote",
+    "contact": false,
+    "code": "D",
+    "xy": [
+     1422.1,
+     79.3
+    ]
+   },
+   "R4940": {
+    "node": 3090,
+    "area": "remote",
+    "contact": false,
+    "code": "D",
+    "xy": [
+     1514.7,
+     20.3
+    ]
+   },
+   "R5054": {
+    "node": 3094,
+    "area": "remote",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     1608.2,
+     -36.9
+    ]
+   },
+   "R5110": {
+    "node": 3100,
+    "area": "remote",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     1703.0,
+     -92.6
+    ]
+   },
+   "R5130": {
+    "node": 3106,
+    "area": "remote",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     1795.1,
+     -150.8
+    ]
+   },
+   "R1799": {
+    "node": 3101,
+    "area": "remote",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     1654.1,
+     -171.5
+    ]
+   },
+   "R1800": {
+    "node": 3095,
+    "area": "remote",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     1559.6,
+     -116.0
+    ]
+   },
+   "R9992": {
+    "node": 3233,
+    "area": "remote",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     2615.9,
+     -1998.2
+    ]
+   },
+   "R0063": {
+    "node": 3107,
+    "area": "remote",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     1741.6,
+     -228.1
+    ]
+   },
+   "R1559": {
+    "node": 3343,
+    "area": "remote",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     3090.2,
+     -2311.0
+    ]
+   },
+   "R1560": {
+    "node": 3344,
+    "area": "remote",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     3016.2,
+     -2289.0
+    ]
+   },
+   "R1561": {
+    "node": 3345,
+    "area": "remote",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     2937.9,
+     -2261.4
+    ]
+   },
+   "R1562": {
+    "node": 3346,
+    "area": "remote",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     2747.0,
+     -2167.8
+    ]
+   },
+   "R1563": {
+    "node": 3347,
+    "area": "remote",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     2675.4,
+     -2126.5
+    ]
+   },
+   "R1564": {
+    "node": 3348,
+    "area": "remote",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     2618.6,
+     -2078.1
+    ]
+   },
+   "R7956": {
+    "node": 3359,
+    "area": "remote",
+    "contact": false,
+    "code": "D",
+    "xy": [
+     1458.7,
+     35.4
+    ]
+   },
+   "R7957": {
+    "node": 3360,
+    "area": "remote",
+    "contact": false,
+    "code": "C",
+    "xy": [
+     1418.6,
+     -29.3
+    ]
+   },
+   "R7960": {
+    "node": 3375,
+    "area": "remote",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     1280.5,
+     252.6
+    ]
+   },
+   "R7962": {
+    "node": 3377,
+    "area": "remote",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     1331.4,
+     336.8
+    ]
+   },
+   "R7964": {
+    "node": 3385,
+    "area": "remote",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     1383.7,
+     421.1
+    ]
+   },
+   "R7966": {
+    "node": 3393,
+    "area": "remote",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     1434.8,
+     505.8
+    ]
+   },
+   "R7968": {
+    "node": 3407,
+    "area": "remote",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     1628.3,
+     381.6
+    ]
+   },
+   "R7969": {
+    "node": 3408,
+    "area": "remote",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     1316.0,
+     463.8
+    ]
+   },
+   "R7970": {
+    "node": 3409,
+    "area": "remote",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     1373.1,
+     548.3
+    ]
+   },
+   "R7971": {
+    "node": 3410,
+    "area": "remote",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     1266.7,
+     378.9
+    ]
+   },
+   "R7972": {
+    "node": 3411,
+    "area": "remote",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     1211.9,
+     294.3
+    ]
+   },
+   "R7973": {
+    "node": 3418,
+    "area": "remote",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     1577.8,
+     278.9
+    ]
+   },
+   "R7974": {
+    "node": 3088,
+    "area": "remote",
+    "contact": false,
+    "code": "C",
+    "xy": [
+     1378.2,
+     7.8
+    ]
+   },
+   "R7976": {
+    "node": 3091,
+    "area": "remote",
+    "contact": false,
+    "code": "F",
+    "xy": [
+     1470.9,
+     -49.4
+    ]
+   },
+   "R7987": {
+    "node": 3437,
+    "area": "remote",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     1827.6,
+     -1855.7
+    ]
+   },
+   "R6278": {
+    "node": 2954,
+    "area": "remote",
+    "contact": false,
+    "code": "E",
+    "xy": [
+     2626.9,
+     -1997.1
+    ]
+   }
+  },
+  "note": "The full taxi graph (nodes and edges with taxiway refs) is docs/taxi_graph.json."
+ },
+ "arrival_flows_note": "N or S: the feeder side. \"B\": Center sends each arrival to the side with fewer arrivals planned at the time (flights row feeder_side).",
+ "sid_via": {
+  "30/EAST": [
+   "E30"
+  ],
+  "12/WEST": [
+   "W12"
+  ]
+ }
+}
