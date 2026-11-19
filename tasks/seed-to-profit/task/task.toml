@@ -1,0 +1,38 @@
+schema_version = "1.3"
+# Captured after the agents end, before grading: the team repo with the plan, the software and the program files.
+artifacts = ["/app"]
+
+[task]
+name = "bespokelabsai/seed-to-profit"
+description = "Start an online consumer goods company with $2M of seed money, write the software that runs it, and run it live for three simulated years"
+authors = [{ name = "Bespoke Labs" }]
+keywords = ["multi-agent", "business", "economy", "market-simulation", "long-horizon", "research-budget"]
+
+[metadata]
+author_name = "Bespoke Labs"
+task_id = "seed-to-profit"
+display_title = "SEED TO PROFIT: start and run a company"
+category = "business"
+difficulty = "hard"
+language = "python"
+
+[agent]
+# 4 hours (the manual says "You have 4 hours."; the live company's clock in environment/hub/make_hub_plugin.py
+# assumes the same).
+timeout_sec = 14400.0
+network_mode = "no-network"
+
+[verifier]
+# The live company's last days and its replay, then the playbook: 24 worlds of 1,095 simulated days each, one at a
+# time, the team's software answering every day (at most 600 s per world), and the fixed policies for the record.
+# Runs on the hub, where the market office's secret and ledger are. Most gradings take well under an hour; the limit
+# covers software that uses its whole time in every world.
+timeout_sec = 21600.0
+network_mode = "no-network"
+
+[environment]
+network_mode = "public"
+build_timeout_sec = 1800.0
+cpus = 4
+memory_mb = 8192
+storage_mb = 10240

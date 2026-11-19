@@ -1,0 +1,2085 @@
+{
+ "products": [
+  {
+   "id": "k1",
+   "name": "Cast iron skillet, 10 inch",
+   "category": "kitchen",
+   "cost": 9.5,
+   "freight": 2.1,
+   "price": 34.0,
+   "moq": 500,
+   "lead": 70,
+   "size": "medium",
+   "suppliers": {
+    "A": {
+     "supplier": "A",
+     "name": "standard",
+     "cost": 9.5,
+     "freight": 2.1,
+     "moq": 500,
+     "lead": 70
+    },
+    "B": {
+     "supplier": "B",
+     "name": "budget",
+     "cost": 7.6,
+     "freight": 2.1,
+     "moq": 1000,
+     "lead": 82
+    },
+    "C": {
+     "supplier": "C",
+     "name": "premium",
+     "cost": 11.21,
+     "freight": 2.1,
+     "moq": 250,
+     "lead": 60
+    }
+   },
+   "fees": {
+    "site_fulfill": 8.5,
+    "mp_fulfill": 6.2,
+    "storage": 0.45,
+    "storage_q4_mp": 1.35,
+    "return_ship": 7.0,
+    "wholesale_ship": 1.2
+   }
+  },
+  {
+   "id": "k2",
+   "name": "Pour-over coffee set",
+   "category": "kitchen",
+   "cost": 7.0,
+   "freight": 1.4,
+   "price": 29.0,
+   "moq": 300,
+   "lead": 65,
+   "size": "medium",
+   "suppliers": {
+    "A": {
+     "supplier": "A",
+     "name": "standard",
+     "cost": 7.0,
+     "freight": 1.4,
+     "moq": 300,
+     "lead": 65
+    },
+    "B": {
+     "supplier": "B",
+     "name": "budget",
+     "cost": 5.6,
+     "freight": 1.4,
+     "moq": 600,
+     "lead": 77
+    },
+    "C": {
+     "supplier": "C",
+     "name": "premium",
+     "cost": 8.26,
+     "freight": 1.4,
+     "moq": 150,
+     "lead": 55
+    }
+   },
+   "fees": {
+    "site_fulfill": 8.5,
+    "mp_fulfill": 6.2,
+    "storage": 0.45,
+    "storage_q4_mp": 1.35,
+    "return_ship": 7.0,
+    "wholesale_ship": 1.2
+   }
+  },
+  {
+   "id": "k3",
+   "name": "Knife sharpener",
+   "category": "kitchen",
+   "cost": 4.0,
+   "freight": 0.6,
+   "price": 22.0,
+   "moq": 500,
+   "lead": 55,
+   "size": "small",
+   "suppliers": {
+    "A": {
+     "supplier": "A",
+     "name": "standard",
+     "cost": 4.0,
+     "freight": 0.6,
+     "moq": 500,
+     "lead": 55
+    },
+    "B": {
+     "supplier": "B",
+     "name": "budget",
+     "cost": 3.2,
+     "freight": 0.6,
+     "moq": 1000,
+     "lead": 67
+    },
+    "C": {
+     "supplier": "C",
+     "name": "premium",
+     "cost": 4.72,
+     "freight": 0.6,
+     "moq": 250,
+     "lead": 45
+    }
+   },
+   "fees": {
+    "site_fulfill": 6.5,
+    "mp_fulfill": 4.1,
+    "storage": 0.15,
+    "storage_q4_mp": 0.45,
+    "return_ship": 4.0,
+    "wholesale_ship": 0.6
+   }
+  },
+  {
+   "id": "k4",
+   "name": "Silicone food storage bags, set of 8",
+   "category": "kitchen",
+   "cost": 3.2,
+   "freight": 0.5,
+   "price": 19.0,
+   "moq": 1000,
+   "lead": 55,
+   "size": "small",
+   "suppliers": {
+    "A": {
+     "supplier": "A",
+     "name": "standard",
+     "cost": 3.2,
+     "freight": 0.5,
+     "moq": 1000,
+     "lead": 55
+    },
+    "B": {
+     "supplier": "B",
+     "name": "budget",
+     "cost": 2.56,
+     "freight": 0.5,
+     "moq": 2000,
+     "lead": 67
+    },
+    "C": {
+     "supplier": "C",
+     "name": "premium",
+     "cost": 3.78,
+     "freight": 0.5,
+     "moq": 500,
+     "lead": 45
+    }
+   },
+   "fees": {
+    "site_fulfill": 6.5,
+    "mp_fulfill": 4.1,
+    "storage": 0.15,
+    "storage_q4_mp": 0.45,
+    "return_ship": 4.0,
+    "wholesale_ship": 0.6
+   }
+  },
+  {
+   "id": "k5",
+   "name": "Electric milk frother",
+   "category": "kitchen",
+   "cost": 5.5,
+   "freight": 0.8,
+   "price": 24.0,
+   "moq": 500,
+   "lead": 65,
+   "size": "small",
+   "suppliers": {
+    "A": {
+     "supplier": "A",
+     "name": "standard",
+     "cost": 5.5,
+     "freight": 0.8,
+     "moq": 500,
+     "lead": 65
+    },
+    "B": {
+     "supplier": "B",
+     "name": "budget",
+     "cost": 4.4,
+     "freight": 0.8,
+     "moq": 1000,
+     "lead": 77
+    },
+    "C": {
+     "supplier": "C",
+     "name": "premium",
+     "cost": 6.49,
+     "freight": 0.8,
+     "moq": 250,
+     "lead": 55
+    }
+   },
+   "fees": {
+    "site_fulfill": 6.5,
+    "mp_fulfill": 4.1,
+    "storage": 0.15,
+    "storage_q4_mp": 0.45,
+    "return_ship": 4.0,
+    "wholesale_ship": 0.6
+   }
+  },
+  {
+   "id": "p1",
+   "name": "Orthopedic dog bed, large",
+   "category": "pet",
+   "cost": 18.0,
+   "freight": 6.5,
+   "price": 69.0,
+   "moq": 200,
+   "lead": 80,
+   "size": "large",
+   "suppliers": {
+    "A": {
+     "supplier": "A",
+     "name": "standard",
+     "cost": 18.0,
+     "freight": 6.5,
+     "moq": 200,
+     "lead": 80
+    },
+    "B": {
+     "supplier": "B",
+     "name": "budget",
+     "cost": 14.4,
+     "freight": 6.5,
+     "moq": 400,
+     "lead": 92
+    },
+    "C": {
+     "supplier": "C",
+     "name": "premium",
+     "cost": 21.24,
+     "freight": 6.5,
+     "moq": 100,
+     "lead": 70
+    }
+   },
+   "fees": {
+    "site_fulfill": 15.0,
+    "mp_fulfill": 13.5,
+    "storage": 1.5,
+    "storage_q4_mp": 3.75,
+    "return_ship": 12.0,
+    "wholesale_ship": 3.0
+   }
+  },
+  {
+   "id": "p2",
+   "name": "Slow feeder dog bowl",
+   "category": "pet",
+   "cost": 2.5,
+   "freight": 0.6,
+   "price": 16.0,
+   "moq": 1000,
+   "lead": 55,
+   "size": "small",
+   "suppliers": {
+    "A": {
+     "supplier": "A",
+     "name": "standard",
+     "cost": 2.5,
+     "freight": 0.6,
+     "moq": 1000,
+     "lead": 55
+    },
+    "B": {
+     "supplier": "B",
+     "name": "budget",
+     "cost": 2.0,
+     "freight": 0.6,
+     "moq": 2000,
+     "lead": 67
+    },
+    "C": {
+     "supplier": "C",
+     "name": "premium",
+     "cost": 2.95,
+     "freight": 0.6,
+     "moq": 500,
+     "lead": 45
+    }
+   },
+   "fees": {
+    "site_fulfill": 6.5,
+    "mp_fulfill": 4.1,
+    "storage": 0.15,
+    "storage_q4_mp": 0.45,
+    "return_ship": 4.0,
+    "wholesale_ship": 0.6
+   }
+  },
+  {
+   "id": "p3",
+   "name": "Cat water fountain",
+   "category": "pet",
+   "cost": 8.0,
+   "freight": 1.6,
+   "price": 32.0,
+   "moq": 400,
+   "lead": 70,
+   "size": "medium",
+   "suppliers": {
+    "A": {
+     "supplier": "A",
+     "name": "standard",
+     "cost": 8.0,
+     "freight": 1.6,
+     "moq": 400,
+     "lead": 70
+    },
+    "B": {
+     "supplier": "B",
+     "name": "budget",
+     "cost": 6.4,
+     "freight": 1.6,
+     "moq": 800,
+     "lead": 82
+    },
+    "C": {
+     "supplier": "C",
+     "name": "premium",
+     "cost": 9.44,
+     "freight": 1.6,
+     "moq": 200,
+     "lead": 60
+    }
+   },
+   "fees": {
+    "site_fulfill": 8.5,
+    "mp_fulfill": 6.2,
+    "storage": 0.45,
+    "storage_q4_mp": 1.35,
+    "return_ship": 7.0,
+    "wholesale_ship": 1.2
+   }
+  },
+  {
+   "id": "p4",
+   "name": "No-pull dog harness",
+   "category": "pet",
+   "cost": 4.5,
+   "freight": 0.5,
+   "price": 25.0,
+   "moq": 500,
+   "lead": 60,
+   "size": "small",
+   "suppliers": {
+    "A": {
+     "supplier": "A",
+     "name": "standard",
+     "cost": 4.5,
+     "freight": 0.5,
+     "moq": 500,
+     "lead": 60
+    },
+    "B": {
+     "supplier": "B",
+     "name": "budget",
+     "cost": 3.6,
+     "freight": 0.5,
+     "moq": 1000,
+     "lead": 72
+    },
+    "C": {
+     "supplier": "C",
+     "name": "premium",
+     "cost": 5.31,
+     "freight": 0.5,
+     "moq": 250,
+     "lead": 50
+    }
+   },
+   "fees": {
+    "site_fulfill": 6.5,
+    "mp_fulfill": 4.1,
+    "storage": 0.15,
+    "storage_q4_mp": 0.45,
+    "return_ship": 4.0,
+    "wholesale_ship": 0.6
+   }
+  },
+  {
+   "id": "p5",
+   "name": "Pet hair remover roller",
+   "category": "pet",
+   "cost": 2.2,
+   "freight": 0.4,
+   "price": 15.0,
+   "moq": 1000,
+   "lead": 55,
+   "size": "small",
+   "suppliers": {
+    "A": {
+     "supplier": "A",
+     "name": "standard",
+     "cost": 2.2,
+     "freight": 0.4,
+     "moq": 1000,
+     "lead": 55
+    },
+    "B": {
+     "supplier": "B",
+     "name": "budget",
+     "cost": 1.76,
+     "freight": 0.4,
+     "moq": 2000,
+     "lead": 67
+    },
+    "C": {
+     "supplier": "C",
+     "name": "premium",
+     "cost": 2.6,
+     "freight": 0.4,
+     "moq": 500,
+     "lead": 45
+    }
+   },
+   "fees": {
+    "site_fulfill": 6.5,
+    "mp_fulfill": 4.1,
+    "storage": 0.15,
+    "storage_q4_mp": 0.45,
+    "return_ship": 4.0,
+    "wholesale_ship": 0.6
+   }
+  },
+  {
+   "id": "f1",
+   "name": "Adjustable dumbbells, pair",
+   "category": "fitness",
+   "cost": 55.0,
+   "freight": 14.0,
+   "price": 179.0,
+   "moq": 100,
+   "lead": 90,
+   "size": "large",
+   "suppliers": {
+    "A": {
+     "supplier": "A",
+     "name": "standard",
+     "cost": 55.0,
+     "freight": 14.0,
+     "moq": 100,
+     "lead": 90
+    },
+    "B": {
+     "supplier": "B",
+     "name": "budget",
+     "cost": 44.0,
+     "freight": 14.0,
+     "moq": 200,
+     "lead": 102
+    },
+    "C": {
+     "supplier": "C",
+     "name": "premium",
+     "cost": 64.9,
+     "freight": 14.0,
+     "moq": 50,
+     "lead": 80
+    }
+   },
+   "fees": {
+    "site_fulfill": 15.0,
+    "mp_fulfill": 28.0,
+    "storage": 1.5,
+    "storage_q4_mp": 3.75,
+    "return_ship": 12.0,
+    "wholesale_ship": 3.0
+   }
+  },
+  {
+   "id": "f2",
+   "name": "Resistance band set",
+   "category": "fitness",
+   "cost": 3.5,
+   "freight": 0.5,
+   "price": 22.0,
+   "moq": 1000,
+   "lead": 55,
+   "size": "small",
+   "suppliers": {
+    "A": {
+     "supplier": "A",
+     "name": "standard",
+     "cost": 3.5,
+     "freight": 0.5,
+     "moq": 1000,
+     "lead": 55
+    },
+    "B": {
+     "supplier": "B",
+     "name": "budget",
+     "cost": 2.8,
+     "freight": 0.5,
+     "moq": 2000,
+     "lead": 67
+    },
+    "C": {
+     "supplier": "C",
+     "name": "premium",
+     "cost": 4.13,
+     "freight": 0.5,
+     "moq": 500,
+     "lead": 45
+    }
+   },
+   "fees": {
+    "site_fulfill": 6.5,
+    "mp_fulfill": 4.1,
+    "storage": 0.15,
+    "storage_q4_mp": 0.45,
+    "return_ship": 4.0,
+    "wholesale_ship": 0.6
+   }
+  },
+  {
+   "id": "f3",
+   "name": "Yoga mat, 6 mm",
+   "category": "fitness",
+   "cost": 6.0,
+   "freight": 1.8,
+   "price": 32.0,
+   "moq": 500,
+   "lead": 65,
+   "size": "medium",
+   "suppliers": {
+    "A": {
+     "supplier": "A",
+     "name": "standard",
+     "cost": 6.0,
+     "freight": 1.8,
+     "moq": 500,
+     "lead": 65
+    },
+    "B": {
+     "supplier": "B",
+     "name": "budget",
+     "cost": 4.8,
+     "freight": 1.8,
+     "moq": 1000,
+     "lead": 77
+    },
+    "C": {
+     "supplier": "C",
+     "name": "premium",
+     "cost": 7.08,
+     "freight": 1.8,
+     "moq": 250,
+     "lead": 55
+    }
+   },
+   "fees": {
+    "site_fulfill": 8.5,
+    "mp_fulfill": 6.2,
+    "storage": 0.45,
+    "storage_q4_mp": 1.35,
+    "return_ship": 7.0,
+    "wholesale_ship": 1.2
+   }
+  },
+  {
+   "id": "f4",
+   "name": "Foam roller",
+   "category": "fitness",
+   "cost": 4.0,
+   "freight": 1.5,
+   "price": 21.0,
+   "moq": 500,
+   "lead": 65,
+   "size": "medium",
+   "suppliers": {
+    "A": {
+     "supplier": "A",
+     "name": "standard",
+     "cost": 4.0,
+     "freight": 1.5,
+     "moq": 500,
+     "lead": 65
+    },
+    "B": {
+     "supplier": "B",
+     "name": "budget",
+     "cost": 3.2,
+     "freight": 1.5,
+     "moq": 1000,
+     "lead": 77
+    },
+    "C": {
+     "supplier": "C",
+     "name": "premium",
+     "cost": 4.72,
+     "freight": 1.5,
+     "moq": 250,
+     "lead": 55
+    }
+   },
+   "fees": {
+    "site_fulfill": 8.5,
+    "mp_fulfill": 6.2,
+    "storage": 0.45,
+    "storage_q4_mp": 1.35,
+    "return_ship": 7.0,
+    "wholesale_ship": 1.2
+   }
+  },
+  {
+   "id": "f5",
+   "name": "Massage gun",
+   "category": "fitness",
+   "cost": 28.0,
+   "freight": 3.0,
+   "price": 89.0,
+   "moq": 200,
+   "lead": 75,
+   "size": "medium",
+   "suppliers": {
+    "A": {
+     "supplier": "A",
+     "name": "standard",
+     "cost": 28.0,
+     "freight": 3.0,
+     "moq": 200,
+     "lead": 75
+    },
+    "B": {
+     "supplier": "B",
+     "name": "budget",
+     "cost": 22.4,
+     "freight": 3.0,
+     "moq": 400,
+     "lead": 87
+    },
+    "C": {
+     "supplier": "C",
+     "name": "premium",
+     "cost": 33.04,
+     "freight": 3.0,
+     "moq": 100,
+     "lead": 65
+    }
+   },
+   "fees": {
+    "site_fulfill": 8.5,
+    "mp_fulfill": 6.2,
+    "storage": 0.45,
+    "storage_q4_mp": 1.35,
+    "return_ship": 7.0,
+    "wholesale_ship": 1.2
+   }
+  },
+  {
+   "id": "h1",
+   "name": "Laptop stand",
+   "category": "home_office",
+   "cost": 7.0,
+   "freight": 1.2,
+   "price": 35.0,
+   "moq": 500,
+   "lead": 65,
+   "size": "medium",
+   "suppliers": {
+    "A": {
+     "supplier": "A",
+     "name": "standard",
+     "cost": 7.0,
+     "freight": 1.2,
+     "moq": 500,
+     "lead": 65
+    },
+    "B": {
+     "supplier": "B",
+     "name": "budget",
+     "cost": 5.6,
+     "freight": 1.2,
+     "moq": 1000,
+     "lead": 77
+    },
+    "C": {
+     "supplier": "C",
+     "name": "premium",
+     "cost": 8.26,
+     "freight": 1.2,
+     "moq": 250,
+     "lead": 55
+    }
+   },
+   "fees": {
+    "site_fulfill": 8.5,
+    "mp_fulfill": 6.2,
+    "storage": 0.45,
+    "storage_q4_mp": 1.35,
+    "return_ship": 7.0,
+    "wholesale_ship": 1.2
+   }
+  },
+  {
+   "id": "h2",
+   "name": "Monitor light bar",
+   "category": "home_office",
+   "cost": 11.0,
+   "freight": 1.3,
+   "price": 45.0,
+   "moq": 300,
+   "lead": 70,
+   "size": "medium",
+   "suppliers": {
+    "A": {
+     "supplier": "A",
+     "name": "standard",
+     "cost": 11.0,
+     "freight": 1.3,
+     "moq": 300,
+     "lead": 70
+    },
+    "B": {
+     "supplier": "B",
+     "name": "budget",
+     "cost": 8.8,
+     "freight": 1.3,
+     "moq": 600,
+     "lead": 82
+    },
+    "C": {
+     "supplier": "C",
+     "name": "premium",
+     "cost": 12.98,
+     "freight": 1.3,
+     "moq": 150,
+     "lead": 60
+    }
+   },
+   "fees": {
+    "site_fulfill": 8.5,
+    "mp_fulfill": 6.2,
+    "storage": 0.45,
+    "storage_q4_mp": 1.35,
+    "return_ship": 7.0,
+    "wholesale_ship": 1.2
+   }
+  },
+  {
+   "id": "h3",
+   "name": "Ergonomic footrest",
+   "category": "home_office",
+   "cost": 9.0,
+   "freight": 2.4,
+   "price": 38.0,
+   "moq": 300,
+   "lead": 70,
+   "size": "medium",
+   "suppliers": {
+    "A": {
+     "supplier": "A",
+     "name": "standard",
+     "cost": 9.0,
+     "freight": 2.4,
+     "moq": 300,
+     "lead": 70
+    },
+    "B": {
+     "supplier": "B",
+     "name": "budget",
+     "cost": 7.2,
+     "freight": 2.4,
+     "moq": 600,
+     "lead": 82
+    },
+    "C": {
+     "supplier": "C",
+     "name": "premium",
+     "cost": 10.62,
+     "freight": 2.4,
+     "moq": 150,
+     "lead": 60
+    }
+   },
+   "fees": {
+    "site_fulfill": 8.5,
+    "mp_fulfill": 6.2,
+    "storage": 0.45,
+    "storage_q4_mp": 1.35,
+    "return_ship": 7.0,
+    "wholesale_ship": 1.2
+   }
+  },
+  {
+   "id": "h4",
+   "name": "Cable management kit",
+   "category": "home_office",
+   "cost": 2.8,
+   "freight": 0.4,
+   "price": 17.0,
+   "moq": 1000,
+   "lead": 55,
+   "size": "small",
+   "suppliers": {
+    "A": {
+     "supplier": "A",
+     "name": "standard",
+     "cost": 2.8,
+     "freight": 0.4,
+     "moq": 1000,
+     "lead": 55
+    },
+    "B": {
+     "supplier": "B",
+     "name": "budget",
+     "cost": 2.24,
+     "freight": 0.4,
+     "moq": 2000,
+     "lead": 67
+    },
+    "C": {
+     "supplier": "C",
+     "name": "premium",
+     "cost": 3.3,
+     "freight": 0.4,
+     "moq": 500,
+     "lead": 45
+    }
+   },
+   "fees": {
+    "site_fulfill": 6.5,
+    "mp_fulfill": 4.1,
+    "storage": 0.15,
+    "storage_q4_mp": 0.45,
+    "return_ship": 4.0,
+    "wholesale_ship": 0.6
+   }
+  },
+  {
+   "id": "h5",
+   "name": "Standing desk converter",
+   "category": "home_office",
+   "cost": 48.0,
+   "freight": 16.0,
+   "price": 169.0,
+   "moq": 100,
+   "lead": 90,
+   "size": "large",
+   "suppliers": {
+    "A": {
+     "supplier": "A",
+     "name": "standard",
+     "cost": 48.0,
+     "freight": 16.0,
+     "moq": 100,
+     "lead": 90
+    },
+    "B": {
+     "supplier": "B",
+     "name": "budget",
+     "cost": 38.4,
+     "freight": 16.0,
+     "moq": 200,
+     "lead": 102
+    },
+    "C": {
+     "supplier": "C",
+     "name": "premium",
+     "cost": 56.64,
+     "freight": 16.0,
+     "moq": 50,
+     "lead": 80
+    }
+   },
+   "fees": {
+    "site_fulfill": 15.0,
+    "mp_fulfill": 22.0,
+    "storage": 1.5,
+    "storage_q4_mp": 3.75,
+    "return_ship": 12.0,
+    "wholesale_ship": 3.0
+   }
+  },
+  {
+   "id": "b1",
+   "name": "Facial cleansing brush",
+   "category": "beauty",
+   "cost": 6.0,
+   "freight": 0.6,
+   "price": 34.0,
+   "moq": 500,
+   "lead": 60,
+   "size": "small",
+   "suppliers": {
+    "A": {
+     "supplier": "A",
+     "name": "standard",
+     "cost": 6.0,
+     "freight": 0.6,
+     "moq": 500,
+     "lead": 60
+    },
+    "B": {
+     "supplier": "B",
+     "name": "budget",
+     "cost": 4.8,
+     "freight": 0.6,
+     "moq": 1000,
+     "lead": 72
+    },
+    "C": {
+     "supplier": "C",
+     "name": "premium",
+     "cost": 7.08,
+     "freight": 0.6,
+     "moq": 250,
+     "lead": 50
+    }
+   },
+   "fees": {
+    "site_fulfill": 6.5,
+    "mp_fulfill": 4.1,
+    "storage": 0.15,
+    "storage_q4_mp": 0.45,
+    "return_ship": 4.0,
+    "wholesale_ship": 0.6
+   }
+  },
+  {
+   "id": "b2",
+   "name": "Hair dryer brush",
+   "category": "beauty",
+   "cost": 14.0,
+   "freight": 1.8,
+   "price": 55.0,
+   "moq": 300,
+   "lead": 70,
+   "size": "medium",
+   "suppliers": {
+    "A": {
+     "supplier": "A",
+     "name": "standard",
+     "cost": 14.0,
+     "freight": 1.8,
+     "moq": 300,
+     "lead": 70
+    },
+    "B": {
+     "supplier": "B",
+     "name": "budget",
+     "cost": 11.2,
+     "freight": 1.8,
+     "moq": 600,
+     "lead": 82
+    },
+    "C": {
+     "supplier": "C",
+     "name": "premium",
+     "cost": 16.52,
+     "freight": 1.8,
+     "moq": 150,
+     "lead": 60
+    }
+   },
+   "fees": {
+    "site_fulfill": 8.5,
+    "mp_fulfill": 6.2,
+    "storage": 0.45,
+    "storage_q4_mp": 1.35,
+    "return_ship": 7.0,
+    "wholesale_ship": 1.2
+   }
+  },
+  {
+   "id": "b3",
+   "name": "Jade roller set",
+   "category": "beauty",
+   "cost": 2.5,
+   "freight": 0.4,
+   "price": 18.0,
+   "moq": 1000,
+   "lead": 55,
+   "size": "small",
+   "suppliers": {
+    "A": {
+     "supplier": "A",
+     "name": "standard",
+     "cost": 2.5,
+     "freight": 0.4,
+     "moq": 1000,
+     "lead": 55
+    },
+    "B": {
+     "supplier": "B",
+     "name": "budget",
+     "cost": 2.0,
+     "freight": 0.4,
+     "moq": 2000,
+     "lead": 67
+    },
+    "C": {
+     "supplier": "C",
+     "name": "premium",
+     "cost": 2.95,
+     "freight": 0.4,
+     "moq": 500,
+     "lead": 45
+    }
+   },
+   "fees": {
+    "site_fulfill": 6.5,
+    "mp_fulfill": 4.1,
+    "storage": 0.15,
+    "storage_q4_mp": 0.45,
+    "return_ship": 4.0,
+    "wholesale_ship": 0.6
+   }
+  },
+  {
+   "id": "b4",
+   "name": "LED makeup mirror",
+   "category": "beauty",
+   "cost": 9.0,
+   "freight": 2.0,
+   "price": 39.0,
+   "moq": 300,
+   "lead": 70,
+   "size": "medium",
+   "suppliers": {
+    "A": {
+     "supplier": "A",
+     "name": "standard",
+     "cost": 9.0,
+     "freight": 2.0,
+     "moq": 300,
+     "lead": 70
+    },
+    "B": {
+     "supplier": "B",
+     "name": "budget",
+     "cost": 7.2,
+     "freight": 2.0,
+     "moq": 600,
+     "lead": 82
+    },
+    "C": {
+     "supplier": "C",
+     "name": "premium",
+     "cost": 10.62,
+     "freight": 2.0,
+     "moq": 150,
+     "lead": 60
+    }
+   },
+   "fees": {
+    "site_fulfill": 8.5,
+    "mp_fulfill": 6.2,
+    "storage": 0.45,
+    "storage_q4_mp": 1.35,
+    "return_ship": 7.0,
+    "wholesale_ship": 1.2
+   }
+  },
+  {
+   "id": "b5",
+   "name": "Satin pillowcase set",
+   "category": "beauty",
+   "cost": 4.0,
+   "freight": 0.5,
+   "price": 24.0,
+   "moq": 500,
+   "lead": 55,
+   "size": "small",
+   "suppliers": {
+    "A": {
+     "supplier": "A",
+     "name": "standard",
+     "cost": 4.0,
+     "freight": 0.5,
+     "moq": 500,
+     "lead": 55
+    },
+    "B": {
+     "supplier": "B",
+     "name": "budget",
+     "cost": 3.2,
+     "freight": 0.5,
+     "moq": 1000,
+     "lead": 67
+    },
+    "C": {
+     "supplier": "C",
+     "name": "premium",
+     "cost": 4.72,
+     "freight": 0.5,
+     "moq": 250,
+     "lead": 45
+    }
+   },
+   "fees": {
+    "site_fulfill": 6.5,
+    "mp_fulfill": 4.1,
+    "storage": 0.15,
+    "storage_q4_mp": 0.45,
+    "return_ship": 4.0,
+    "wholesale_ship": 0.6
+   }
+  },
+  {
+   "id": "o1",
+   "name": "Camping hammock",
+   "category": "outdoor",
+   "cost": 8.0,
+   "freight": 1.0,
+   "price": 36.0,
+   "moq": 500,
+   "lead": 65,
+   "size": "medium",
+   "suppliers": {
+    "A": {
+     "supplier": "A",
+     "name": "standard",
+     "cost": 8.0,
+     "freight": 1.0,
+     "moq": 500,
+     "lead": 65
+    },
+    "B": {
+     "supplier": "B",
+     "name": "budget",
+     "cost": 6.4,
+     "freight": 1.0,
+     "moq": 1000,
+     "lead": 77
+    },
+    "C": {
+     "supplier": "C",
+     "name": "premium",
+     "cost": 9.44,
+     "freight": 1.0,
+     "moq": 250,
+     "lead": 55
+    }
+   },
+   "fees": {
+    "site_fulfill": 8.5,
+    "mp_fulfill": 6.2,
+    "storage": 0.45,
+    "storage_q4_mp": 1.35,
+    "return_ship": 7.0,
+    "wholesale_ship": 1.2
+   }
+  },
+  {
+   "id": "o2",
+   "name": "Insulated water bottle, 32 oz",
+   "category": "outdoor",
+   "cost": 5.5,
+   "freight": 1.1,
+   "price": 29.0,
+   "moq": 500,
+   "lead": 65,
+   "size": "medium",
+   "suppliers": {
+    "A": {
+     "supplier": "A",
+     "name": "standard",
+     "cost": 5.5,
+     "freight": 1.1,
+     "moq": 500,
+     "lead": 65
+    },
+    "B": {
+     "supplier": "B",
+     "name": "budget",
+     "cost": 4.4,
+     "freight": 1.1,
+     "moq": 1000,
+     "lead": 77
+    },
+    "C": {
+     "supplier": "C",
+     "name": "premium",
+     "cost": 6.49,
+     "freight": 1.1,
+     "moq": 250,
+     "lead": 55
+    }
+   },
+   "fees": {
+    "site_fulfill": 8.5,
+    "mp_fulfill": 6.2,
+    "storage": 0.45,
+    "storage_q4_mp": 1.35,
+    "return_ship": 7.0,
+    "wholesale_ship": 1.2
+   }
+  },
+  {
+   "id": "o3",
+   "name": "Solar lantern, set of 2",
+   "category": "outdoor",
+   "cost": 7.0,
+   "freight": 1.2,
+   "price": 32.0,
+   "moq": 500,
+   "lead": 70,
+   "size": "medium",
+   "suppliers": {
+    "A": {
+     "supplier": "A",
+     "name": "standard",
+     "cost": 7.0,
+     "freight": 1.2,
+     "moq": 500,
+     "lead": 70
+    },
+    "B": {
+     "supplier": "B",
+     "name": "budget",
+     "cost": 5.6,
+     "freight": 1.2,
+     "moq": 1000,
+     "lead": 82
+    },
+    "C": {
+     "supplier": "C",
+     "name": "premium",
+     "cost": 8.26,
+     "freight": 1.2,
+     "moq": 250,
+     "lead": 60
+    }
+   },
+   "fees": {
+    "site_fulfill": 8.5,
+    "mp_fulfill": 6.2,
+    "storage": 0.45,
+    "storage_q4_mp": 1.35,
+    "return_ship": 7.0,
+    "wholesale_ship": 1.2
+   }
+  },
+  {
+   "id": "o4",
+   "name": "Portable camping stove",
+   "category": "outdoor",
+   "cost": 16.0,
+   "freight": 2.6,
+   "price": 59.0,
+   "moq": 300,
+   "lead": 75,
+   "size": "medium",
+   "suppliers": {
+    "A": {
+     "supplier": "A",
+     "name": "standard",
+     "cost": 16.0,
+     "freight": 2.6,
+     "moq": 300,
+     "lead": 75
+    },
+    "B": {
+     "supplier": "B",
+     "name": "budget",
+     "cost": 12.8,
+     "freight": 2.6,
+     "moq": 600,
+     "lead": 87
+    },
+    "C": {
+     "supplier": "C",
+     "name": "premium",
+     "cost": 18.88,
+     "freight": 2.6,
+     "moq": 150,
+     "lead": 65
+    }
+   },
+   "fees": {
+    "site_fulfill": 8.5,
+    "mp_fulfill": 6.2,
+    "storage": 0.45,
+    "storage_q4_mp": 1.35,
+    "return_ship": 7.0,
+    "wholesale_ship": 1.2
+   }
+  },
+  {
+   "id": "o5",
+   "name": "Hiking daypack, 25 L",
+   "category": "outdoor",
+   "cost": 12.0,
+   "freight": 2.2,
+   "price": 49.0,
+   "moq": 300,
+   "lead": 70,
+   "size": "medium",
+   "suppliers": {
+    "A": {
+     "supplier": "A",
+     "name": "standard",
+     "cost": 12.0,
+     "freight": 2.2,
+     "moq": 300,
+     "lead": 70
+    },
+    "B": {
+     "supplier": "B",
+     "name": "budget",
+     "cost": 9.6,
+     "freight": 2.2,
+     "moq": 600,
+     "lead": 82
+    },
+    "C": {
+     "supplier": "C",
+     "name": "premium",
+     "cost": 14.16,
+     "freight": 2.2,
+     "moq": 150,
+     "lead": 60
+    }
+   },
+   "fees": {
+    "site_fulfill": 8.5,
+    "mp_fulfill": 6.2,
+    "storage": 0.45,
+    "storage_q4_mp": 1.35,
+    "return_ship": 7.0,
+    "wholesale_ship": 1.2
+   }
+  }
+ ],
+ "sizes": {
+  "small": {
+   "site_fulfill": 6.5,
+   "mp_fulfill": 4.1,
+   "storage": 0.15,
+   "storage_q4_mp": 0.45,
+   "return_ship": 4.0,
+   "wholesale_ship": 0.6
+  },
+  "medium": {
+   "site_fulfill": 8.5,
+   "mp_fulfill": 6.2,
+   "storage": 0.45,
+   "storage_q4_mp": 1.35,
+   "return_ship": 7.0,
+   "wholesale_ship": 1.2
+  },
+  "large": {
+   "site_fulfill": 15.0,
+   "mp_fulfill": 11.5,
+   "storage": 1.5,
+   "storage_q4_mp": 3.75,
+   "return_ship": 12.0,
+   "wholesale_ship": 3.0
+  }
+ },
+ "season": {
+  "kitchen": [
+   0.9,
+   0.85,
+   0.94,
+   0.93,
+   0.98,
+   0.94,
+   1.0,
+   0.96,
+   0.94,
+   1.0,
+   1.19,
+   1.56
+  ],
+  "pet": [
+   0.97,
+   0.92,
+   0.99,
+   0.98,
+   1.0,
+   0.98,
+   1.02,
+   1.0,
+   0.97,
+   1.0,
+   1.08,
+   1.15
+  ],
+  "fitness": [
+   1.4,
+   1.15,
+   1.02,
+   0.95,
+   0.95,
+   0.9,
+   0.92,
+   0.9,
+   0.92,
+   0.9,
+   1.0,
+   1.04
+  ],
+  "home_office": [
+   1.12,
+   1.0,
+   0.98,
+   0.94,
+   0.92,
+   0.9,
+   0.98,
+   1.12,
+   1.1,
+   0.98,
+   1.0,
+   1.04
+  ],
+  "beauty": [
+   0.92,
+   0.98,
+   0.94,
+   0.94,
+   1.0,
+   0.92,
+   0.96,
+   0.94,
+   0.92,
+   0.98,
+   1.18,
+   1.52
+  ],
+  "outdoor": [
+   0.72,
+   0.72,
+   0.88,
+   1.06,
+   1.25,
+   1.35,
+   1.35,
+   1.18,
+   0.96,
+   0.84,
+   0.88,
+   0.95
+  ]
+ },
+ "return_rate": {
+  "kitchen": 0.07,
+  "pet": 0.09,
+  "fitness": 0.11,
+  "home_office": 0.08,
+  "beauty": 0.1,
+  "outdoor": 0.09
+ },
+ "rules": {
+  "start_date": "2027-03-01",
+  "days": 1095,
+  "seed_money": 2000000.0,
+  "research_budget": 250000.0,
+  "max_products": 10,
+  "channels": [
+   "site",
+   "marketplace"
+  ],
+  "ad_channels": {
+   "site": "social",
+   "marketplace": "sponsored"
+  },
+  "launch_cost": 6000.0,
+  "overhead_month": 35000.0,
+  "line_month": 1500.0,
+  "overhead_share": 0.1,
+  "overhead_window": 90,
+  "list_cost_month": 0.015,
+  "card_fee_pct": 0.029,
+  "card_fee_fixed": 0.3,
+  "mp_referral": 0.15,
+  "mp_payout_days": 14,
+  "mp_hold_days": 10,
+  "deposit": 0.3,
+  "transit_days": 35,
+  "price_break_qty": 5,
+  "price_break": 0.08,
+  "credit_max": 500000.0,
+  "credit_advance_stock": 0.5,
+  "credit_advance_receivables": 0.8,
+  "credit_apr": 0.105,
+  "credit_fee": 0.005,
+  "tax_rate": 0.21,
+  "liquidation": 0.35,
+  "profit_multiple": 3.0,
+  "resell_share": 0.6,
+  "max_daily_ad": 50000.0,
+  "max_order_units": 200000,
+  "rnd_cost": 90000.0,
+  "rnd_max_running": 3,
+  "wholesale_pay_days": 60,
+  "wholesale_pay_days_choices": [
+   30,
+   60,
+   90
+  ],
+  "wholesale_max_contracts": 6,
+  "wholesale_penalty": 0.1,
+  "equity_first_day": 120,
+  "equity_every_days": 180,
+  "equity_min_run_rate": 1000000.0,
+  "equity_fee": 0.04,
+  "equity_max_share": 0.3,
+  "equity_max": 4000000.0,
+  "venture_debt_min_run_rate": 1500000.0,
+  "venture_debt_share": 0.3,
+  "venture_debt_max": 2000000.0,
+  "venture_debt_apr": 0.13,
+  "venture_debt_warrant_coverage": [
+   0.03,
+   0.1
+  ],
+  "discount_range": [
+   0.05,
+   0.3
+  ],
+  "max_bundles": 5
+ },
+ "countries": {
+  "GB": {
+   "name": "United Kingdom",
+   "currency": "GBP",
+   "vat": 0.2,
+   "duty": 0.029,
+   "referral": 0.15,
+   "payout": 14,
+   "hold": 10,
+   "entry": 8000,
+   "days": 42,
+   "month": 2500,
+   "listing": 300,
+   "eu": false,
+   "south": false,
+   "ecommerce_usd_bn": 177.0,
+   "price_level": 0.92,
+   "currency_yearly_spread": 0.063,
+   "market_size": 0.1703,
+   "price_factor": 1.151,
+   "paid_up_capital": 0,
+   "freight_factor": 0.694,
+   "lead_days_vs_us": 18,
+   "fulfillment_factor": 1.0,
+   "return_factor": 0.9,
+   "social_ad_price_factor": 0.81,
+   "sponsored_ad_price_factor": 0.48,
+   "english": true
+  },
+  "DE": {
+   "name": "Germany",
+   "currency": "EUR",
+   "vat": 0.19,
+   "duty": 0.041,
+   "referral": 0.15,
+   "payout": 14,
+   "hold": 10,
+   "entry": 15000,
+   "days": 77,
+   "month": 4000,
+   "listing": 1000,
+   "eu": true,
+   "south": false,
+   "ecommerce_usd_bn": 124.2,
+   "price_level": 0.81,
+   "currency_yearly_spread": 0.075,
+   "market_size": 0.1274,
+   "price_factor": 1.071,
+   "paid_up_capital": 0,
+   "freight_factor": 0.694,
+   "lead_days_vs_us": 19,
+   "fulfillment_factor": 1.1,
+   "return_factor": 1.3,
+   "social_ad_price_factor": 0.84,
+   "sponsored_ad_price_factor": 0.48,
+   "english": false
+  },
+  "FR": {
+   "name": "France",
+   "currency": "EUR",
+   "vat": 0.2,
+   "duty": 0.041,
+   "referral": 0.15,
+   "payout": 14,
+   "hold": 10,
+   "entry": 18000,
+   "days": 77,
+   "month": 4500,
+   "listing": 1000,
+   "eu": true,
+   "south": false,
+   "ecommerce_usd_bn": 79.2,
+   "price_level": 0.83,
+   "currency_yearly_spread": 0.075,
+   "market_size": 0.0802,
+   "price_factor": 1.0933,
+   "paid_up_capital": 0,
+   "freight_factor": 0.694,
+   "lead_days_vs_us": 19,
+   "fulfillment_factor": 1.5,
+   "return_factor": 0.9,
+   "social_ad_price_factor": 0.67,
+   "sponsored_ad_price_factor": 0.45,
+   "english": false
+  },
+  "ES": {
+   "name": "Spain",
+   "currency": "EUR",
+   "vat": 0.21,
+   "duty": 0.041,
+   "referral": 0.15,
+   "payout": 14,
+   "hold": 10,
+   "entry": 18000,
+   "days": 77,
+   "month": 4000,
+   "listing": 1000,
+   "eu": true,
+   "south": false,
+   "ecommerce_usd_bn": 56.4,
+   "price_level": 0.69,
+   "currency_yearly_spread": 0.075,
+   "market_size": 0.0627,
+   "price_factor": 1.0051,
+   "paid_up_capital": 0,
+   "freight_factor": 0.73,
+   "lead_days_vs_us": 19,
+   "fulfillment_factor": 1.2,
+   "return_factor": 0.9,
+   "social_ad_price_factor": 0.58,
+   "sponsored_ad_price_factor": 0.31,
+   "english": false
+  },
+  "IT": {
+   "name": "Italy",
+   "currency": "EUR",
+   "vat": 0.22,
+   "duty": 0.041,
+   "referral": 0.15,
+   "payout": 14,
+   "hold": 10,
+   "entry": 18000,
+   "days": 77,
+   "month": 4000,
+   "listing": 1000,
+   "eu": true,
+   "south": false,
+   "ecommerce_usd_bn": 43.4,
+   "price_level": 0.73,
+   "currency_yearly_spread": 0.075,
+   "market_size": 0.0469,
+   "price_factor": 1.0424,
+   "paid_up_capital": 0,
+   "freight_factor": 0.73,
+   "lead_days_vs_us": 19,
+   "fulfillment_factor": 1.3,
+   "return_factor": 0.9,
+   "social_ad_price_factor": 0.62,
+   "sponsored_ad_price_factor": 0.31,
+   "english": false
+  },
+  "NL": {
+   "name": "Netherlands",
+   "currency": "EUR",
+   "vat": 0.21,
+   "duty": 0.041,
+   "referral": 0.12,
+   "payout": 14,
+   "hold": 10,
+   "entry": 15000,
+   "days": 77,
+   "month": 4000,
+   "listing": 1000,
+   "eu": true,
+   "south": false,
+   "ecommerce_usd_bn": 23.8,
+   "price_level": 0.87,
+   "currency_yearly_spread": 0.075,
+   "market_size": 0.0236,
+   "price_factor": 1.1286,
+   "paid_up_capital": 0,
+   "freight_factor": 0.694,
+   "lead_days_vs_us": 17,
+   "fulfillment_factor": 1.15,
+   "return_factor": 1.1,
+   "social_ad_price_factor": 0.72,
+   "sponsored_ad_price_factor": 0.72,
+   "english": false
+  },
+  "PL": {
+   "name": "Poland",
+   "currency": "PLN",
+   "vat": 0.23,
+   "duty": 0.041,
+   "referral": 0.11,
+   "payout": 14,
+   "hold": 10,
+   "entry": 18000,
+   "days": 56,
+   "month": 4000,
+   "listing": 1000,
+   "eu": true,
+   "south": false,
+   "ecommerce_usd_bn": 32.3,
+   "price_level": 0.55,
+   "currency_yearly_spread": 0.084,
+   "market_size": 0.0402,
+   "price_factor": 0.9122,
+   "paid_up_capital": 0,
+   "freight_factor": 0.694,
+   "lead_days_vs_us": 26,
+   "fulfillment_factor": 0.7,
+   "return_factor": 1.0,
+   "social_ad_price_factor": 0.51,
+   "sponsored_ad_price_factor": 0.51,
+   "english": false
+  },
+  "JP": {
+   "name": "Japan",
+   "currency": "JPY",
+   "vat": 0.1,
+   "duty": 0.024,
+   "referral": 0.154,
+   "payout": 14,
+   "hold": 10,
+   "entry": 20000,
+   "days": 42,
+   "month": 4000,
+   "listing": 1000,
+   "eu": false,
+   "south": false,
+   "ecommerce_usd_bn": 127.5,
+   "price_level": 0.69,
+   "currency_yearly_spread": 0.082,
+   "market_size": 0.1417,
+   "price_factor": 0.9137,
+   "paid_up_capital": 0,
+   "freight_factor": 0.454,
+   "lead_days_vs_us": -10,
+   "fulfillment_factor": 0.52,
+   "return_factor": 0.7,
+   "social_ad_price_factor": 0.78,
+   "sponsored_ad_price_factor": 0.78,
+   "english": false
+  },
+  "KR": {
+   "name": "South Korea",
+   "currency": "KRW",
+   "vat": 0.1,
+   "duty": 0.065,
+   "referral": 0.11,
+   "payout": 30,
+   "hold": 30,
+   "entry": 20000,
+   "days": 60,
+   "month": 4000,
+   "listing": 1000,
+   "eu": false,
+   "south": false,
+   "ecommerce_usd_bn": 112.2,
+   "price_level": 0.62,
+   "currency_yearly_spread": 0.048,
+   "market_size": 0.1315,
+   "price_factor": 0.8661,
+   "paid_up_capital": 0,
+   "freight_factor": 0.436,
+   "lead_days_vs_us": -10,
+   "fulfillment_factor": 0.74,
+   "return_factor": 1.0,
+   "social_ad_price_factor": 0.73,
+   "sponsored_ad_price_factor": 0.73,
+   "english": false
+  },
+  "CN": {
+   "name": "China",
+   "currency": "CNY",
+   "vat": 0.091,
+   "duty": 0.0,
+   "referral": 0.08,
+   "payout": 7,
+   "hold": 15,
+   "entry": 40000,
+   "days": 90,
+   "month": 6000,
+   "listing": 1000,
+   "eu": false,
+   "south": false,
+   "ecommerce_usd_bn": 2044.5,
+   "price_level": 0.48,
+   "currency_yearly_spread": 0.037,
+   "market_size": 0.1362,
+   "price_factor": 0.7559,
+   "paid_up_capital": 0,
+   "freight_factor": 0.43,
+   "lead_days_vs_us": -7,
+   "fulfillment_factor": 0.68,
+   "return_factor": 1.2,
+   "social_ad_price_factor": 0.6,
+   "sponsored_ad_price_factor": 0.6,
+   "english": false
+  },
+  "IN": {
+   "name": "India",
+   "currency": "INR",
+   "vat": 0.18,
+   "duty": 0.22,
+   "referral": 0.12,
+   "payout": 7,
+   "hold": 14,
+   "entry": 40000,
+   "days": 70,
+   "month": 5000,
+   "listing": 800,
+   "eu": false,
+   "south": false,
+   "ecommerce_usd_bn": 138.4,
+   "price_level": 0.23,
+   "currency_yearly_spread": 0.029,
+   "market_size": 0.1332,
+   "price_factor": 0.5659,
+   "paid_up_capital": 0,
+   "freight_factor": 0.622,
+   "lead_days_vs_us": 4,
+   "fulfillment_factor": 0.54,
+   "return_factor": 1.6,
+   "social_ad_price_factor": 0.27,
+   "sponsored_ad_price_factor": 0.27,
+   "english": false
+  },
+  "ID": {
+   "name": "Indonesia",
+   "currency": "IDR",
+   "vat": 0.11,
+   "duty": 0.079,
+   "referral": 0.1,
+   "payout": 7,
+   "hold": 10,
+   "entry": 40000,
+   "days": 120,
+   "month": 5000,
+   "listing": 800,
+   "eu": false,
+   "south": false,
+   "ecommerce_usd_bn": 68.2,
+   "price_level": 0.31,
+   "currency_yearly_spread": 0.041,
+   "market_size": 0.1131,
+   "price_factor": 0.618,
+   "paid_up_capital": 150000,
+   "freight_factor": 0.526,
+   "lead_days_vs_us": -7,
+   "fulfillment_factor": 0.57,
+   "return_factor": 1.0,
+   "social_ad_price_factor": 0.56,
+   "sponsored_ad_price_factor": 0.56,
+   "english": false
+  },
+  "CA": {
+   "name": "Canada",
+   "currency": "CAD",
+   "vat": 0.12,
+   "duty": 0.02,
+   "referral": 0.15,
+   "payout": 14,
+   "hold": 10,
+   "entry": 8000,
+   "days": 42,
+   "month": 2500,
+   "listing": 300,
+   "eu": false,
+   "south": false,
+   "ecommerce_usd_bn": 64.5,
+   "price_level": 0.9,
+   "currency_yearly_spread": 0.054,
+   "market_size": 0.0628,
+   "price_factor": 1.0625,
+   "paid_up_capital": 0,
+   "freight_factor": 0.94,
+   "lead_days_vs_us": 5,
+   "fulfillment_factor": 1.2,
+   "return_factor": 1.0,
+   "social_ad_price_factor": 0.77,
+   "sponsored_ad_price_factor": 0.77,
+   "english": true
+  },
+  "MX": {
+   "name": "Mexico",
+   "currency": "MXN",
+   "vat": 0.16,
+   "duty": 0.25,
+   "referral": 0.13,
+   "payout": 7,
+   "hold": 15,
+   "entry": 20000,
+   "days": 75,
+   "month": 4000,
+   "listing": 1000,
+   "eu": false,
+   "south": false,
+   "ecommerce_usd_bn": 44.0,
+   "price_level": 0.59,
+   "currency_yearly_spread": 0.093,
+   "market_size": 0.0529,
+   "price_factor": 0.891,
+   "paid_up_capital": 0,
+   "freight_factor": 0.904,
+   "lead_days_vs_us": 11,
+   "fulfillment_factor": 0.65,
+   "return_factor": 1.0,
+   "social_ad_price_factor": 0.47,
+   "sponsored_ad_price_factor": 0.47,
+   "english": false
+  },
+  "BR": {
+   "name": "Brazil",
+   "currency": "BRL",
+   "vat": 0.25,
+   "duty": 0.25,
+   "referral": 0.13,
+   "payout": 7,
+   "hold": 15,
+   "entry": 40000,
+   "days": 120,
+   "month": 5000,
+   "listing": 1000,
+   "eu": false,
+   "south": true,
+   "ecommerce_usd_bn": 77.9,
+   "price_level": 0.46,
+   "currency_yearly_spread": 0.149,
+   "market_size": 0.106,
+   "price_factor": 0.8478,
+   "paid_up_capital": 0,
+   "freight_factor": 1.78,
+   "lead_days_vs_us": 18,
+   "fulfillment_factor": 0.5,
+   "return_factor": 1.0,
+   "social_ad_price_factor": 0.47,
+   "sponsored_ad_price_factor": 0.47,
+   "english": false
+  },
+  "AU": {
+   "name": "Australia",
+   "currency": "AUD",
+   "vat": 0.1,
+   "duty": 0.0,
+   "referral": 0.13,
+   "payout": 14,
+   "hold": 10,
+   "entry": 8000,
+   "days": 42,
+   "month": 2500,
+   "listing": 300,
+   "eu": false,
+   "south": true,
+   "ecommerce_usd_bn": 49.7,
+   "price_level": 0.94,
+   "currency_yearly_spread": 0.072,
+   "market_size": 0.0473,
+   "price_factor": 1.0665,
+   "paid_up_capital": 0,
+   "freight_factor": 0.796,
+   "lead_days_vs_us": 7,
+   "fulfillment_factor": 1.3,
+   "return_factor": 1.0,
+   "social_ad_price_factor": 0.77,
+   "sponsored_ad_price_factor": 0.77,
+   "english": true
+  },
+  "TR": {
+   "name": "Turkey",
+   "currency": "TRY",
+   "vat": 0.2,
+   "duty": 0.25,
+   "referral": 0.17,
+   "payout": 3,
+   "hold": 7,
+   "entry": 20000,
+   "days": 75,
+   "month": 4000,
+   "listing": 1000,
+   "eu": false,
+   "south": false,
+   "ecommerce_usd_bn": 48.0,
+   "price_level": 0.45,
+   "currency_yearly_spread": 0.21,
+   "market_size": 0.0661,
+   "price_factor": 0.805,
+   "paid_up_capital": 0,
+   "freight_factor": 0.604,
+   "lead_days_vs_us": 8,
+   "fulfillment_factor": 0.65,
+   "return_factor": 1.0,
+   "social_ad_price_factor": 0.45,
+   "sponsored_ad_price_factor": 0.45,
+   "english": false
+  },
+  "SA": {
+   "name": "Saudi Arabia",
+   "currency": "SAR",
+   "vat": 0.15,
+   "duty": 0.057,
+   "referral": 0.14,
+   "payout": 14,
+   "hold": 10,
+   "entry": 12000,
+   "days": 60,
+   "month": 3500,
+   "listing": 1000,
+   "eu": false,
+   "south": false,
+   "ecommerce_usd_bn": 11.4,
+   "price_level": 0.5,
+   "currency_yearly_spread": 0.0,
+   "market_size": 0.0149,
+   "price_factor": 0.8132,
+   "paid_up_capital": 0,
+   "freight_factor": 0.568,
+   "lead_days_vs_us": 6,
+   "fulfillment_factor": 0.55,
+   "return_factor": 1.0,
+   "social_ad_price_factor": 0.8,
+   "sponsored_ad_price_factor": 0.8,
+   "english": false
+  },
+  "AE": {
+   "name": "United Arab Emirates",
+   "currency": "AED",
+   "vat": 0.05,
+   "duty": 0.046,
+   "referral": 0.15,
+   "payout": 14,
+   "hold": 10,
+   "entry": 12000,
+   "days": 45,
+   "month": 3500,
+   "listing": 800,
+   "eu": false,
+   "south": false,
+   "ecommerce_usd_bn": 8.1,
+   "price_level": 0.69,
+   "currency_yearly_spread": 0.0,
+   "market_size": 0.009,
+   "price_factor": 0.8722,
+   "paid_up_capital": 0,
+   "freight_factor": 1.378,
+   "lead_days_vs_us": 3,
+   "fulfillment_factor": 0.56,
+   "return_factor": 1.0,
+   "social_ad_price_factor": 0.81,
+   "sponsored_ad_price_factor": 0.81,
+   "english": false
+  }
+ },
+ "shapes": [
+  "mnl",
+  "nested",
+  "wom",
+  "delayed_ads",
+  "deal_seekers"
+ ]
+}

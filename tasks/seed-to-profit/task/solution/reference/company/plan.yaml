@@ -1,0 +1,15 @@
+# Reference plan: the 10 products with the largest dollar margin per unit on the marketplace, from the public
+# catalog alone, on both channels, from the standard supplier.
+company: Reference Goods
+credit_line: 250000
+products:
+  - {id: h5, channels: [site, marketplace], supplier: A}
+  - {id: f1, channels: [site, marketplace], supplier: A}
+  - {id: f5, channels: [site, marketplace], supplier: A}
+  - {id: o4, channels: [site, marketplace], supplier: A}
+  - {id: b2, channels: [site, marketplace], supplier: A}
+  - {id: o5, channels: [site, marketplace], supplier: A}
+  - {id: p1, channels: [site, marketplace], supplier: A}
+  - {id: h2, channels: [site, marketplace], supplier: A}
+  - {id: b1, channels: [site, marketplace], supplier: A}
+  - {id: b4, channels: [site, marketplace], supplier: A}
