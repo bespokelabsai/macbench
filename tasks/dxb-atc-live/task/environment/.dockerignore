@@ -1,0 +1,5 @@
+# Of the hub side only the live day's server enters the image, root-only; the harness plugins and launcher never do.
+hub/*
+!hub/server
+**/__pycache__
+**/*.pyc

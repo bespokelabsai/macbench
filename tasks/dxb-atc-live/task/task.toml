@@ -1,0 +1,39 @@
+version = "1.0"
+# Captured after the agents end: the team repo, for the record, and the live day's state, which the verifier grades in a
+# container of its own.
+artifacts = ["/app", "/var/lib/dxb-atc"]
+
+[task]
+name = "bespokelabsai/dxb-atc-live"
+description = "DXB ATC LIVE: run air traffic control at Dubai International as a team for one live day of real flights and weather"
+authors = [{ name = "Bespoke Labs" }]
+keywords = ["multi-agent", "air-traffic-control", "real-time", "live-game", "real-weather", "real-traffic"]
+
+[metadata]
+author_name = "Bespoke Labs"
+task_id = "dxb-atc-live"
+category = "operations"
+difficulty = "hard"
+tags = ["air-traffic-control", "real-time", "live-game", "bluesky", "real-weather", "real-traffic"]
+
+[agent]
+# 4 hours. The team copy (environment/hub/make_team_task.py) adds 10 minutes for the orchestration to stop the day.
+timeout_sec = 14400.0
+# Agents work as an unprivileged user, never root.
+user = "agent"
+network_mode = "no-network"
+
+[verifier]
+# Reads the hub's grading record; takes seconds. It runs in a container of its own, never in an agent's.
+timeout_sec = 300.0
+environment_mode = "separate"
+user = "root"
+network_mode = "no-network"
+
+[environment]
+network_mode = "public"
+build_timeout_sec = 1800.0
+# The same for every agent at every team size. An agent's work is model calls and its own programs.
+cpus = 1
+memory_mb = 4096
+storage_mb = 20480
