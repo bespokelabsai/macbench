@@ -53,11 +53,12 @@ Chicago Skyline Survey). Each task's `NOTICE.md` or the Credits section of its R
 ## Citation
 
 ```bibtex
-@article{bespokelabs2026macbench,
-  author  = {Shreyas Pimpalgaonkar and Kartik Sharma and Harsh Agarwal and Daniel Wang and Prajval Nakrani and Shivank Garg and Shahryar Adil Khan and Hardik Khichi and Anirudha Ramesh and Vishnu Suresh and Robert Zhang and Siddhant Jain and Alex Dimakis and Carlos Bonilla and Mahesh Sathiamoorthy},
-  title   = {Multi Agent Coordination Bench},
-  journal = {Bespoke Labs Blog},
-  year    = {2026},
-  note    = {https://benchmarks.bespokelabs.ai/multi-agent-coordination-bench/},
+@misc{pimpalgaonkar2026macbench,
+  title        = {{Multi Agent Coordination Bench}},
+  author       = {Pimpalgaonkar, Shreyas and Sharma, Kartik and Agarwal, Harsh and Wang, Daniel and Nakrani, Prajval and Garg, Shivank and Khan, Shahryar Adil and Khichi, Hardik and Ramesh, Anirudha and Suresh, Vishnu and Zhang, Robert and Jain, Siddhant and Dimakis, Alex and Bonilla, Carlos and Sathiamoorthy, Mahesh},
+  year         = {2026},
+  month        = nov,
+  howpublished = {Bespoke Labs Blog},
+  url          = {https://benchmarks.bespokelabs.ai/multi-agent-coordination-bench/}
 }
 ```
