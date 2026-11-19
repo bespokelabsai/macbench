@@ -48,13 +48,13 @@ harbor run -p task \
   -e multi_agent_harness.harbor.environment:TeamEnvironment --ek backend=docker --ek n_agents=$K \
   --ek budget_usd=$((150 * K)) --agent-setup-timeout-multiplier 3 \
   -a multi_agent_harness.harbor.agent:TeamAgent --ak harness=claude-code --ak model=claude-opus-5-5 --ak effort=max \
-  --ak orchestration=task/mah/fixed_solo_resume.py \
+  --ak orchestration=task/environment/hub/fixed_solo_resume.py \
   --ak timeout_sec=15300 --ak grade_at=30m,1h,2h,3h \
   --env-file .env
 ```
 
 - These are the settings of our reference runs (Claude Code, Opus 5.5 at max effort). `budget_usd` caps the team's model spend at $150 for each agent.
-- Every team size uses `task/mah/fixed_solo_resume.py`: every agent gets the whole task, the CLI's own subagents are off, and an agent whose session ends with an error is resumed in the same session.
+- Every team size uses `task/environment/hub/fixed_solo_resume.py`: every agent gets the whole task, the CLI's own subagents are off, and an agent whose session ends with an error is resumed in the same session.
 - `grade_at` grades the team's `main` at 30 minutes and at hours 1, 2 and 3. The grading after the agents stop is the score. The agents are told that `main` is graded at intervals; they never see a result.
 - The agents are stopped at 4 hours 15 minutes (`timeout_sec`); the prompt tells them they have 4 hours.
 - The task gives the agents no network. The Docker backend does not enforce that, so on it the agents can reach the internet, where compressors can be downloaded. Our reference runs used a backend with network isolation; the [harness's README](https://github.com/bespokelabsai/multi-agent-coordination-bench/blob/cd6c6ce43168d531033699d1c3f3aefcbae791b9/harness/README.md) lists the backends.
@@ -88,12 +88,12 @@ It scores 1.0. Its grading takes about 2 hours, because paq8px needs 1 to 8 minu
 | `task/environment/` | The image: Ubuntu 24.04 with Python and a C/C++ toolchain. `data/` becomes `/data`, read-only: `public/` (the twelve Silesia files, 210 MB), `samples/` (the practice files) and `samples.json` (their targets). `app/` becomes `/app`, the team repository, with a starter compressor that only copies bytes. |
 | `task/tests/` | `test.sh` and `grade.py` (the grader), `hidden/` (the 25 hidden files) and `targets.json`. |
 | `task/solution/` | The reference solution. `compressor/paq8px/` is the source of paq8px v217, with the zlib copy and the word lists it ships with, run at `-9LT`. `compressor/g16.cpp` is a coder for 16-bit pixel grids. For each file the smaller of the two outputs is kept. |
-| `task/mah/` | `fixed_solo_resume.py`, the orchestration the multi-agent harness loads. |
-| `task/licenses/` | The licence texts of the data sources (see Credits). |
+| `task/environment/hub/` | `fixed_solo_resume.py`, the orchestration the multi-agent harness loads. Not copied into the image. |
+| `task/environment/licenses/` | The licence texts of the data sources (see Credits). Not copied into the image. |
 
 ## Credits
 
-Every data file is cut from a public source and keeps that source's terms. The licence texts are in `task/licenses/`. Where a source states no terms of use, the table says so.
+Every data file is cut from a public source and keeps that source's terms. The licence texts are in `task/environment/licenses/`. Where a source states no terms of use, the table says so.
 
 **Public examples**, `task/environment/data/public/`: the twelve files of the Silesia compression corpus (S. Deorowicz), renamed. The corpus's page states no terms of use; it names where each file came from.
 
@@ -114,7 +114,7 @@ Every data file is cut from a public source and keeps that source's terms. The l
 
 **Practice files**, `task/environment/data/samples/`, 1 MiB each:
 
-| File | Source | Terms | Text in `task/licenses/` |
+| File | Source | Terms | Text in `task/environment/licenses/` |
 |---|---|---|---|
 | `english` | Project Gutenberg ebook 599, *Vanity Fair* | Public domain in the US | `Project-Gutenberg-License.txt` |
 | `polish` | Fourteen Polish-language Project Gutenberg ebooks | Public domain in the US | `Project-Gutenberg-License.txt` |
@@ -131,7 +131,7 @@ Every data file is cut from a public source and keeps that source's terms. The l
 
 **Hidden files**, `task/tests/hidden/`, about 1 MiB each. `task/tests/targets.json` records how each one was cut (`source`).
 
-| File | Source | Terms | Text in `task/licenses/` |
+| File | Source | Terms | Text in `task/environment/licenses/` |
 |---|---|---|---|
 | `arm64` | `libcrypto.so.3` of the Ubuntu 24.04 `libssl3t64` package (OpenSSL 3.0.13), arm64 | Apache 2.0 | `Apache-2.0.txt`, `ubuntu-copyright-openssl.txt` |
 | `audio` | archive.org item `MEGranHistoriadeAmor`, `AMOR.wav` | Marked public domain by its uploader | |
