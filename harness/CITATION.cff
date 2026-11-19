@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this harness, please cite it as below."
+type: software
+title: multi-agent-harness
+authors:
+  - name: Bespoke Labs
+repository-code: "https://github.com/bespokelabsai/multi-agent-coordination-bench/tree/main/harness"
+url: "https://github.com/bespokelabsai/multi-agent-coordination-bench/tree/main/harness"
+license: MIT
