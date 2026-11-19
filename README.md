@@ -5,7 +5,7 @@ This repository holds the tasks of [**Multi Agent Coordination Bench**](https://
 model agents coordinate.
 
 <p align="center">
-  <img src="assets/mac-bench.gif" alt="Agents on platforms over water post notes to one shared message board, and messages travel from the board to their teammates." width="900">
+  <img src="assets/mac-bench.gif" alt="Multi Agent Coordination Bench: agents on platforms over water post notes to one shared message board, and messages travel from the board to their teammates." width="900">
 </p>
 
 Each task is built so that the work of one agent depends on the work of its teammates. Every task runs in three
