@@ -1,0 +1,8 @@
+# generated: the hub plugin carries Petra (python3 task/environment/hub/make_hub_plugin.py)
+task/build/
+# model credentials
+.env
+.venv/
+jobs/
+__pycache__/
+*.pyc

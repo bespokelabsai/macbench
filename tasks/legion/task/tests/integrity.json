@@ -1,0 +1,14 @@
+{
+ "/usr/games/pyrogenesis": "54684626bfbdd7eaad94acc2f7a130b11fd324a614226edf0bea5e8de8595bdd",
+ "/usr/share/games/0ad/mods/public/public.zip": "aa8c80cce0c0568411e206d189ab11aa82d9da2f3859a128f5aa1aece4981dd0",
+ "/usr/share/games/0ad/mods/public/mod.json": "a5cf63a85c0e40afbcacc1eb56c8f9c5852166104ee946a603873c29fea86573",
+ "/usr/share/games/0ad/mods/mod/mod.zip": "8dad8b95d913501d11ed8628cc2e4f07680c43f071e0a6a2aee45f0daff0c809",
+ "/usr/lib/games/0ad/ActorEditor": "cfe66450cf02a987ff5387c45a3a79d3110bd6e6b592e5db20d1876789e8d3f1",
+ "/usr/lib/games/0ad/libAtlasUI.so": "067aa70251cbb08fca42ba7d36a8eec4d960817912229efe9611f1f51df52299",
+ "/usr/lib/games/0ad/libCollada.so": "d3ebf219d60d4f292f8481a31f91aa3f74c5d23484a2334ab0bf89c69c98d81c",
+ "/usr/lib/games/0ad/libmozjs128-release.so": "37a3f1af7b877b1386f5b4ca74110a8abc3372e12abc13d015d8cb8a3676dc79",
+ "/usr/lib/games/0ad/libnvcore.so": "becdb6f902279dcdc0c4b89650083b8f79a83230f21cb4fc5296ce4d53d3370c",
+ "/usr/lib/games/0ad/libnvimage.so": "e45cf683b0a05198b20ae3be9cc1fbf44d5e7bfab861141a0216b6adf202e560",
+ "/usr/lib/games/0ad/libnvmath.so": "da6fbbe4e3f6d74f574b5ac527a9e1d20fa284cd98c4828c5fe38f5c2f60db8c",
+ "/usr/lib/games/0ad/libnvtt.so": "ef84d381545f685446068d7f52841605d9781597c502a3bbcffc728f525a6d17"
+}

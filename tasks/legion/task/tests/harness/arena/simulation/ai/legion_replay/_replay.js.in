@@ -1,0 +1,35 @@
+// LEGION reproducibility check. Generated per match by the match runner:
+// re-posts the logged commands of the LEGION player at the same game times.
+// It imports the same guard, so Petra runs under identical conditions.
+import "simulation/ai/legion/guard.js";
+
+// Keyed by the AI-turn time (state.timeElapsed) at which each batch was posted;
+// the simulation logged them one turn later.
+const LEGION_REPLAY_COMMANDS = /*COMMANDS*/{};
+
+export function LegionReplay(settings)
+{
+	this.player = settings.player;
+}
+
+LegionReplay.prototype.Init = function()
+{
+};
+
+LegionReplay.prototype.HandleMessage = function(state, playerID)
+{
+	const commands = LEGION_REPLAY_COMMANDS[state.timeElapsed];
+	if (!commands)
+		return;
+	for (const command of commands)
+		Engine.PostCommand(this.player, command);
+};
+
+LegionReplay.prototype.Serialize = function()
+{
+	return {};
+};
+
+LegionReplay.prototype.Deserialize = function()
+{
+};

@@ -1,0 +1,7 @@
+{
+	"name": "LEGION sparring partner",
+	"description": "A second LEGION AI for bot-versus-bot practice, loaded through the same guard.",
+	"constructor": "LegionSparringEntry",
+	"filename": "_entry.js",
+	"useShared": true
+}
