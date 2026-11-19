@@ -1,0 +1,31 @@
+schema_version = "1.4"
+# Captured after the agents end: the team's compressor and notes.
+artifacts = ["/app"]
+[task]
+name = "bespokelabsai/compressor-sprint"
+description = "A team of agents builds a general-purpose lossless compressor that comes close to, or beats, the state of the art."
+authors = [{ name = "Bespoke Labs" }]
+keywords = ["multi-agent", "compression", "algorithm-engineering", "long-horizon"]
+[metadata]
+author_name = "Bespoke Labs"
+category = "software-engineering"
+difficulty = "hard"
+tags = ["multi-agent", "compression", "algorithm-engineering", "long-horizon"]
+description = "Build a general-purpose lossless compressor that comes close to, or beats, the state of the art (paq8px, JPEG XL) on 25 hidden files of 21 kinds. Each file is scored on a log scale of compressed size, from the best standard tool (0) to the state of the art (1.0)."
+[agent]
+# The prompt gives the agents 4 hours; this limit adds 15 minutes.
+timeout_sec = 15300.0
+network_mode = "no-network"
+[verifier]
+# Every hidden file is compressed and decompressed once. Each of those runs gets at most 15 minutes of CPU time
+# and 20 minutes of wall time, after a build of at most 15 minutes.
+timeout_sec = 23400.0
+network_mode = "no-network"
+[environment]
+# The network is needed only to build and set up the environment.
+network_mode = "public"
+build_timeout_sec = 1200.0
+# Every agent gets 8 CPUs and 16 GB, at every team size.
+cpus = 8
+memory_mb = 16384
+storage_mb = 20480

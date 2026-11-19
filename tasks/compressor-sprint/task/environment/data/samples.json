@@ -1,0 +1,98 @@
+{
+ "chemistry": {
+  "file": "/data/samples/chemistry",
+  "size": 1048576,
+  "baseline_bytes": 58818,
+  "baseline_tool": "lpaq1",
+  "sota_bytes": 36889,
+  "sota_tool": "paq8px-9LT"
+ },
+ "database": {
+  "file": "/data/samples/database",
+  "size": 1048576,
+  "baseline_bytes": 228330,
+  "baseline_tool": "lpaq1",
+  "sota_bytes": 106200,
+  "sota_tool": "paq8px-9LT"
+ },
+ "dictionary": {
+  "file": "/data/samples/dictionary",
+  "size": 1048576,
+  "baseline_bytes": 152400,
+  "baseline_tool": "lpaq1",
+  "sota_bytes": 115894,
+  "sota_tool": "paq8px-9LT"
+ },
+ "dll": {
+  "file": "/data/samples/dll",
+  "size": 1048576,
+  "baseline_bytes": 286196,
+  "baseline_tool": "xz -9e",
+  "sota_bytes": 249022,
+  "sota_tool": "paq8px-9LT"
+ },
+ "english": {
+  "file": "/data/samples/english",
+  "size": 1048576,
+  "baseline_bytes": 255508,
+  "baseline_tool": "lpaq1",
+  "sota_bytes": 221702,
+  "sota_tool": "paq8px-9LT"
+ },
+ "mri": {
+  "file": "/data/samples/mri",
+  "size": 1048320,
+  "baseline_bytes": 407546,
+  "baseline_tool": "lpaq1",
+  "sota_bytes": 362274,
+  "sota_tool": "paq8px-9LT"
+ },
+ "polish": {
+  "file": "/data/samples/polish",
+  "size": 1048576,
+  "baseline_bytes": 277180,
+  "baseline_tool": "lpaq1",
+  "sota_bytes": 248455,
+  "sota_tool": "paq8px-9LT"
+ },
+ "programs": {
+  "file": "/data/samples/programs",
+  "size": 1048576,
+  "baseline_bytes": 443570,
+  "baseline_tool": "lpaq1",
+  "sota_bytes": 282149,
+  "sota_tool": "paq8px-9LT"
+ },
+ "source": {
+  "file": "/data/samples/source",
+  "size": 1048576,
+  "baseline_bytes": 132740,
+  "baseline_tool": "lpaq1",
+  "sota_bytes": 99470,
+  "sota_tool": "paq8px-9LT"
+ },
+ "stars": {
+  "file": "/data/samples/stars",
+  "size": 1048576,
+  "baseline_bytes": 842228,
+  "baseline_tool": "xz -9e",
+  "sota_bytes": 723286,
+  "sota_tool": "paq8px-9LT"
+ },
+ "xml": {
+  "file": "/data/samples/xml",
+  "size": 1048576,
+  "baseline_bytes": 75350,
+  "baseline_tool": "lpaq1",
+  "sota_bytes": 47546,
+  "sota_tool": "paq8px-9LT"
+ },
+ "xray": {
+  "file": "/data/samples/xray",
+  "size": 1045440,
+  "baseline_bytes": 137854,
+  "baseline_tool": "lpaq1",
+  "sota_bytes": 93531,
+  "sota_tool": "jpegxl-lossless"
+ }
+}
