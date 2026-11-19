@@ -41,13 +41,13 @@ You need Docker and Python 3.12. Set up once, from this folder:
 ```bash
 python3 -m venv .venv && source .venv/bin/activate
 git clone https://github.com/bespokelabsai/multi-agent-coordination-bench ~/mac-bench
-git -C ~/mac-bench checkout cd6c6ce43168d531033699d1c3f3aefcbae791b9
+git -C ~/mac-bench checkout f834aee31c6148f63327d0ddb1a72cdc5074ed9b
 pip install -e "$HOME/mac-bench/harness[docker]"
 python3 task/environment/hub/make_hub_plugin.py   # packs the hidden game for the hub and the oracle
 echo "ANTHROPIC_API_KEY=..." > ~/.mindustry.env   # keep keys outside this folder
 ```
 
-This installs [multi-agent-harness](https://github.com/bespokelabsai/multi-agent-coordination-bench/tree/cd6c6ce43168d531033699d1c3f3aefcbae791b9/harness) (this repository's `harness/`) at the commit the task was
+This installs [multi-agent-harness](https://github.com/bespokelabsai/multi-agent-coordination-bench/tree/f834aee31c6148f63327d0ddb1a72cdc5074ed9b/harness) (this repository's `harness/`) at the commit the task was
 tested with, and Harbor with it. The clone can live anywhere, but keep it: the harness builds its hub from it. All
 commands below run from this folder. The images download the Mindustry v160.7 server JAR from its GitHub release.
 
@@ -83,7 +83,7 @@ harbor run -p task \
   and add `--ek model_upstream=subscription`. On the Docker backend also `export MULTI_AGENT_HARNESS_CLAUDE_ENV_SCRUB=0`:
   Claude Code's shell sandbox cannot start in a Docker agent box, and this runs it without (the agents' shell
   commands can then read the token). Other harnesses (Codex, Antigravity) and backends are described in the [harness's
-  README](https://github.com/bespokelabsai/multi-agent-coordination-bench/blob/cd6c6ce43168d531033699d1c3f3aefcbae791b9/harness/README.md).
+  README](https://github.com/bespokelabsai/multi-agent-coordination-bench/blob/f834aee31c6148f63327d0ddb1a72cdc5074ed9b/harness/README.md).
 
 ### Harbor
 

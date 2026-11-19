@@ -20,6 +20,9 @@ user = "root"
 
 [agent]
 timeout_sec = 14400.0
+# Agents reach only the model's API and, in team runs, the hub. The scenario (scenarios/s5.json, in this repository)
+# says where the people are, so an agent with internet access could read it.
+network_mode = "no-network"
 
 [environment]
 build_timeout_sec = 1800.0

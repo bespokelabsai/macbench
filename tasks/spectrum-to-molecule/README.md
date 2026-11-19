@@ -43,12 +43,12 @@ You need Docker, `curl`, Python 3.12 and git. Set up once, from this folder:
 ```bash
 python3 -m venv .venv && source .venv/bin/activate
 git clone https://github.com/bespokelabsai/multi-agent-coordination-bench ~/mac-bench
-git -C ~/mac-bench checkout cd6c6ce43168d531033699d1c3f3aefcbae791b9
+git -C ~/mac-bench checkout f834aee31c6148f63327d0ddb1a72cdc5074ed9b
 pip install -e "$HOME/mac-bench/harness[docker]"
 echo "ANTHROPIC_API_KEY=..." > .env
 ```
 
-This installs [multi-agent-harness](https://github.com/bespokelabsai/multi-agent-coordination-bench/tree/cd6c6ce43168d531033699d1c3f3aefcbae791b9/harness) (this repository's `harness/`) at the commit the task was
+This installs [multi-agent-harness](https://github.com/bespokelabsai/multi-agent-coordination-bench/tree/f834aee31c6148f63327d0ddb1a72cdc5074ed9b/harness) (this repository's `harness/`) at the commit the task was
 tested with, and Harbor with it. The clone can live anywhere, but keep it: the harness builds its hub from it. All
 commands below run from this folder.
 
@@ -111,7 +111,7 @@ harbor run -p task $COMMON --ak harness=antigravity --ak model=gemini-4-argon-hi
 - `MULTI_AGENT_HARNESS_CLAUDE_ENV_SCRUB=0` runs Claude Code without its shell sandbox, which cannot start in these
   boxes (the agents' shell commands can then read the plan token).
 - `--ek backend=docker` runs everything on your own Docker host instead, but the harness cannot keep the agents off
-  the internet there (it warns), so those runs are not comparable with ours. The [harness's README](https://github.com/bespokelabsai/multi-agent-coordination-bench/blob/cd6c6ce43168d531033699d1c3f3aefcbae791b9/harness/README.md) describes its
+  the internet there (it warns), so those runs are not comparable with ours. The [harness's README](https://github.com/bespokelabsai/multi-agent-coordination-bench/blob/f834aee31c6148f63327d0ddb1a72cdc5074ed9b/harness/README.md) describes its
   backends.
 
 **Grades during the run.** The score is the final verifier's, at 4 hours. Our results also graded the team's `main`

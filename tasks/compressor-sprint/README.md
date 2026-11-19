@@ -32,7 +32,7 @@ You need Docker, Python 3.12 or newer, and 8 CPUs and 16 GB of memory for every 
 
 ```bash
 git clone https://github.com/bespokelabsai/multi-agent-coordination-bench ~/mac-bench
-git -C ~/mac-bench checkout ca9c5b0b26f94bda43e4ba155d37ba2680bfa30c
+git -C ~/mac-bench checkout f834aee31c6148f63327d0ddb1a72cdc5074ed9b
 pip install -e "$HOME/mac-bench/harness[docker]"
 ```
 
@@ -57,8 +57,8 @@ harbor run -p task \
 - Every team size uses `task/environment/hub/fixed_solo_resume.py`: every agent gets the whole task, the CLI's own subagents are off, and an agent whose session ends with an error is resumed in the same session.
 - `grade_at` grades the team's `main` at 30 minutes and at hours 1, 2 and 3. The grading after the agents stop is the score. The agents are told that `main` is graded at intervals; they never see a result.
 - The agents are stopped at 4 hours 15 minutes (`timeout_sec`); the prompt tells them they have 4 hours.
-- The task gives the agents no network. The Docker backend does not enforce that, so on it the agents can reach the internet, where compressors can be downloaded. Our reference runs used a backend with network isolation; the [harness's README](https://github.com/bespokelabsai/multi-agent-coordination-bench/blob/ca9c5b0b26f94bda43e4ba155d37ba2680bfa30c/harness/README.md) lists the backends.
-- To use a Claude plan instead of an API key, put `CLAUDE_CODE_OAUTH_TOKEN` (from `claude setup-token`) in `.env` and add `--ek model_upstream=subscription`. On the Docker backend also `export MULTI_AGENT_HARNESS_CLAUDE_ENV_SCRUB=0`: Claude Code's shell sandbox cannot start in a Docker agent box, and this runs it without (the agents' shell commands can then read the token). Other harnesses (Codex, Antigravity) and backends are described in the [harness's README](https://github.com/bespokelabsai/multi-agent-coordination-bench/blob/ca9c5b0b26f94bda43e4ba155d37ba2680bfa30c/harness/README.md).
+- The task gives the agents no network. The Docker backend does not enforce that, so on it the agents can reach the internet, where compressors can be downloaded. Our reference runs used a backend with network isolation; the [harness's README](https://github.com/bespokelabsai/multi-agent-coordination-bench/blob/f834aee31c6148f63327d0ddb1a72cdc5074ed9b/harness/README.md) lists the backends.
+- To use a Claude plan instead of an API key, put `CLAUDE_CODE_OAUTH_TOKEN` (from `claude setup-token`) in `.env` and add `--ek model_upstream=subscription`. On the Docker backend also `export MULTI_AGENT_HARNESS_CLAUDE_ENV_SCRUB=0`: Claude Code's shell sandbox cannot start in a Docker agent box, and this runs it without (the agents' shell commands can then read the token). Other harnesses (Codex, Antigravity) and backends are described in the [harness's README](https://github.com/bespokelabsai/multi-agent-coordination-bench/blob/f834aee31c6148f63327d0ddb1a72cdc5074ed9b/harness/README.md).
 
 ### Harbor
 
