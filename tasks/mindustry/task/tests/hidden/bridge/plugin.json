@@ -1,0 +1,11 @@
+{
+  "name": "agent-bridge",
+  "displayName": "Agent player bridge",
+  "author": "Olam Labs",
+  "main": "agentbridge.AgentBridge",
+  "description": "Programmatic player controls, sight limits and production counters for Mindustry Many Fronts.",
+  "version": "0.1.0",
+  "minGameVersion": "160",
+  "java": true,
+  "hidden": true
+}
