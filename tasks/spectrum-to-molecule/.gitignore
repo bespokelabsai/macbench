@@ -1,0 +1,10 @@
+# the dataset build (build/ next to task/, or wherever MS2_BUILD_DIR points) and what environment/dataset/prepare.sh
+# places: the agents' data next to its README, and the verifier's hidden/ folder
+build/
+task/environment/app/data/*
+!task/environment/app/data/README.md
+task/tests/hidden/
+# Harbor job folders (with their .checkpoints, .ckpt-archive and .graded-checkpoints), credentials
+jobs/
+.env
+__pycache__/
