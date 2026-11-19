@@ -23,7 +23,7 @@ leaderboard and the results for every task.
 | Holdout-game | survival game | Distributed | [`tasks/holdout`](tasks/holdout) |
 | 0 A.D. | game AI | Shared | [`tasks/legion`](tasks/legion) |
 | Power Outage | power grid restoration | Distributed | [`tasks/power-outage`](tasks/power-outage) |
-| Seed to Profit | company management | Shared | coming soon |
+| Seed to Profit | company management | Shared | [`tasks/seed-to-profit`](tasks/seed-to-profit) |
 | Mindustry | factory and defense game | Distributed | [`tasks/mindustry`](tasks/mindustry) |
 | Dubai ATC | air traffic control | Shared | [`tasks/dxb-atc-live`](tasks/dxb-atc-live) |
 | Chicago Skyline Survey | drone survey planning | Shared | [`tasks/chicago-skyline-survey`](tasks/chicago-skyline-survey) |
