@@ -1,0 +1,6 @@
+{
+  "disableWorkflows": true,
+  "permissions": {
+    "deny": ["Agent", "Task", "Workflow", "Skill", "RemoteTrigger", "Bash(claude *)"]
+  }
+}
