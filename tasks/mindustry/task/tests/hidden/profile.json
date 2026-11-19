@@ -1,0 +1,21 @@
+{
+  "map_size": 360,
+  "sight_radius_tiles": 510,
+  "fronts": 4,
+  "spawn_radius": 165,
+  "first_wave_ticks": 28800,
+  "wave_spacing_ticks": 10800,
+  "first_budget": 300,
+  "growth": 1.06,
+  "loadout": {
+    "copper": 1000,
+    "lead": 500
+  },
+  "host": {
+    "rate_per_sec": 4,
+    "rate_burst": 24,
+    "between_worlds_sec": 120,
+    "units": 8,
+    "map_key": "f4600b1736a78c4c2cbd2634b40e8226d3b56d001ca5b9c944c320f3f47ab531"
+  }
+}
