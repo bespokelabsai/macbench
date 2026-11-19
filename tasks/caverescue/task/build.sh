@@ -1,8 +1,8 @@
 #!/bin/bash
 # Build the CAVE RESCUE harness tasks: build-mah/caverescue-m{1,2,4,8}.
 #   ./build.sh
-# Renders the photo library into build/s5 the first time. 16 CPUs / 32 GB are split over the k agent
-# boxes; the k=1 build cannot spawn subagents.
+# Renders the photo library into build/s5 the first time. Every agent box gets the size in task.toml,
+# whatever k is; the k=1 build cannot spawn subagents.
 set -euo pipefail
 H=$(cd "$(dirname "$0")" && pwd); R=$H; cd "$R"   # this folder is the Harbor task and its sources
 SCEN=("$R/build/s5")   # the task has one scenario, s5
@@ -39,12 +39,10 @@ for K in 1 2 4 8; do
   cp "$H/tests/test.sh" "$OUT/tests/test.sh"; cp "$H/task.toml" "$OUT/task.toml"; cp "$H/instruction.md" "$OUT/instruction.md"
   cp -r "$H/solution" "$OUT/solution"
   python3 - "$OUT" "$K" <<'P'
-import json, re, sys
+import json, sys
 out, k = sys.argv[1], int(sys.argv[2])
 p = f"{out}/task.toml"; s = open(p).read()
 s = s.replace('name = "bespokelabsai/caverescue"', f'name = "bespokelabsai/caverescue-m{k}"')
-s = re.sub(r"^cpus = .*$", f"cpus = {16 // k}", s, flags=re.M)
-s = re.sub(r"^memory_mb = .*$", f"memory_mb = {32768 // k}", s, flags=re.M)
 open(p, "w").write(s)
 p = f"{out}/instruction.md"; s = open(p).read().rstrip() + "\n\n"
 if k == 1:
