@@ -1,0 +1,18 @@
+{
+  "start_hour": 18,
+  "weather": "mild",
+  "temperature_c": 15,
+  "load_scale": 0.9,
+  "wind": 0.5,
+  "solar": 0.6,
+  "open_at_start": {"fraction": 0.45, "seed": 1},
+  "feeders_closed": {"fraction": 0.3, "seed": 1},
+  "faulted": ["L010", "L120", "L333", "L690"],
+  "stuck": ["L050", "L410"],
+  "unavailable": ["G010", "G032"],
+  "offline_h": {"G005": 30, "G012": 120},
+  "battery_h": 7,
+  "telecom_h": 5,
+  "nuclear_deadline_h": 8,
+  "events": [[240, "unit_trip", "G026"], [400, "line_trip", "L200"], [500, "wind_drop", null]]
+}
