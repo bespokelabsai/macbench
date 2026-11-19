@@ -37,7 +37,7 @@ environment gives each agent its own part of the system to see or control.
 ## Running a task
 
 Each task is a [Harbor](https://github.com/harbor-framework/harbor) task folder. It runs with plain Harbor for a
-single agent, and with [multi-agent-harness](https://github.com/bespokelabsai/multi-agent-harness) for a team. The
+single agent, and with [multi-agent-harness](harness/) for a team. The
 README in each task's folder has the setup and the exact commands.
 
 ## Citation

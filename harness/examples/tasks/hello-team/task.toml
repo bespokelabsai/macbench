@@ -1,0 +1,20 @@
+schema_version = "1.4"
+
+[metadata]
+description = "Toy multi-agent task: N agents coordinate on the board to write distinct lines and elect a leader."
+tags = ["multi-agent", "toy"]
+
+# The verifier runs on the hub and reads the team repo and board log locally.
+[verifier]
+timeout_sec = 120.0
+network_mode = "no-network"
+
+# Agents reach only the hub (board, proxy, git) while they work.
+[agent]
+timeout_sec = 1200.0
+network_mode = "no-network"
+
+# Open at start so the hub runtime and the agents' CLIs can install.
+[environment]
+build_timeout_sec = 1200.0  # covers a first build of the task image
+network_mode = "public"
