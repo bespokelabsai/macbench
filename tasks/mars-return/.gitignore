@@ -1,0 +1,10 @@
+# generated: the hub plugin carries the hidden simulator and compiler (python3 task/environment/hub/make_hub_plugin.py)
+task/build/
+# model credentials
+.env
+.venv/
+jobs/
+__pycache__/
+*.pyc
+# the simulator has a package named core/, which a repository-wide "core" (crash dump) rule would drop
+!task/tests/hidden/marsflight/core/

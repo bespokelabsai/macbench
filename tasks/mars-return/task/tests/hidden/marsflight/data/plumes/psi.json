@@ -1,0 +1,102 @@
+{
+  "about": "Plume surface interaction on Mars: flight observations used to fit and to check models/plumes/surface.py. ",
+  "msl_sky_crane": {
+    "source": "J. Vizcaino and M. Mehta, 'Quantification of plume-soil interaction and excavation due to the Sky Crane descent stage', AIAA 2015, NTRS 20150002954: Figure 3 (descent track, p. 4), Table 3 (craters, p. 9), Table 4 and Section V (erosion rates, p. 9), Section II (heights, p. 3).",
+    "engines_firing": 4,
+    "thrust_per_engine_N": 3113.0,
+    "thrust_note": "'about 2800 lbf of thrust for its final descent stage' (p. 2) = 12.45 kN over the four engines left lit below 23 m.",
+    "exit_diameter_m": 0.2,
+    "track_t_s_h_m": [
+      [
+        -26.953,
+        100.0
+      ],
+      [
+        -24.511,
+        50.0
+      ],
+      [
+        -21.153,
+        23.0
+      ],
+      [
+        -4.907,
+        10.0
+      ],
+      [
+        0.0,
+        6.3
+      ],
+      [
+        0.525,
+        6.1
+      ]
+    ],
+    "bcf_onset_h_m": 18.0,
+    "bcf_note": "Erosion turns from viscous shear to bearing capacity failure where the ground disappears from view, about 18 m (p. 9); the first plume interaction is seen at 63 m (p. 3).",
+    "craters": {
+      "Goulburn": {
+        "volume_m3": 0.011,
+        "depth_m": 0.067,
+        "diameter_m": 1.33,
+        "bedrock": true
+      },
+      "Burnside": {
+        "volume_m3": 0.054,
+        "depth_m": 0.051,
+        "diameter_m": 1.74,
+        "bedrock": true
+      },
+      "Hepburn": {
+        "volume_m3": 0.064,
+        "depth_m": 0.073,
+        "diameter_m": 2.0,
+        "bedrock": false
+      },
+      "Sleepy Dragon": {
+        "volume_m3": 0.085,
+        "depth_m": 0.102,
+        "diameter_m": 2.24,
+        "bedrock": false
+      }
+    }
+  },
+  "phoenix": {
+    "sources": [
+      "M. Mehta et al., 'Explosive erosion during the Phoenix landing exposes subsurface water on Mars', Icarus 211 (2011) 172-194: 5 to 18 cm of soil removed under the lander in under 2 s (Conclusions (2)); pulsed jets erode 5 to 20 times faster than steady ones (Conclusions (1)); a 12 cm rock dragged 35 cm (Fig. 16B).",
+      "D. H. Plemmons et al., 'Effects of the Phoenix Lander descent thruster plume on the Martian surface', JGR 113 (2008) E00A11: 10 Hz pulses, 45 ms wide; thrusters 0.5 m above the ground at touchdown (0.25 m on the half-scale rig).",
+      "NASA/JPL Phoenix Landing press kit (2008), p. 22: twelve thrusters of about 293 N; constant 2.4 m/s descent from about 30 m; engines off when the footpads sense the ground.",
+      "Vizcaino and Mehta (2015), p. 2: lift loss from about 5 m at 2.6 m/s; mean impingement pressure about one tenth of Earth's sea level pressure."
+    ],
+    "engines": 12,
+    "thrust_per_engine_N": 293.0,
+    "duty": 0.45,
+    "exit_diameter_m": 0.066,
+    "exit_note": "Not published; the MR-107 class nozzle is taken as 6.6 cm across. The pressure check below is insensitive to it at 0.5 m.",
+    "descent_mps": 2.6,
+    "interaction_from_h_m": 5.0,
+    "touchdown_h_m": 0.5,
+    "removed_depth_m": [
+      0.05,
+      0.18
+    ],
+    "removed_note": "Erosion stopped at the ice table, so the soil the plume could have removed is at least this deep.",
+    "impingement_pressure_Pa": 10132.5,
+    "rock_dragged_m": 0.12
+  },
+  "soils": {
+    "about": "Soil classes for the fit. p_bcf_Pa_check: the ground pressure above which bearing capacity failure starts, which surface.py computes from MSL at 18 m (a check value only). loose_depth: how deep the loose layer goes before bedrock or ice stops the digging; drawn per world from the range.",
+    "jezero_floor": {
+      "p_bcf_Pa_check": 92.0,
+      "loose_depth_m": [
+        0.05,
+        0.3
+      ],
+      "rock_density_kg_m3": 3000.0,
+      "note": "Jezero's floor is rocky with thin regolith; the range brackets MSL's craters stopped by bedrock (5 to 7 cm) and Phoenix's 5 to 18 cm over ice. An engineering range, not a survey.",
+      "bulk_density_kg_m3": 1300.0,
+      "density_note": "Viking lander soils 1.1 to 1.6 g/cm3 (H. J. Moore et al., USGS Professional Paper 1389, 1987); used only to turn eroded volume into mass. (Vizcaino and Mehta's Table 5 implies 390 kg/m3, which looks like a unit slip, so it is not used.)"
+    }
+  },
+  "license": "Published NASA, AIAA, Elsevier and AGU material; numbers quoted with citation for non-commercial use."
+}

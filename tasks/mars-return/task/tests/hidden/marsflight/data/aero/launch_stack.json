@@ -1,0 +1,430 @@
+{
+ "about": "Launch stack normal-force slope on the widest section.",
+ "default": "wind_tunnel",
+ "sources": {
+  "wind_tunnel": {
+   "mach": [
+    0.0,
+    50.0
+   ],
+   "cn_alpha_per_rad": [
+    2.5,
+    2.5
+   ],
+   "source": "Apollo/Saturn V without fins, NASA TM X-53770 (Walker 1968), Figs. 25-26"
+  },
+  "vspaero_body_wakes": {
+   "mach": [
+    0.3,
+    0.6,
+    0.8,
+    0.9,
+    1.2,
+    1.5,
+    2.0,
+    3.0
+   ],
+   "cn_alpha_per_rad": [
+    3.609,
+    3.173,
+    2.19,
+    0.485,
+    1.6,
+    2.058,
+    2.971,
+    3.975
+   ],
+   "source": "OpenVSP OpenVSP 3.55.0 VSPAERO panel method on the reference stack"
+  },
+  "vspaero_no_wakes": {
+   "mach": [
+    0.3,
+    0.6,
+    0.8,
+    0.9,
+    1.2,
+    1.5,
+    2.0,
+    3.0
+   ],
+   "cn_alpha_per_rad": [
+    -1.253,
+    -2.927,
+    -10.07,
+    -34.417,
+    -0.663,
+    0.049,
+    0.13,
+    0.63
+   ],
+   "source": "OpenVSP OpenVSP 3.55.0 VSPAERO panel method on the reference stack"
+  }
+ },
+ "bodies": {
+  "reference": {
+   "parts": [
+    [
+     "cyl",
+     11.2,
+     47.730000000000004
+    ],
+    [
+     "cone",
+     11.2,
+     16.8
+    ]
+   ],
+   "d_ref_m": 11.2,
+   "vspaero_body_wakes": {
+    "mach": [
+     0.3,
+     0.6,
+     0.8,
+     0.9,
+     1.2,
+     1.5,
+     2.0,
+     3.0
+    ],
+    "cn_alpha_per_rad": [
+     3.609,
+     3.173,
+     2.19,
+     0.485,
+     1.6,
+     2.058,
+     2.971,
+     3.975
+    ],
+    "surface_pressure_only_per_rad": [
+     -0.078,
+     -0.111,
+     -0.212,
+     -0.453,
+     -0.073,
+     -0.054,
+     -0.052,
+     -0.048
+    ]
+   },
+   "vspaero_no_wakes": {
+    "mach": [
+     0.3,
+     0.6,
+     0.8,
+     0.9,
+     1.2,
+     1.5,
+     2.0,
+     3.0
+    ],
+    "cn_alpha_per_rad": [
+     -1.253,
+     -2.927,
+     -10.07,
+     -34.417,
+     -0.663,
+     0.049,
+     0.13,
+     0.63
+    ],
+    "surface_pressure_only_per_rad": [
+     -0.0,
+     -0.0,
+     -0.0,
+     -0.0,
+     -0.0,
+     -0.0,
+     -0.0,
+     -0.0
+    ]
+   },
+   "marsflight_hand_fit": 2.5
+  },
+  "cylinder": {
+   "parts": [
+    [
+     "cyl",
+     3.66,
+     64.51
+    ],
+    [
+     "cone",
+     3.66,
+     5.49
+    ]
+   ],
+   "d_ref_m": 3.66,
+   "vspaero_body_wakes": {
+    "mach": [
+     0.3,
+     0.6,
+     0.8,
+     0.9,
+     1.2,
+     1.5,
+     2.0,
+     3.0
+    ],
+    "cn_alpha_per_rad": [
+     5.5,
+     3.549,
+     -9.923,
+     -73.885,
+     655.428,
+     2.497,
+     -2.715,
+     16.312
+    ],
+    "surface_pressure_only_per_rad": [
+     -0.67,
+     -1.049,
+     -2.819,
+     -10.597,
+     -928.649,
+     -0.133,
+     -0.183,
+     -0.128
+    ]
+   },
+   "vspaero_no_wakes": {
+    "mach": [
+     0.3,
+     0.6,
+     0.8,
+     0.9,
+     1.2,
+     1.5,
+     2.0,
+     3.0
+    ],
+    "cn_alpha_per_rad": [
+     -49.367,
+     -90.211,
+     -244.922,
+     -743.529,
+     173.953,
+     0.271,
+     -4.082,
+     9.811
+    ],
+    "surface_pressure_only_per_rad": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "openrocket": {
+    "mach_0.5_alpha_0": 2.0,
+    "mach_0.5_alpha_2": 2.8975957773016057
+   },
+   "rocketpy": {
+    "mach_0.5_alpha_0": 2.0
+   },
+   "marsflight_hand_fit": 2.5
+  },
+  "flare": {
+   "parts": [
+    [
+     "cyl",
+     10.06,
+     62.0
+    ],
+    [
+     "trans",
+     10.06,
+     6.6,
+     5.5
+    ],
+    [
+     "cyl",
+     6.6,
+     27.5
+    ],
+    [
+     "cone",
+     6.6,
+     9.899999999999999
+    ]
+   ],
+   "d_ref_m": 10.06,
+   "vspaero_body_wakes": {
+    "mach": [
+     0.3,
+     0.6,
+     0.8,
+     0.9,
+     1.2,
+     1.5,
+     2.0,
+     3.0
+    ],
+    "cn_alpha_per_rad": [
+     3.802,
+     3.676,
+     3.427,
+     2.275,
+     -0.711,
+     2.562,
+     5.115,
+     5.414
+    ],
+    "surface_pressure_only_per_rad": [
+     -0.25,
+     -0.317,
+     -0.488,
+     -0.85,
+     -0.1,
+     -0.076,
+     -0.078,
+     -0.076
+    ]
+   },
+   "vspaero_no_wakes": {
+    "mach": [
+     0.3,
+     0.6,
+     0.8,
+     0.9,
+     1.2,
+     1.5,
+     2.0,
+     3.0
+    ],
+    "cn_alpha_per_rad": [
+     -5.677,
+     -10.581,
+     -27.519,
+     -79.34,
+     -1.942,
+     0.437,
+     1.69,
+     1.733
+    ],
+    "surface_pressure_only_per_rad": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "openrocket": {
+    "mach_0.5_alpha_0": 2.0,
+    "mach_0.5_alpha_2": 2.4263159519817648
+   },
+   "rocketpy": {
+    "mach_0.5_alpha_0": 2.0
+   },
+   "marsflight_hand_fit": 2.5,
+   "wind_tunnel": "2.5 to 2.6 per rad, Mach 0.5 to 2 (TM X-53770)"
+  },
+  "hammerhead": {
+   "parts": [
+    [
+     "cyl",
+     3.66,
+     60.0
+    ],
+    [
+     "trans",
+     3.66,
+     5.2,
+     2.0
+    ],
+    [
+     "cyl",
+     5.2,
+     6.0
+    ],
+    [
+     "cone",
+     5.2,
+     7.800000000000001
+    ]
+   ],
+   "d_ref_m": 5.2,
+   "vspaero_body_wakes": {
+    "mach": [
+     0.3,
+     0.6,
+     0.8,
+     0.9,
+     1.2,
+     1.5,
+     2.0,
+     3.0
+    ],
+    "cn_alpha_per_rad": [
+     2.87,
+     2.185,
+     -2.542,
+     -25.811,
+     58.167,
+     3.329,
+     -0.109,
+     7.756
+    ],
+    "surface_pressure_only_per_rad": [
+     -0.459,
+     -0.712,
+     -1.762,
+     -5.976,
+     -12.152,
+     -0.078,
+     -0.091,
+     -0.071
+    ]
+   },
+   "vspaero_no_wakes": {
+    "mach": [
+     0.3,
+     0.6,
+     0.8,
+     0.9,
+     1.2,
+     1.5,
+     2.0,
+     3.0
+    ],
+    "cn_alpha_per_rad": [
+     -29.003,
+     -51.851,
+     -132.992,
+     -383.765,
+     12.509,
+     2.224,
+     -0.824,
+     4.713
+    ],
+    "surface_pressure_only_per_rad": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "openrocket": {
+    "mach_0.5_alpha_0": 0.9907988165680472,
+    "mach_0.5_alpha_2": 1.4965294910713582
+   },
+   "rocketpy": {
+    "mach_0.5_alpha_0": 0.9907988165680475
+   },
+   "marsflight_hand_fit": 2.5
+  }
+ },
+ "bodies_note": "cylinder, flare and hammerhead are the bodies (our cross-check, not included); OpenRocket and RocketPy values from results/issue-115/rocket at Mach 0.5."
+}

@@ -1,0 +1,39 @@
+{
+  "about": "Supersonic retropropulsion (SRP) wind tunnel data for blunt bodies: how much of the no-jet aerodynamic drag a thrusting body keeps, and the pitching moment slope. ",
+  "drag_fraction": {
+    "about": "Aerodynamic drag coefficient with the jets on divided by the no-jet value (thrust not included), at zero angle of attack, against the thrust coefficient CT = T / (q S). Points digitized from Korzun (2012), Figure 22 (filled points are Jarvinen and Adams 1970 data; 60 deg sphere-cone, air, Mach 1.05 to 6), read to about +-0.02.",
+    "source": "A. M. Korzun, 'Aerodynamic and performance characterization of supersonic retropropulsion for application to planetary entry and descent', PhD thesis, Georgia Institute of Technology, 2012, Figure 22 (p. 65) and Section 2.2 (pp. 28-34); data of P. O. Jarvinen and R. H. Adams, NASA CR NAS-7-576, 1970.",
+    "central": [[0.0, 1.0], [0.5, 0.215], [0.72, 0.18], [1.02, 0.13], [1.04, 0.035], [1.12, 0.015], [4.0, 0.005], [10.0, 0.005]],
+    "peripheral": [[0.0, 0.99], [1.03, 0.855], [1.63, 0.335], [1.66, 0.30], [3.0, 0.005], [4.0, 0.0], [10.0, 0.0]],
+    "valid_mach": [1.05, 6.0],
+    "valid_ct": [0.0, 10.0]
+  },
+  "langley_1853": {
+    "about": "NASA Langley Unitary Plan Wind Tunnel Test 1853 (2010): 5 in 70 deg sphere-cone, Mach 4.6, CT = 2, integrated forebody drag coefficient from the measured surface pressures. Nozzles: 1 at the center, 3 at half the forebody radius, 4 (both). Korzun (2012) Table 22, p. 182, 'CD,f Exp.' column.",
+    "source": "Korzun (2012) Table 22; test described in S. A. Berry and M. N. Rhode, 'Supersonic Retropropulsion Test 1853 in NASA LaRC Unitary Plan Wind Tunnel Test Section 2', NASA/TP-2014-218256.",
+    "mach": 4.6,
+    "ct": 2.0,
+    "cd_no_jet": {"alpha_0": 1.491, "alpha_8": 1.462},
+    "cd_jet": {
+      "center":  {"alpha_0": 0.018, "alpha_8": 0.016},
+      "tri_half_radius": {"alpha_0": 0.057, "alpha_8": 0.047},
+      "quad":    {"alpha_0": -0.013, "alpha_8": -0.001}
+    }
+  },
+  "central_high_ct": {
+    "about": "Jarvinen and Adams central-nozzle case reproduced by FUN3D, experimental integrated forebody drag CD,f against CT (Korzun 2012 Table 17, p. 123). Negative values: the forebody pressure falls below the free stream.",
+    "points": [[0.0, 1.254], [2.0, -0.047], [4.04, -0.142], [7.0, -0.148], [7.0, -0.167]]
+  },
+  "pitch_slope_central": {
+    "about": "Pitching moment slope dCm/dalpha (per degree) of a 60 deg cone with one central retro nozzle, against CT. Digitized from Korzun (2012) Figure 15 (p. 31), data of Jarvinen and Adams (1970). Always negative (statically stable about the reference point), largest near CT = 1, then falling towards zero.",
+    "source": "Korzun (2012) Figure 15, read to about +-0.0005 per degree.",
+    "mach_0.60": [[0.0, -0.0030], [0.4, -0.0110], [0.8, -0.0148], [1.2, -0.0140], [2.0, -0.0092], [2.2, -0.0082]],
+    "mach_1.05": [[0.0, -0.0035], [0.5, -0.0175], [0.9, -0.0220], [1.0, -0.0218], [1.5, -0.0185], [2.0, -0.0155], [2.2, -0.0142]],
+    "mach_2.00": [[0.0, -0.0028], [0.4, -0.0080], [0.75, -0.0100], [1.0, -0.0095], [1.5, -0.0065], [2.0, -0.0037], [3.0, -0.0020], [4.0, -0.0008]]
+  },
+  "unsteadiness": {
+    "about": "At Mach 4.6 and CT = 2 the forebody drag oscillates at about 1.9 to 2.6 kHz on the 5 in model, a Strouhal number of 0.31 to 0.44 (Korzun 2012 Table 21; Codoni and Berry 2014, J. Spacecraft Rockets 51(4)). Recorded, not flown: the oscillation is far faster than a vehicle can respond to.",
+    "strouhal": [0.31, 0.44]
+  },
+  "license": "Published NASA and Georgia Tech material; numbers read from figures and tables for non-commercial use with citation."
+}

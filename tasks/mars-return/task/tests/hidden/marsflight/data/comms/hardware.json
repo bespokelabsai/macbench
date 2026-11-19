@@ -1,0 +1,46 @@
+{
+  "_source": "DESCANSO Design and Performance Summary Series (JPL, public): MRO (Taylor, Lee, Shambayati 2006, MRO_092106.pdf) Tables 2-1, 2-2, 2-4, 4-3 to 4-6; MSL (Makovsky, Ilott, Taylor 2009, Descanso14_MSL_Telecom.pdf) Tables 1-6, 2-9, 2-11, 2-12; MarCO (DESCANSO 18) Tables 5-3 to 5-5; Mars Odyssey (DESCANSO 2) Table 5-3.",
+  "bands": {
+    "X":  {"down_Hz": 8.42e9, "up_Hz": 7.16e9},
+    "Ka": {"down_Hz": 32.05e9}
+  },
+  "defaults": {"tx_rf_W": 15.0, "circuit_loss_dB": 1.3, "band": "X", "hga_m": 0.0,
+               "_note": "An element with no comms fields gets MSL's rover X-band chain: a 15 W SSPA and a low-gain antenna (DESCANSO 14). Circuit loss 1.3 dB is MarCO's HGA path (DESCANSO 18 Table 5-4, line 8)."},
+  "lga": {"gain_dBi": 8.8, "rx_gain_dBi": 8.4, "mass_kg": 0.4, "_note": "MRO LGA boresight gains (MRO Table 2-2); mass of an MSL PLGA (MSL Table 2-11)."},
+  "hga": {
+    "aperture_efficiency": 0.665,
+    "areal_density_kg_m2": 2.86,
+    "feed_kg": 1.6,
+    "gimbal": {"kg_per_m2": 5.0, "min_kg": 6.6},
+    "_note": "Efficiency fitted to MRO's 3 m HGA, 46.7 dBi at 8.439 GHz (Table 2-2). Reflector 19.1 kg plus 1.1 kg hardware over 7.07 m^2, feed 1.6 kg (MRO Table 2-1). Gimbal: MRO 45 kg for 3 m (Table 2-1), MSL rover 6.6 kg (MSL Table 2-11)."
+  },
+  "amplifiers": {
+    "twta_min_rf_W": 20.0,
+    "sspa": {"rf_W": 15.0, "efficiency": 0.273, "mass_kg": 1.4, "mass_exponent": 0.5, "_note": "MSL rover SSPA: 15 W RF, 55 W DC nominal, 1.4 kg (MSL Tables 2-9, 2-11)."},
+    "twta": {"rf_W": 100.0, "efficiency": 0.571, "mass_kg": 2.5, "mass_exponent": 0.5, "_note": "MSL descent-stage TWTA: 100 W RF, 175.2 W DC operating, 2.5 kg (MSL Tables 2-11, 2-12). MRO measured 102 W RF from 172 W (efficiency 0.59)."},
+    "twta_ka": {"rf_W": 35.0, "efficiency": 0.42, "mass_kg": 2.3, "mass_exponent": 0.5, "_note": "MRO Ka-band TWTA: 34 W RF from 81 W DC; tube 0.8 kg plus converter 1.5 kg (MRO Table 2-1)."}
+  },
+  "transponder": {"mass_kg": 3.0, "dc_W": 14.4, "rx_only_W": 11.4, "noise_K": 480.9, "threshold_dBm": -156.0,
+                  "_note": "SDST: 3.0 kg, 14.4 W coherent transmit, 11.4 W receive only (MSL Tables 2-11, 2-12); receiver threshold -156 dBm (MRO Table 2-3); system noise 480.9 K as MarCO's MGA uplink budget (DESCANSO 18 Table 5-3, line 21)."},
+  "microwave_kg": 2.5,
+  "ka_chain_kg": 0.6,
+  "uhf": {"mass_kg": 3.7, "dc_W": 71.0, "tx_rf_W": 14.8, "return_Hz": 401.586e6, "forward_Hz": 437.1e6,
+          "rx_threshold_dBm_1kbps": -130.8, "rx_threshold_dBm_1024kbps": -99.6,
+          "_note": "Electra-Lite radio about 3 kg (MSL sec. 2.6.3) plus a 0.7 kg antenna; 71 W DC full duplex (MRO Electra, Table 2-1); 14.8 W RF transmit and 401.586 MHz return frequency (InSight, DESCANSO 18 Table 5-5); Electra coded thresholds (MRO Table 2-4)."},
+  "codes": {
+    "turbo_1/6": {"eb_n0_dB": -0.10, "implementation_loss_dB": 0.63, "_note": "FER 1e-4, MarCO Table 5-4 lines 35-36"},
+    "turbo_1/3": {"eb_n0_dB": 0.30, "implementation_loss_dB": 0.63, "_note": "CCSDS 131.0 turbo (8920 bit frame), FER 1e-4, about 0.4 dB above rate 1/6"},
+    "turbo_1/2": {"eb_n0_dB": 1.00, "implementation_loss_dB": 0.63, "_note": "CCSDS turbo rate 1/2, FER 1e-4"},
+    "conv_7_1/2+RS": {"eb_n0_dB": 2.31, "implementation_loss_dB": 0.30, "_note": "Odyssey Table 5-3 lines 44, 46"},
+    "uncoded_cmd": {"eb_n0_dB": 9.60, "implementation_loss_dB": 2.68, "_note": "uncoded command, BER 1e-5, MarCO Table 5-3 lines 35-36"},
+    "uhf_conv_7_1/2": {"eb_n0_dB": 3.52, "implementation_loss_dB": 4.50, "_note": "BER 1e-3, MarCO-InSight Table 5-5 lines 27-28"}
+  },
+  "edl": {
+    "uhf_plasma_blackout": {"speed_ms": 5000.0, "alt_max_m": 90000.0, "alt_min_m": 25000.0,
+      "_note": "UHF only: the plasma sheath of peak heating cuts the UHF relay (MSL Table 1-6: 25 to 100 s); X-band is not cut. Our own rule (not a published model): blackout while airspeed > 5 km/s between 25 and 90 km; checked against MSL's 25 to 100 s band in dev/test_comms_range.py."},
+    "mfsk_rate_bps": 10.0,
+    "relay_rate_bps": 8000.0,
+    "relay_max_range_m": 6.0e6,
+    "dte_min_earth_elevation_deg": 0.0
+  }
+}
