@@ -1,0 +1,7 @@
+# The dataset build's runtime: Python 3.12 and the package versions of the original build (requirements-runner.txt).
+# drun.sh builds it as spectrum-dataset-runner and runs every step in it.
+FROM python:3.12.14-slim-bookworm
+RUN apt-get update && apt-get install -y --no-install-recommends libgomp1 && rm -rf /var/lib/apt/lists/*
+COPY requirements-runner.txt /tmp/requirements-runner.txt
+RUN pip install --no-cache-dir -r /tmp/requirements-runner.txt \
+ && pip install --no-cache-dir --no-deps --index-url https://download.pytorch.org/whl/cpu torch==2.15.0+cpu

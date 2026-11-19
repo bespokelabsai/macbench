@@ -1,0 +1,7 @@
+source: build/ (built by environment/dataset/run_all.sh from MassSpecGym v1.5, HF revision 018a9542378725cf5620423f930608730c36dd8c)
+built: 2026-11-19 (spectrum ids from the salt in s07_write.py; all other content as built 2026-11-03)
+8a7efdfe947f7f388fe01495c13a01f0e1366c462ae8282918871011860b72cd  train_spectra.parquet
+bf059c13ec2ada711cde5d8c2f48b991c5fb5fd46df82c0fad2b7da2fbc90b03  candidates.parquet
+82714d1dc7591d7388539b0b49069d9ea16bb2e7a3d8b514237924b44d2d532a  hidden_spectra.jsonl
+bc31560ce807a387889eebbb7af3ef9537e307f3ab03bb8a5b26c0d65ee4f4f1  hidden_labels.jsonl
+c18cbd4703fcf54d45f0b1dd669faf2083e091d2b4389992a186de52e22d37a7  manifest.json
