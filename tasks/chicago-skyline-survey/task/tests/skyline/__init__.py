@@ -12,7 +12,7 @@ Typical use::
 
 ``skyline.scoring.light(target, t)`` gives a static target's sun-light factor and
 ``skyline.scoring.quality(world, target, D, t)`` a photo's quality factor Q.
-v2b helpers: ``scan_sees(world, D, landmark)``,
+Mapping and show helpers: ``scan_sees(world, D, landmark)``,
 ``landmark_points(world, landmark_id, scans)``, ``landmark_detail(...)`` and
 ``noise_usage(world, res_or_samples)``; ``res.photo_points``,
 ``res.landmark_points``, ``res.show_points``, ``res.scans``, ``res.show_holds``,

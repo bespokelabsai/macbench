@@ -2,5 +2,5 @@
  "P_greedy": 0.0,
  "P_ref": 18924.421,
  "computed": "2026-11-13",
- "notes": "Score = points / theoretical max (P_greedy 0, P_ref = max). Max from the scoring rules only, no flight limits: static 10924.4 (3 photos at best light), moving 3000.0, landmarks 4500.0 (full coverage), shows 500.0. build/solver/max_points.py, light step 60 s."
+ "notes": "Score = points / theoretical maximum (P_ref). The maximum counts the scoring rules only, with no flight limits: static 10924.4 (3 photos at best light), moving 3000.0, landmarks 4500.0 (full coverage), shows 500.0; light sampled every 60 s."
 }

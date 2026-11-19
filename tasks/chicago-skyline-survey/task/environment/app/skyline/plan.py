@@ -10,9 +10,9 @@ Each row is the next waypoint; the first leg starts at the drone's start pad.
 * ``pad``   - arg = pad id; soc optional in [0, 1] (default 1.0); the
   waypoint must be the pad position (horizontal within 1 m, z within 0.5 m);
   land, charge, leave when t >= depart_after and battery >= soc * battery_J.
-* ``scan``  - (v2b rules only) arg = landmark id; like ``photo``: on arrival wait
+* ``scan``  - (mapping and show rules) arg = landmark id; like ``photo``: on arrival wait
   until t >= depart_after, hover ``mapping.scan_hover_s``, scan, continue.
-* ``show``  - (v2b rules only) arg = ``<show id>:<slot>`` (slot counted from 0);
+* ``show``  - (mapping and show rules) arg = ``<show id>:<slot>`` (slot counted from 0);
   the waypoint must be that slot's position within ``shows.slot_tol_m`` in each
   of x, y and z; hold until max(t0 + hold_s, depart_after), then continue.
 

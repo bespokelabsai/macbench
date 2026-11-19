@@ -1,0 +1,4 @@
+# hub/ is for the hub only and never goes into the image
+hub/
+**/__pycache__/
+**/*.pyc

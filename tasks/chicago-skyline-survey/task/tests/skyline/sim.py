@@ -34,7 +34,7 @@ literal reading was taken; these notes are part of the checker's spec):
   active interval of a zone that overlaps the step, the part of the step flown
   during it is tested against the polygon (boundary counts as inside, active
   intervals are inclusive); a hit loses the drone at the end of that step (the
-  sample), as the per-sample test did. Within one step the battery crossing
+  sample). Within one step the battery crossing
   (exact time) comes first, then altitude, then no-fly at the step end. Pad
   zones are inclusive (horizontal distance <= radius). Pad rows keep the row's
   own coordinates.
@@ -58,12 +58,12 @@ literal reading was taken; these notes are part of the checker's spec):
   counts while it flies a leg or hovers (not landed, queued or lost) and is not
   inside a pad zone. A pair whose exact closest approach, over the moments of
   the second when both count, is < separation_m (3D) is in conflict; this
-  includes v1's point check at k. All drones in conflicts are lost together at
+  includes the point check at k. All drones in conflicts are lost together at
   k (the first integer second at or after the violation). A drone lost earlier
   in that second for another reason keeps that loss but still counts up to its
   loss time, so its partner is lost at k.
 * **Photos.** Photo time tp = max(arrival, depart_after) + hover_s, taken from
-  the waypoint. Validity per section 6 (``geometry.viewpoint_reason``). A valid
+  the waypoint. Validity per MANUAL section 7 (``geometry.viewpoint_reason``). A valid
   photo is banked at the drone's next landing; on loss its unbanked photos are
   voided. Points, the light factor of static photos, the quality factor Q
   and the sync rule for moving photos are applied after the flight
@@ -96,7 +96,7 @@ class _Drone:
         "hover_end", "hover_kind",
         # bookkeeping
         "unbanked", "samples", "lost_reason", "lost_t", "photos_taken", "photos_banked",
-        # v2b: unbanked scans and show holds, scan counts, memory card, captures per sortie
+        # mapping and shows: unbanked scans and show holds, scan counts, memory card, captures per sortie
         "unb_scans", "unb_holds", "scans_taken", "scans_banked", "card", "sorties",
         # separation: path points (t, x, y, z, counts) since the last check, and when it last stopped counting
         "trk", "air_end",
@@ -678,7 +678,7 @@ class Simulator:
         while flying a leg or hovering (not landed, queued or lost) and while outside every pad zone. Two
         drones conflict if, at some moment of the second when both count, their 3D distance is strictly less
         than separation_m (the exact closest approach of the linear pieces). The point check at k itself
-        (v1's rule) is included. A drone already lost earlier in the second keeps that loss.
+        is included. A drone already lost earlier in the second keeps that loss.
         """
         sep = self.r.separation_m
         sep2 = sep * sep

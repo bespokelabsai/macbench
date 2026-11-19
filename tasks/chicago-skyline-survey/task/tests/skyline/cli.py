@@ -8,7 +8,7 @@ Prints a per-drone table, plan errors, lost reasons, the day's points and, when
 ``<data>/norm_forecast.json`` exists, the forecast score. The photo summary
 gives static photos with their mean light factor L and mean quality Q and moving
 photos synced and unsynced with their mean Q; ``--photos`` also lists every
-banked photo with its L (static) or sync state (moving), its Q and points. With the v2b rules it
+banked photo with its L (static) or sync state (moving), its Q and points. With the mapping and show rules it
 also prints the captures per sortie (memory card), the scans, each landmark's
 mapped share c and points, each show's filled slots and points, each noise
 zone's hours over budget, the lost drones and the loss fine, and the points
@@ -217,7 +217,7 @@ def main(argv=None) -> int:
     c.add_argument("--data", default="data", help="world data directory (default: data)")
     c.add_argument("--wind", default=None, help="wind day file (default: <data>/wind_forecast.json)")
     c.add_argument("--json", default=None, help="write the full result as JSON to this path")
-    c.add_argument("--log", default=None, help="write the flight log (viewer input) to this path")
+    c.add_argument("--log", default=None, help="write the flight log (JSON) to this path")
     c.add_argument("--photos", action="store_true",
                    help="list every banked photo with its light factor or sync state, quality Q and points")
     c.add_argument("--landmarks", action="store_true",

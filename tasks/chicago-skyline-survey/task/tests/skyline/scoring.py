@@ -27,7 +27,8 @@ Points for one day:
    :func:`quality` (the photo quality from distance and viewing angle);
 5. the day's points are the sum.
 
-Score: S = max(0, (P - P_greedy) / (P_ref - P_greedy)), uncapped above.
+Score: S = max(0, (P - P_greedy) / (P_ref - P_greedy)), uncapped above. Here P_greedy = 0
+(norm.json), so S = P / P_ref.
 """
 
 from __future__ import annotations
@@ -236,7 +237,7 @@ def score_photos(world, photos: list) -> float:
 
 
 def points_to_score(P: float, norm: dict) -> float:
-    """S = max(0, (P - P_greedy) / (P_ref - P_greedy)), uncapped above.
+    """S = max(0, (P - P_greedy) / (P_ref - P_greedy)), uncapped above (P_greedy is 0 here).
 
     ``norm`` is a dict with ``P_greedy`` and ``P_ref`` (``norm.json`` or
     ``norm_forecast.json``).
@@ -247,7 +248,7 @@ def points_to_score(P: float, norm: dict) -> float:
     return max(0.0, (float(P) - pg) / (pr - pg))
 
 
-# --------------------------------------------------------------------------- v2b: landmark mapping
+# --------------------------------------------------------------------------- landmark mapping
 def _landmark(world, landmark):
     return world.landmarks[landmark] if isinstance(landmark, str) else landmark
 
@@ -398,7 +399,7 @@ def landmark_points(world, landmark_id, scans) -> float:
     return landmark_detail(world, landmark_id, scans)["points"]
 
 
-# --------------------------------------------------------------------------- v2b: noise budget
+# --------------------------------------------------------------------------- noise budget
 def noise_usage(world, samples) -> dict:
     """Noise usage U(z, h): zone id -> list of 12 hourly counts (h = 0..11).
 
@@ -450,7 +451,7 @@ def apply_noise(world, items, usage) -> int:
     return n
 
 
-# --------------------------------------------------------------------------- v2b: light shows
+# --------------------------------------------------------------------------- light shows
 def score_shows(world, holds) -> tuple:
     """Mark show holds in place and return (points, per-show dict).
 
@@ -500,11 +501,11 @@ def score_shows(world, holds) -> tuple:
     return total, out
 
 
-# --------------------------------------------------------------------------- v2b: the whole day
+# --------------------------------------------------------------------------- the whole day
 def score_day(world, photos, scans, holds, usage) -> dict:
     """Day points before the loss fine = photo + landmark + show points.
 
-    The fine per lost drone (``scoring.loss_fine``, section 10.4) is applied by :func:`skyline.simulate`.
+    The fine per lost drone (``scoring.loss_fine``, MANUAL section 7) is applied by :func:`skyline.simulate`.
 
     Order: (1) the noise penalty marks photos and scans in over-budget zone-hours (reason
     ``"noise"``); (2) :func:`score_photos` over the rest; (3) landmark mapping over the banked
