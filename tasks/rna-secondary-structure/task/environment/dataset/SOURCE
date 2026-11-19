@@ -1,0 +1,8 @@
+# sha256 of the five dataset files (built from Rfam 15.1). run_all.sh checks a rebuild against them; prepare.sh
+# writes the same hashes into tests/hidden/SOURCE. The first four are the files the published runs used; the published
+# runs' manifest.json differed from this one only in its "dataset" label and a "version" field.
+bc01c29e81323251ec7b983674eb4a2f4d5809a08b38b7b6fc27d1bc0b13dbb1  train.parquet
+0e453aea791372d28cff32134df8cf10fdc3e16462c41824b49ba92d57e84123  sequences.fa.gz
+0753b5b6c0df967846837cd1ad49667a226096c08ad57e68ad4b7fb803d4e295  hidden_sequences.jsonl
+b209eaaf66af88b66b2781d17d936d42782684107d4b86995ac88d0d2288547d  hidden_labels.jsonl
+b799d2291b6ff427ffd65ff2f869cd46620951064a84ce0c982237b9a706b8c8  manifest.json
