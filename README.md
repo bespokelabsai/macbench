@@ -19,16 +19,16 @@ leaderboard and the results for every task.
 | Task | Domain | Type | Folder |
 |---|---|---|---|
 | Cave Rescue | emergency response | Shared | [`tasks/caverescue`](tasks/caverescue) |
-| Mars Return | space mission design | Shared | coming soon |
-| Holdout-game | survival game | Distributed | coming soon |
-| 0 A.D. | game AI | Shared | coming soon |
-| Power Outage | power grid restoration | Distributed | coming soon |
+| Mars Return | space mission design | Shared | [`tasks/mars-return`](tasks/mars-return) |
+| Holdout-game | survival game | Distributed | [`tasks/holdout`](tasks/holdout) |
+| 0 A.D. | game AI | Shared | [`tasks/legion`](tasks/legion) |
+| Power Outage | power grid restoration | Distributed | [`tasks/power-outage`](tasks/power-outage) |
 | Seed to Profit | company management | Shared | coming soon |
-| Mindustry | factory and defense game | Distributed | coming soon |
+| Mindustry | factory and defense game | Distributed | [`tasks/mindustry`](tasks/mindustry) |
 | Dubai ATC | air traffic control | Shared | coming soon |
-| Chicago Skyline Survey | drone survey planning | Shared | coming soon |
-| Spectrum to Molecule | mass spectrometry | Shared | coming soon |
-| RNA Secondary Structure | computational biology | Shared | coming soon |
+| Chicago Skyline Survey | drone survey planning | Shared | [`tasks/chicago-skyline-survey`](tasks/chicago-skyline-survey) |
+| Spectrum to Molecule | mass spectrometry | Shared | [`tasks/spectrum-to-molecule`](tasks/spectrum-to-molecule) |
+| RNA Secondary Structure | computational biology | Shared | [`tasks/rna-secondary-structure`](tasks/rna-secondary-structure) |
 | SOTA Compressor | algorithm engineering | Shared | coming soon |
 
 In a **shared** task all agents start with the same information and actions. In a **distributed** task the
