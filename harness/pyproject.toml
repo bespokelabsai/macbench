@@ -1,0 +1,40 @@
+[project]
+name = "multi-agent-harness"
+version = "0.1.0"
+description = "Multi-agent harness: N coding agents in SDK sandboxes on a shared message board, run through Harbor"
+requires-python = ">=3.12"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+dependencies = []
+
+[project.optional-dependencies]
+# What runs on the hub: board and proxy. No harbor or daytona here.
+hub = ["fastapi", "uvicorn", "mcp>=2.3,<3", "httpx"]
+# What runs on the host: the Harbor environment, agent, cleanup and the scripts.
+harbor = ["harbor==0.23.0", "bespokelabs-sandbox[daytona] @ git+https://github.com/bespokelabsai/sandbox-router@a96416dd5b86bcb5245faafe5253bc2efd53b9fd",
+          "tenacity", "python-dotenv"]
+# The local Docker backend (--ek backend=docker): the SDK's docker-py client.
+docker = ["multi-agent-harness[harbor]", "bespokelabs-sandbox[docker] @ git+https://github.com/bespokelabsai/sandbox-router@a96416dd5b86bcb5245faafe5253bc2efd53b9fd"]
+dev = ["multi-agent-harness[hub,harbor]", "pytest", "pytest-asyncio"]
+
+[project.scripts]
+multi-agent-harness-board = "multi_agent_harness.board.server:main"
+multi-agent-harness-board-cli = "multi_agent_harness.board.cli:main"
+multi-agent-harness-proxy = "multi_agent_harness.proxy.server:main"
+multi-agent-harness-git = "multi_agent_harness.gitserver:main"
+multi-agent-harness-gateway = "multi_agent_harness.gateway:main"
+multi-agent-harness-cleanup = "multi_agent_harness.harbor.cleanup:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/multi_agent_harness"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]

@@ -1,0 +1,33 @@
+# secrets
+.env
+.env.*
+.modal.toml
+
+# local envs and tooling
+.venv
+.claude/
+
+# python build and caches
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+
+# run records stay on disk, out of git
+runs/
+jobs/
+
+# board/proxy state from local runs
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+board-events.jsonl
+proxy-usage.jsonl
+
+.DS_Store
+
+# local experiment records
+experiments/
+
