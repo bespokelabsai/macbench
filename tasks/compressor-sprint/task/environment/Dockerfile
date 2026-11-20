@@ -5,6 +5,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 # Public data, read-only and outside the team repo.
 COPY data/ /data/
+COPY fetch_data.py /tmp/fetch_data.py
+RUN python3 /tmp/fetch_data.py && rm /tmp/fetch_data.py
 RUN chmod -R a+rX,a-w /data
 # The team repo is seeded from /app.
 COPY app/ /app/

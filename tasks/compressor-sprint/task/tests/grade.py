@@ -33,6 +33,8 @@ TARGETS = {t: v for t, v in json.loads((TESTS / "targets.json").read_text()).ite
 for _t, _v in TARGETS.items():  # a type whose SOTA does not beat the standard tools has no scale to score on
     assert _v["sota_bytes"] and _v["sota_bytes"] < _v["baseline_bytes"], f"targets.json: no valid SOTA for {_t}"
 HIDDEN = TESTS / "hidden"
+SEALED = Path("/var/lib/compressor-sprint/sealed")
+SEALED_TYPE = "json"
 USER = 65534             # build.sh and the read probes run as this one uid
 RUN_USERS = tuple(range(65470, 65534))  # a distinct uid per concurrent run: a 0700 run dir then really isolates
 ALL_USERS = (*RUN_USERS, USER)          # one file cannot read or corrupt another's run directory, or hide CPU in it
@@ -735,6 +737,24 @@ def write_result(name: str, text: str):
     path.write_text(text)
 
 
+def unseal():
+    dst, want = HIDDEN / SEALED_TYPE, TARGETS[SEALED_TYPE]["sha256"]
+    if dst.exists():
+        return
+    try:
+        sealed = SEALED.read_bytes()
+    except OSError as e:
+        raise RuntimeError(f"hidden file {SEALED_TYPE} is not in tests/hidden and {SEALED} cannot be read ({e}): "
+                           f"rebuild the image from environment/Dockerfile") from e
+    n = len(sealed)
+    pad = b"".join(hashlib.sha256(bytes.fromhex(want) + i.to_bytes(8, "big")).digest() for i in range((n + 31) // 32))[:n]
+    plain = (int.from_bytes(sealed, "big") ^ int.from_bytes(pad, "big")).to_bytes(n, "big")
+    data = plain[8:8 + int.from_bytes(plain[:8], "big")]
+    if hashlib.sha256(data).hexdigest() != want:
+        raise RuntimeError(f"{SEALED} does not open to hidden file {SEALED_TYPE}: rebuild the image from environment/Dockerfile")
+    dst.write_bytes(data)
+
+
 def main():
     """Grade, and whatever happens (a crash included) write details.json, reward.json, reward.txt and report.md."""
     OUT.mkdir(parents=True, exist_ok=True)
@@ -748,6 +768,7 @@ def main():
     details = {"types": {}, "limits": {"cpu_s": CPU_LIMIT_S, "wall_s": WALL_LIMIT_S, "mem_bytes": MEM_LIMIT,
                                        "size_cap_xz_bytes": SIZE_CAP}}
     try:
+        unseal()
         reward, scores = grade(details, types)
     except Escaped as e:
         details["disqualified"] = f"{e}; nothing it produced can be trusted, so the run scores 0"

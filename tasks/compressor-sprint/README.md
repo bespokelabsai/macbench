@@ -28,7 +28,7 @@ Every grading writes `report.md` and `details.json` with the team's size, time a
 
 ## How to run
 
-You need Docker, Python 3.12 or newer, and 8 CPUs and 16 GB of memory for every agent. Install the multi-agent harness, which brings Harbor with it, from its repository at the commit these commands were checked with:
+You need Docker, Python 3.12 or newer, and 8 CPUs and 16 GB of memory for every agent. The image build downloads the Silesia corpus (68 MB) from `sun.aei.polsl.pl` and the start of one file from `data.gharchive.org`, so it needs to reach both. Install the multi-agent harness, which brings Harbor with it, from its repository at the commit these commands were checked with:
 
 ```bash
 git clone https://github.com/bespokelabsai/multi-agent-coordination-bench ~/mac-bench
@@ -85,8 +85,8 @@ It scores 1.0. Its grading takes about 2 hours, because paq8px needs 1 to 8 minu
 |---|---|
 | `task/instruction.md` | The prompt every agent gets: goal, what is graded, the data, the targets, the rules. |
 | `task/task.toml` | Agents stop at 4 h 15 min and have no network while they work. 8 CPUs and 16 GB per sandbox. |
-| `task/environment/` | The image: Ubuntu 24.04 with Python and a C/C++ toolchain. `data/` becomes `/data`, read-only: `public/` (the twelve Silesia files, 210 MB), `samples/` (the practice files) and `samples.json` (their targets). `app/` becomes `/app`, the team repository, with a starter compressor that only copies bytes. |
-| `task/tests/` | `test.sh` and `grade.py` (the grader), `hidden/` (the 25 hidden files) and `targets.json`. |
+| `task/environment/` | The image: Ubuntu 24.04 with Python and a C/C++ toolchain. `data/` becomes `/data`, read-only: `samples/` (the practice files) and `samples.json` (their targets). `/data/public` (the twelve Silesia files, 210 MB) is not in this repository: `fetch_data.py` downloads it when the image is built and checks every file against a pinned SHA-256. `app/` becomes `/app`, the team repository, with a starter compressor that only copies bytes. |
+| `task/tests/` | `test.sh` and `grade.py` (the grader), `hidden/` (24 of the 25 hidden files) and `targets.json`. The 25th, `json`, is not in this repository: `fetch_data.py` downloads it when the image is built and keeps it sealed there, and the grader opens it with a key from `targets.json`. |
 | `task/solution/` | The reference solution. `reference/paq8px/` is the source of paq8px v217, with the zlib copy and the word lists it ships with, run at `-9LT`. `reference/g16.cpp` is a coder for 16-bit pixel grids. For each file the smaller of the two outputs is kept. |
 | `task/environment/hub/` | `fixed_solo_resume.py`, the orchestration the multi-agent harness loads. Not copied into the image. |
 | `task/environment/licenses/` | The licence texts of the data sources (see Credits). Not copied into the image. |
@@ -95,7 +95,7 @@ It scores 1.0. Its grading takes about 2 hours, because paq8px needs 1 to 8 minu
 
 Every data file is cut from a public source and keeps that source's terms. The licence texts are in `task/environment/licenses/`. Where a source states no terms of use, the table says so.
 
-**Public examples**, `task/environment/data/public/`: the twelve files of the Silesia compression corpus (S. Deorowicz), renamed. The corpus's page states no terms of use; it names where each file came from.
+**Public examples**, `/data/public` in the image: the twelve files of the [Silesia compression corpus](https://sun.aei.polsl.pl/~sdeor/index.php?page=silesia) (S. Deorowicz), renamed. They are not in this repository; the image build downloads them from the corpus's site. The corpus's page states no terms of use; it names where each file came from.
 
 | File | Silesia file | Origin named by the corpus |
 |---|---|---|
@@ -121,8 +121,8 @@ Every data file is cut from a public source and keeps that source's terms. The l
 | `dictionary` | Project Gutenberg ebook 38390, *A Dictionary of English Synonymes* | Public domain in the US | `Project-Gutenberg-License.txt` |
 | `xml` | Unicode CLDR 45, `common/main` | Unicode License v3. Copyright © 1991-2024 Unicode, Inc. | `Unicode-3.0.txt` |
 | `source` | zlib 1.3.1 source | zlib licence | `zlib.txt` |
-| `programs` | Files of the Ubuntu 24.04 `vim` package (9.1.0016) | Vim licence, with other notices for some files | `Vim.txt`, `ubuntu-copyright-vim.txt` |
-| `dll` | Wine 9.0 `shell32.dll`, from the Ubuntu `libwine` package | LGPL 2.1 or later | `LGPL-2.1.txt`, `Wine-9.0-notice.txt`, `ubuntu-copyright-libwine.txt` |
+| `programs` | Files of the Ubuntu 24.04 `vim` package (9.1.0016); [source package](https://launchpad.net/ubuntu/noble/+source/vim) | Vim licence, with other notices for some files | `Vim.txt`, `ubuntu-copyright-vim.txt` |
+| `dll` | Wine 9.0 `shell32.dll`, from the Ubuntu `libwine` package; [source package](https://launchpad.net/ubuntu/noble/+source/wine) | LGPL 2.1 or later | `LGPL-2.1.txt`, `Wine-9.0-notice.txt`, `ubuntu-copyright-libwine.txt` |
 | `mri` | OpenNeuro ds000001, the T1-weighted image of sub-01 | CC0 in the dataset description, PDDL 1.0 in its README | `CC0-1.0.txt`, `PDDL-1.0.txt` |
 | `xray` | pydicom-data `RG3_UNCI.dcm`, from the NEMA WG04 compression samples | MIT for the repository; the NEMA set states no terms | `MIT-pydicom-data.txt` |
 | `chemistry` | ChEBI, the lite SDF file | CC BY 4.0 | `CC-BY-4.0.txt` |
@@ -146,14 +146,14 @@ Every data file is cut from a public source and keeps that source's terms. The l
 | `dna` | NCBI RefSeq NC_000964.3, the genome of *Bacillus subtilis* 168 | NCBI places no restrictions on use | |
 | `english` | Project Gutenberg ebook 5231, *The Way We Live Now* | Public domain in the US | `Project-Gutenberg-License.txt` |
 | `floats` | NASA's FITS sample `FOCx38i0101t_c0f.fits`, a Hubble image from the MAST archive (NASA, STScI) | Public domain under MAST's data-use policy | |
-| `json` | [GH Archive](https://www.gharchive.org/), the hour 2024-01-15-12 of public GitHub events | No licence stated for the data | |
+| `json` | [GH Archive](https://www.gharchive.org/), the first 1 MiB of the hour 2024-01-15-12 of public GitHub events. Not in this repository; the image build downloads it from GH Archive. | No licence stated for the data. It holds account names, e-mail addresses and text written by GitHub users. | |
 | `logs` | The web server log of NASA's Kennedy Space Center for July 1995, from the Internet Traffic Archive (collected by Jim Dumoulin, contributed by Martin Arlitt and Carey Williamson) | "The traces may be freely redistributed." It holds the clients' host names. | |
 | `mri` | OpenNeuro ds000002, the T1-weighted image of sub-01 | PDDL 1.0 | `PDDL-1.0.txt` |
 | `photo` | ["Ares Tower Vienna from SW on 2015-07-10.png"](https://commons.wikimedia.org/wiki/File:Ares_Tower_Vienna_from_SW_on_2015-07-10.png) by Robert F. Tobler, from Wikimedia Commons. Changed: cropped to the middle 1024×341 pixels. | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | `CC-BY-SA-4.0.txt` |
 | `photo2` | Library of Congress, Prints & Photographs Division, photograph by Carol M. Highsmith, LC-DIG-highsm-66198, cropped | Public domain | |
 | `photo3` | Library of Congress, Prints & Photographs Division, FSA/OWI Collection, LC-DIG-fsa-8b29516 (Dorothea Lange, 1936), cropped | No known restrictions | |
 | `polish` | Fourteen Polish-language Project Gutenberg ebooks | Public domain in the US | `Project-Gutenberg-License.txt` |
-| `programs` | Files of the Ubuntu 24.04 `libavcodec60` package (FFmpeg 6.1.1) | GPL 2 or later | `GPL-2.txt`, `ubuntu-copyright-ffmpeg.txt` |
+| `programs` | Files of the Ubuntu 24.04 `libavcodec60` package (FFmpeg 6.1.1); [source package](https://launchpad.net/ubuntu/noble/+source/ffmpeg) | GPL 2 or later | `GPL-2.txt`, `ubuntu-copyright-ffmpeg.txt` |
 | `source` | redis 7.2.5 source | BSD 3-Clause. Copyright © 2006-2020 Salvatore Sanfilippo | `BSD-3-Clause-redis.txt` |
 | `stars` | Stellarium's star catalogue file `stars_2_0v0_17.cat`, which the Stellarium project built from Hipparcos and Gaia DR3. It was taken from Stellarium, not downloaded from the Gaia archive. | GPL 2 or later for Stellarium. The Gaia data are open and free to use with credit to ESA/Gaia/DPAC ([Gaia data licence](https://www.cosmos.esa.int/web/gaia-users/license)). | `GPL-2.txt` |
 | `xml` | The PubMed baseline file `pubmed26n0001.xml`, courtesy of the U.S. National Library of Medicine | NLM's terms. This copy does not reflect the most current data available from NLM, and some abstracts may be protected by copyright. | `NLM-PubMed-terms.txt` |
