@@ -1,0 +1,1278 @@
+{
+ "_note": "Hidden test files, about 1 MiB each, grouped into kinds. baseline = best of the four standard tools; sota = the smaller of paq8px v217 -9LT and, for image files, JPEG XL lossless (cjxl -d 0 -e 9, or -e 9 -I 100 -g 3 if smaller). Every result round-trip checked.",
+ "audio": {
+  "baseline_bytes": 379830,
+  "baseline_tool": "bzip2 -9",
+  "tools": {
+   "xz -9e": {
+    "bytes": 384572,
+    "compress_cpu_s": 0.253,
+    "decompress_cpu_s": 0.02
+   },
+   "zstd --ultra -22 --long=27": {
+    "bytes": 427520,
+    "compress_cpu_s": 0.14,
+    "decompress_cpu_s": 0.004
+   },
+   "brotli -q 11 -w 24": {
+    "bytes": 381367,
+    "compress_cpu_s": 1.689,
+    "decompress_cpu_s": 0.007
+   },
+   "bzip2 -9": {
+    "bytes": 379830,
+    "compress_cpu_s": 0.056,
+    "decompress_cpu_s": 0.034
+   }
+  },
+  "references": {
+   "lpaq1": {
+    "bytes": 349425,
+    "compress_cpu_s": 1.08,
+    "decompress_cpu_s": 1.092
+   },
+   "paq8px-9LT": {
+    "bytes": 149741,
+    "compress_cpu_s": 69.809,
+    "decompress_cpu_s": 69.291,
+    "peak_rss_mb": 2589,
+    "roundtrip_checked": true
+   },
+   "jpegxl-lossless": null,
+   "paq8px-12LT": null,
+   "cmix": null
+  },
+  "sota_bytes": 149741,
+  "sota_tool": "paq8px-9LT",
+  "surprise": true,
+  "source": "archive.org MEGranHistoriadeAmor AMOR.wav (16-bit stereo 44.1 kHz)",
+  "size": 1048576,
+  "sha256": "b884757011b86970c729100c6b076419f844035c3067beb5918af96eaebd4b64",
+  "kind": "audio"
+ },
+ "chemistry": {
+  "baseline_bytes": 89808,
+  "baseline_tool": "xz -9e",
+  "tools": {
+   "xz -9e": {
+    "bytes": 89808,
+    "compress_cpu_s": 0.421,
+    "decompress_cpu_s": 0.007
+   },
+   "zstd --ultra -22 --long=27": {
+    "bytes": 99935,
+    "compress_cpu_s": 0.446,
+    "decompress_cpu_s": 0.003
+   },
+   "brotli -q 11 -w 24": {
+    "bytes": 90502,
+    "compress_cpu_s": 1.614,
+    "decompress_cpu_s": 0.004
+   },
+   "bzip2 -9": {
+    "bytes": 90297,
+    "compress_cpu_s": 0.094,
+    "decompress_cpu_s": 0.026
+   }
+  },
+  "references": {
+   "lpaq1": {
+    "bytes": 72198,
+    "compress_cpu_s": 0.886,
+    "decompress_cpu_s": 0.91
+   },
+   "paq8px-9LT": {
+    "bytes": 46020,
+    "compress_cpu_s": 286.373,
+    "decompress_cpu_s": 281.49,
+    "peak_rss_mb": 3470,
+    "roundtrip_checked": true
+   },
+   "jpegxl-lossless": null,
+   "paq8px-12LT": null,
+   "cmix": null
+  },
+  "sota_bytes": 46020,
+  "sota_tool": "paq8px-9LT",
+  "surprise": false,
+  "source": "PubChem CIDs 60000-61499 SDF",
+  "size": 1048576,
+  "sha256": "3ac5a08cc6311ee029c233f06bb3de7c494cf18402aaa69832b73108d643e9cc",
+  "kind": "chemistry"
+ },
+ "chinese": {
+  "baseline_bytes": 331335,
+  "baseline_tool": "bzip2 -9",
+  "tools": {
+   "xz -9e": {
+    "bytes": 368336,
+    "compress_cpu_s": 0.376,
+    "decompress_cpu_s": 0.017
+   },
+   "zstd --ultra -22 --long=27": {
+    "bytes": 373823,
+    "compress_cpu_s": 0.256,
+    "decompress_cpu_s": 0.004
+   },
+   "brotli -q 11 -w 24": {
+    "bytes": 370017,
+    "compress_cpu_s": 1.451,
+    "decompress_cpu_s": 0.005
+   },
+   "bzip2 -9": {
+    "bytes": 331335,
+    "compress_cpu_s": 0.066,
+    "decompress_cpu_s": 0.041
+   }
+  },
+  "references": {
+   "lpaq1": {
+    "bytes": 291208,
+    "compress_cpu_s": 2.299,
+    "decompress_cpu_s": 1.145
+   },
+   "paq8px-9LT": {
+    "bytes": 265249,
+    "compress_cpu_s": 277.621,
+    "decompress_cpu_s": 288.077,
+    "peak_rss_mb": 3488,
+    "roundtrip_checked": true
+   },
+   "jpegxl-lossless": null,
+   "paq8px-12LT": null,
+   "cmix": null
+  },
+  "sota_bytes": 265249,
+  "sota_tool": "paq8px-9LT",
+  "surprise": true,
+  "source": "Gutenberg #24264 紅樓夢 (Dream of the Red Chamber), UTF-8",
+  "size": 1048576,
+  "sha256": "9ba060bc2b64220b9c0cf355850c9013614e8ae87966716f50ae0c363f84bc76",
+  "kind": "chinese"
+ },
+ "csv": {
+  "baseline_bytes": 222888,
+  "baseline_tool": "xz -9e",
+  "tools": {
+   "xz -9e": {
+    "bytes": 222888,
+    "compress_cpu_s": 0.456,
+    "decompress_cpu_s": 0.015
+   },
+   "zstd --ultra -22 --long=27": {
+    "bytes": 254325,
+    "compress_cpu_s": 0.381,
+    "decompress_cpu_s": 0.004
+   },
+   "brotli -q 11 -w 24": {
+    "bytes": 223140,
+    "compress_cpu_s": 1.696,
+    "decompress_cpu_s": 0.006
+   },
+   "bzip2 -9": {
+    "bytes": 252787,
+    "compress_cpu_s": 0.061,
+    "decompress_cpu_s": 0.031
+   }
+  },
+  "references": {
+   "lpaq1": {
+    "bytes": 209330,
+    "compress_cpu_s": 0.956,
+    "decompress_cpu_s": 0.975
+   },
+   "paq8px-9LT": {
+    "bytes": 140655,
+    "compress_cpu_s": 272.246,
+    "decompress_cpu_s": 271.289,
+    "peak_rss_mb": 3366,
+    "roundtrip_checked": true
+   },
+   "jpegxl-lossless": null,
+   "paq8px-12LT": null,
+   "cmix": null
+  },
+  "sota_bytes": 140655,
+  "sota_tool": "paq8px-9LT",
+  "surprise": true,
+  "source": "Our World in Data owid-co2-data.csv",
+  "size": 1048576,
+  "sha256": "58af83c999815d718ce25e5e95b35628072cb1a21f6a44676163ce47741e5245",
+  "kind": "csv"
+ },
+ "database": {
+  "baseline_bytes": 250968,
+  "baseline_tool": "xz -9e",
+  "tools": {
+   "xz -9e": {
+    "bytes": 250968,
+    "compress_cpu_s": 0.316,
+    "decompress_cpu_s": 0.017
+   },
+   "zstd --ultra -22 --long=27": {
+    "bytes": 365898,
+    "compress_cpu_s": 0.27,
+    "decompress_cpu_s": 0.004
+   },
+   "brotli -q 11 -w 24": {
+    "bytes": 280713,
+    "compress_cpu_s": 1.559,
+    "decompress_cpu_s": 0.006
+   },
+   "bzip2 -9": {
+    "bytes": 368528,
+    "compress_cpu_s": 0.059,
+    "decompress_cpu_s": 0.03
+   }
+  },
+  "references": {
+   "lpaq1": {
+    "bytes": 220037,
+    "compress_cpu_s": 1.094,
+    "decompress_cpu_s": 1.127
+   },
+   "paq8px-9LT": {
+    "bytes": 89031,
+    "compress_cpu_s": 426.66,
+    "decompress_cpu_s": 404.758,
+    "peak_rss_mb": 3882,
+    "roundtrip_checked": true
+   },
+   "jpegxl-lossless": null,
+   "paq8px-12LT": null,
+   "cmix": null
+  },
+  "sota_bytes": 89031,
+  "sota_tool": "paq8px-9LT",
+  "surprise": false,
+  "source": "Northwind SQLite database",
+  "size": 1048576,
+  "sha256": "801c75d7b437e3351c334087d17bb5de0d6696063ca489d58b01d7b28b4b4fde",
+  "kind": "database"
+ },
+ "dictionary": {
+  "baseline_bytes": 223843,
+  "baseline_tool": "bzip2 -9",
+  "tools": {
+   "xz -9e": {
+    "bytes": 248376,
+    "compress_cpu_s": 0.337,
+    "decompress_cpu_s": 0.013
+   },
+   "zstd --ultra -22 --long=27": {
+    "bytes": 250864,
+    "compress_cpu_s": 0.283,
+    "decompress_cpu_s": 0.004
+   },
+   "brotli -q 11 -w 24": {
+    "bytes": 241774,
+    "compress_cpu_s": 1.447,
+    "decompress_cpu_s": 0.005
+   },
+   "bzip2 -9": {
+    "bytes": 223843,
+    "compress_cpu_s": 0.069,
+    "decompress_cpu_s": 0.032
+   }
+  },
+  "references": {
+   "lpaq1": {
+    "bytes": 181552,
+    "compress_cpu_s": 1.033,
+    "decompress_cpu_s": 1.063
+   },
+   "paq8px-9LT": {
+    "bytes": 134870,
+    "compress_cpu_s": 307.789,
+    "decompress_cpu_s": 303.031,
+    "peak_rss_mb": 3470,
+    "roundtrip_checked": true
+   },
+   "jpegxl-lossless": null,
+   "paq8px-12LT": null,
+   "cmix": null
+  },
+  "sota_bytes": 134870,
+  "sota_tool": "paq8px-9LT",
+  "surprise": false,
+  "source": "Gutenberg #38538 Chambers's Twentieth Century Dictionary part 2 (HTML)",
+  "size": 1048576,
+  "sha256": "b03a6db511ff100d776efb9a1fb319304a4888626719216ed3f116e5fe70ffdb",
+  "kind": "dictionary"
+ },
+ "dll": {
+  "baseline_bytes": 391980,
+  "baseline_tool": "xz -9e",
+  "tools": {
+   "xz -9e": {
+    "bytes": 391980,
+    "compress_cpu_s": 0.395,
+    "decompress_cpu_s": 0.021
+   },
+   "zstd --ultra -22 --long=27": {
+    "bytes": 412394,
+    "compress_cpu_s": 0.28,
+    "decompress_cpu_s": 0.004
+   },
+   "brotli -q 11 -w 24": {
+    "bytes": 397483,
+    "compress_cpu_s": 2.236,
+    "decompress_cpu_s": 0.007
+   },
+   "bzip2 -9": {
+    "bytes": 404073,
+    "compress_cpu_s": 0.058,
+    "decompress_cpu_s": 0.041
+   }
+  },
+  "references": {
+   "lpaq1": {
+    "bytes": 325634,
+    "compress_cpu_s": 2.289,
+    "decompress_cpu_s": 1.201
+   },
+   "paq8px-9LT": {
+    "bytes": 232574,
+    "compress_cpu_s": 416.875,
+    "decompress_cpu_s": 430.598,
+    "peak_rss_mb": 3898,
+    "roundtrip_checked": true
+   },
+   "jpegxl-lossless": null,
+   "paq8px-12LT": null,
+   "cmix": null
+  },
+  "sota_bytes": 232574,
+  "sota_tool": "paq8px-9LT",
+  "surprise": false,
+  "source": "SQLite 3.54.1 sqlite3.dll (win x86)",
+  "size": 1048576,
+  "sha256": "3b09d127b565efcbfe8216a7cb74015c568985541c248ae74a0bafcd6557a38d",
+  "kind": "dll"
+ },
+ "dna": {
+  "baseline_bytes": 279689,
+  "baseline_tool": "brotli -q 11 -w 24",
+  "tools": {
+   "xz -9e": {
+    "bytes": 279764,
+    "compress_cpu_s": 0.432,
+    "decompress_cpu_s": 0.013
+   },
+   "zstd --ultra -22 --long=27": {
+    "bytes": 285047,
+    "compress_cpu_s": 0.391,
+    "decompress_cpu_s": 0.004
+   },
+   "brotli -q 11 -w 24": {
+    "bytes": 279689,
+    "compress_cpu_s": 2.013,
+    "decompress_cpu_s": 0.009
+   },
+   "bzip2 -9": {
+    "bytes": 295069,
+    "compress_cpu_s": 0.072,
+    "decompress_cpu_s": 0.04
+   }
+  },
+  "references": {
+   "lpaq1": {
+    "bytes": 258554,
+    "compress_cpu_s": 1.079,
+    "decompress_cpu_s": 1.088
+   },
+   "paq8px-9LT": {
+    "bytes": 240877,
+    "compress_cpu_s": 262.446,
+    "decompress_cpu_s": 266.38,
+    "peak_rss_mb": 3174,
+    "roundtrip_checked": true
+   },
+   "jpegxl-lossless": null,
+   "paq8px-12LT": null,
+   "cmix": null
+  },
+  "sota_bytes": 240877,
+  "sota_tool": "paq8px-9LT",
+  "surprise": true,
+  "source": "NCBI NC_000964.3 Bacillus subtilis 168 genome, FASTA",
+  "size": 1048576,
+  "sha256": "58a1ae6466feec890fa32a7be2391bb8e89cea05675b2e26b624f697383cf53d",
+  "kind": "dna"
+ },
+ "english": {
+  "baseline_bytes": 273004,
+  "baseline_tool": "bzip2 -9",
+  "tools": {
+   "xz -9e": {
+    "bytes": 305344,
+    "compress_cpu_s": 0.377,
+    "decompress_cpu_s": 0.014
+   },
+   "zstd --ultra -22 --long=27": {
+    "bytes": 308047,
+    "compress_cpu_s": 0.295,
+    "decompress_cpu_s": 0.004
+   },
+   "brotli -q 11 -w 24": {
+    "bytes": 300911,
+    "compress_cpu_s": 1.427,
+    "decompress_cpu_s": 0.005
+   },
+   "bzip2 -9": {
+    "bytes": 273004,
+    "compress_cpu_s": 0.07,
+    "decompress_cpu_s": 0.038
+   }
+  },
+  "references": {
+   "lpaq1": {
+    "bytes": 231439,
+    "compress_cpu_s": 1.1,
+    "decompress_cpu_s": 1.083
+   },
+   "paq8px-9LT": {
+    "bytes": 195836,
+    "compress_cpu_s": 317.216,
+    "decompress_cpu_s": 305.86,
+    "peak_rss_mb": 3447,
+    "roundtrip_checked": true
+   },
+   "jpegxl-lossless": null,
+   "paq8px-12LT": null,
+   "cmix": null
+  },
+  "sota_bytes": 195836,
+  "sota_tool": "paq8px-9LT",
+  "surprise": false,
+  "source": "Gutenberg #5231 The Way We Live Now (Trollope)",
+  "size": 1048576,
+  "sha256": "6ac53f8d99e02e7f476a7d79ce0cee3cda0feb738f42ecaf732adc9a76cb9512",
+  "kind": "english"
+ },
+ "json": {
+  "baseline_bytes": 102246,
+  "baseline_tool": "brotli -q 11 -w 24",
+  "tools": {
+   "xz -9e": {
+    "bytes": 108500,
+    "compress_cpu_s": 0.282,
+    "decompress_cpu_s": 0.008
+   },
+   "zstd --ultra -22 --long=27": {
+    "bytes": 114016,
+    "compress_cpu_s": 0.409,
+    "decompress_cpu_s": 0.003
+   },
+   "brotli -q 11 -w 24": {
+    "bytes": 102246,
+    "compress_cpu_s": 1.208,
+    "decompress_cpu_s": 0.004
+   },
+   "bzip2 -9": {
+    "bytes": 123418,
+    "compress_cpu_s": 0.089,
+    "decompress_cpu_s": 0.024
+   }
+  },
+  "references": {
+   "lpaq1": {
+    "bytes": 89738,
+    "compress_cpu_s": 0.925,
+    "decompress_cpu_s": 0.954
+   },
+   "paq8px-9LT": {
+    "bytes": 57116,
+    "compress_cpu_s": 284.589,
+    "decompress_cpu_s": 276.408,
+    "peak_rss_mb": 3502,
+    "roundtrip_checked": true
+   },
+   "jpegxl-lossless": null,
+   "paq8px-12LT": null,
+   "cmix": null
+  },
+  "sota_bytes": 57116,
+  "sota_tool": "paq8px-9LT",
+  "surprise": true,
+  "source": "GH Archive 2024-01-15-12 (GitHub events, JSON lines)",
+  "size": 1048576,
+  "sha256": "9e2b2ea2ace9b51321e6e4abf095e51f171ad8d38aff3c07598c84bc43ae3f82",
+  "kind": "json"
+ },
+ "mri": {
+  "baseline_bytes": 288867,
+  "baseline_tool": "bzip2 -9",
+  "tools": {
+   "xz -9e": {
+    "bytes": 316096,
+    "compress_cpu_s": 0.374,
+    "decompress_cpu_s": 0.017
+   },
+   "zstd --ultra -22 --long=27": {
+    "bytes": 355190,
+    "compress_cpu_s": 0.289,
+    "decompress_cpu_s": 0.005
+   },
+   "brotli -q 11 -w 24": {
+    "bytes": 329531,
+    "compress_cpu_s": 1.748,
+    "decompress_cpu_s": 0.006
+   },
+   "bzip2 -9": {
+    "bytes": 288867,
+    "compress_cpu_s": 0.063,
+    "decompress_cpu_s": 0.035
+   }
+  },
+  "references": {
+   "lpaq1": {
+    "bytes": 264401,
+    "compress_cpu_s": 0.957,
+    "decompress_cpu_s": 0.994
+   },
+   "paq8px-9LT": {
+    "bytes": 235921,
+    "compress_cpu_s": 354.521,
+    "decompress_cpu_s": 341.968,
+    "peak_rss_mb": 3859,
+    "roundtrip_checked": true
+   },
+   "jpegxl-lossless": {
+    "bytes": 237994,
+    "compress_cpu_s": 3.685,
+    "decompress_cpu_s": 0.097,
+    "note": "16-bit 160x3276 as PGM (maxval 65535), cjxl -d 0 -e 9 -I 100 -g 3"
+   },
+   "paq8px-12LT": null,
+   "cmix": null
+  },
+  "sota_bytes": 235921,
+  "sota_tool": "paq8px-9LT",
+  "surprise": false,
+  "source": "OpenNeuro ds000002 sub-01 T1w voxels",
+  "size": 1048320,
+  "sha256": "15aceb5ed62cf270e70751beb8fd45dcecc847a53430e8a0dc6ad317e955c35c",
+  "kind": "mri"
+ },
+ "photo": {
+  "baseline_bytes": 592869,
+  "baseline_tool": "bzip2 -9",
+  "tools": {
+   "xz -9e": {
+    "bytes": 621932,
+    "compress_cpu_s": 0.321,
+    "decompress_cpu_s": 0.036
+   },
+   "zstd --ultra -22 --long=27": {
+    "bytes": 697860,
+    "compress_cpu_s": 0.151,
+    "decompress_cpu_s": 0.006
+   },
+   "brotli -q 11 -w 24": {
+    "bytes": 644357,
+    "compress_cpu_s": 2.236,
+    "decompress_cpu_s": 0.01
+   },
+   "bzip2 -9": {
+    "bytes": 592869,
+    "compress_cpu_s": 0.068,
+    "decompress_cpu_s": 0.052
+   }
+  },
+  "references": {
+   "lpaq1": {
+    "bytes": 524132,
+    "compress_cpu_s": 1.196,
+    "decompress_cpu_s": 1.249
+   },
+   "paq8px-9LT": {
+    "bytes": 294516,
+    "compress_cpu_s": 265.197,
+    "decompress_cpu_s": 277.611,
+    "peak_rss_mb": 3032,
+    "roundtrip_checked": true
+   },
+   "jpegxl-lossless": {
+    "bytes": 330799,
+    "compress_cpu_s": 9.238,
+    "decompress_cpu_s": 0.141,
+    "note": "24-bit PPM as given, cjxl -d 0 -e 9 -I 100 -g 3"
+   },
+   "paq8px-12LT": null,
+   "cmix": null
+  },
+  "sota_bytes": 294516,
+  "sota_tool": "paq8px-9LT",
+  "surprise": true,
+  "source": "Wikimedia Commons 'Ares Tower Vienna from SW on 2015-07-10.png', 1024x341 middle crop",
+  "size": 1047568,
+  "sha256": "12ebb2b0c3a5457ca21516d83a24db6a8bcfcca10743238cce84a7d9c2822271",
+  "kind": "photo"
+ },
+ "polish": {
+  "baseline_bytes": 340781,
+  "baseline_tool": "bzip2 -9",
+  "tools": {
+   "xz -9e": {
+    "bytes": 366272,
+    "compress_cpu_s": 0.399,
+    "decompress_cpu_s": 0.017
+   },
+   "zstd --ultra -22 --long=27": {
+    "bytes": 372241,
+    "compress_cpu_s": 0.289,
+    "decompress_cpu_s": 0.004
+   },
+   "brotli -q 11 -w 24": {
+    "bytes": 365997,
+    "compress_cpu_s": 1.481,
+    "decompress_cpu_s": 0.005
+   },
+   "bzip2 -9": {
+    "bytes": 340781,
+    "compress_cpu_s": 0.075,
+    "decompress_cpu_s": 0.041
+   }
+  },
+  "references": {
+   "lpaq1": {
+    "bytes": 287625,
+    "compress_cpu_s": 1.121,
+    "decompress_cpu_s": 1.136
+   },
+   "paq8px-9LT": {
+    "bytes": 259351,
+    "compress_cpu_s": 309.462,
+    "decompress_cpu_s": 316.799,
+    "peak_rss_mb": 3480,
+    "roundtrip_checked": true
+   },
+   "jpegxl-lossless": null,
+   "paq8px-12LT": null,
+   "cmix": null
+  },
+  "sota_bytes": 259351,
+  "sota_tool": "paq8px-9LT",
+  "surprise": false,
+  "source": "Gutenberg Polish books [34635, 31536, 28014, 35301, 31531, 28121, 38459, 27835, 30407, 27208, 27729, 27723, 28044, 27928]",
+  "size": 1048576,
+  "sha256": "f5640891a7f2d7f31f21c70200e15b74b1e02d5b6f8fe98e5988bc1a38ee5000",
+  "kind": "polish"
+ },
+ "programs": {
+  "baseline_bytes": 422772,
+  "baseline_tool": "xz -9e",
+  "tools": {
+   "xz -9e": {
+    "bytes": 422772,
+    "compress_cpu_s": 0.32,
+    "decompress_cpu_s": 0.023
+   },
+   "zstd --ultra -22 --long=27": {
+    "bytes": 453511,
+    "compress_cpu_s": 0.241,
+    "decompress_cpu_s": 0.005
+   },
+   "brotli -q 11 -w 24": {
+    "bytes": 432001,
+    "compress_cpu_s": 2.51,
+    "decompress_cpu_s": 0.007
+   },
+   "bzip2 -9": {
+    "bytes": 481596,
+    "compress_cpu_s": 0.067,
+    "decompress_cpu_s": 0.046
+   }
+  },
+  "references": {
+   "lpaq1": {
+    "bytes": 391540,
+    "compress_cpu_s": 2.338,
+    "decompress_cpu_s": 1.206
+   },
+   "paq8px-9LT": {
+    "bytes": 252048,
+    "compress_cpu_s": 413.467,
+    "decompress_cpu_s": 398.666,
+    "peak_rss_mb": 3901,
+    "roundtrip_checked": true
+   },
+   "jpegxl-lossless": null,
+   "paq8px-12LT": null,
+   "cmix": null
+  },
+  "sota_bytes": 252048,
+  "sota_tool": "paq8px-9LT",
+  "surprise": false,
+  "source": "Ubuntu 24.04 libavcodec60 7:6.1.1-3ubuntu5 package files, tar",
+  "size": 1048576,
+  "sha256": "a59d18af0fc9c33b96d59840ee55c1732d3e9d4714ef574f26db8c9b0eb927b0",
+  "kind": "programs"
+ },
+ "source": {
+  "baseline_bytes": 83461,
+  "baseline_tool": "brotli -q 11 -w 24",
+  "tools": {
+   "xz -9e": {
+    "bytes": 84968,
+    "compress_cpu_s": 0.393,
+    "decompress_cpu_s": 0.007
+   },
+   "zstd --ultra -22 --long=27": {
+    "bytes": 90527,
+    "compress_cpu_s": 0.736,
+    "decompress_cpu_s": 0.003
+   },
+   "brotli -q 11 -w 24": {
+    "bytes": 83461,
+    "compress_cpu_s": 0.944,
+    "decompress_cpu_s": 0.003
+   },
+   "bzip2 -9": {
+    "bytes": 86922,
+    "compress_cpu_s": 0.047,
+    "decompress_cpu_s": 0.016
+   }
+  },
+  "references": {
+   "lpaq1": {
+    "bytes": 73099,
+    "compress_cpu_s": 0.9,
+    "decompress_cpu_s": 0.916
+   },
+   "paq8px-9LT": {
+    "bytes": 41192,
+    "compress_cpu_s": 295.808,
+    "decompress_cpu_s": 286.841,
+    "peak_rss_mb": 3924,
+    "roundtrip_checked": true
+   },
+   "jpegxl-lossless": null,
+   "paq8px-12LT": null,
+   "cmix": null
+  },
+  "sota_bytes": 41192,
+  "sota_tool": "paq8px-9LT",
+  "surprise": false,
+  "source": "redis 7.2.5 source tar",
+  "size": 1048576,
+  "sha256": "a4288cc8352c19c7a9c12d271d86832a2673287e6424dcf9dca71592bd6e3366",
+  "kind": "source"
+ },
+ "stars": {
+  "baseline_bytes": 774012,
+  "baseline_tool": "xz -9e",
+  "tools": {
+   "xz -9e": {
+    "bytes": 774012,
+    "compress_cpu_s": 0.31,
+    "decompress_cpu_s": 0.044
+   },
+   "zstd --ultra -22 --long=27": {
+    "bytes": 870144,
+    "compress_cpu_s": 0.145,
+    "decompress_cpu_s": 0.005
+   },
+   "brotli -q 11 -w 24": {
+    "bytes": 811333,
+    "compress_cpu_s": 3.247,
+    "decompress_cpu_s": 0.013
+   },
+   "bzip2 -9": {
+    "bytes": 859644,
+    "compress_cpu_s": 0.08,
+    "decompress_cpu_s": 0.062
+   }
+  },
+  "references": {
+   "lpaq1": {
+    "bytes": 799642,
+    "compress_cpu_s": 2.582,
+    "decompress_cpu_s": 1.376
+   },
+   "paq8px-9LT": {
+    "bytes": 580550,
+    "compress_cpu_s": 448.041,
+    "decompress_cpu_s": 437.681,
+    "peak_rss_mb": 3891,
+    "roundtrip_checked": true
+   },
+   "jpegxl-lossless": null,
+   "paq8px-12LT": null,
+   "cmix": null
+  },
+  "sota_bytes": 580550,
+  "sota_tool": "paq8px-9LT",
+  "surprise": false,
+  "source": "Stellarium Gaia DR3 stars_2_0v0_17.cat",
+  "size": 1048576,
+  "sha256": "a23480bdcc4483cc44ca6e7b24145b035f3e55a45ae3f0f403d5b6a19fae9e2a",
+  "kind": "stars"
+ },
+ "xml": {
+  "baseline_bytes": 75842,
+  "baseline_tool": "bzip2 -9",
+  "tools": {
+   "xz -9e": {
+    "bytes": 79944,
+    "compress_cpu_s": 0.358,
+    "decompress_cpu_s": 0.007
+   },
+   "zstd --ultra -22 --long=27": {
+    "bytes": 84965,
+    "compress_cpu_s": 0.873,
+    "decompress_cpu_s": 0.003
+   },
+   "brotli -q 11 -w 24": {
+    "bytes": 75950,
+    "compress_cpu_s": 1.247,
+    "decompress_cpu_s": 0.003
+   },
+   "bzip2 -9": {
+    "bytes": 75842,
+    "compress_cpu_s": 0.08,
+    "decompress_cpu_s": 0.023
+   }
+  },
+  "references": {
+   "lpaq1": {
+    "bytes": 62113,
+    "compress_cpu_s": 0.884,
+    "decompress_cpu_s": 0.9
+   },
+   "paq8px-9LT": {
+    "bytes": 42247,
+    "compress_cpu_s": 292.886,
+    "decompress_cpu_s": 312.783,
+    "peak_rss_mb": 3478,
+    "roundtrip_checked": true
+   },
+   "jpegxl-lossless": null,
+   "paq8px-12LT": null,
+   "cmix": null
+  },
+  "sota_bytes": 42247,
+  "sota_tool": "paq8px-9LT",
+  "surprise": false,
+  "source": "PubMed baseline pubmed26n0001.xml",
+  "size": 1048576,
+  "sha256": "6dffc5f8beb60d68d7bfc395b5a0d680b171ea1a7cd66051e7975ade08524bf5",
+  "kind": "xml"
+ },
+ "xray": {
+  "baseline_bytes": 721814,
+  "baseline_tool": "bzip2 -9",
+  "tools": {
+   "xz -9e": {
+    "bytes": 852164,
+    "compress_cpu_s": 0.314,
+    "decompress_cpu_s": 0.046
+   },
+   "zstd --ultra -22 --long=27": {
+    "bytes": 960186,
+    "compress_cpu_s": 0.109,
+    "decompress_cpu_s": 0.004
+   },
+   "brotli -q 11 -w 24": {
+    "bytes": 749889,
+    "compress_cpu_s": 4.509,
+    "decompress_cpu_s": 0.012
+   },
+   "bzip2 -9": {
+    "bytes": 721814,
+    "compress_cpu_s": 0.075,
+    "decompress_cpu_s": 0.051
+   }
+  },
+  "references": {
+   "lpaq1": {
+    "bytes": 699789,
+    "compress_cpu_s": 1.245,
+    "decompress_cpu_s": 1.291
+   },
+   "paq8px-9LT": {
+    "bytes": 633659,
+    "compress_cpu_s": 401.238,
+    "decompress_cpu_s": 406.409,
+    "peak_rss_mb": 3886,
+    "roundtrip_checked": true
+   },
+   "jpegxl-lossless": {
+    "bytes": 605263,
+    "compress_cpu_s": 8.051,
+    "decompress_cpu_s": 0.092,
+    "note": "16-bit 1841x284 as PGM (maxval 65535), cjxl -d 0 -e 9 -I 100 -g 3"
+   },
+   "paq8px-12LT": null,
+   "cmix": null
+  },
+  "sota_bytes": 605263,
+  "sota_tool": "jpegxl-lossless",
+  "surprise": false,
+  "source": "pydicom-data RG1_UNCI pixels",
+  "size": 1045688,
+  "sha256": "abe3a3da90925d1103c571ee93d2aa4174db04a02a3ca346b73a2da7696e4df8",
+  "kind": "xray"
+ },
+ "arm64": {
+  "baseline_bytes": 335080,
+  "baseline_tool": "xz -9e",
+  "tools": {
+   "xz -9e": {
+    "bytes": 335080,
+    "compress_cpu_s": 0.339,
+    "decompress_cpu_s": 0.019
+   },
+   "zstd --ultra -22 --long=27": {
+    "bytes": 388063,
+    "compress_cpu_s": 0.254,
+    "decompress_cpu_s": 0.005
+   },
+   "brotli -q 11 -w 24": {
+    "bytes": 352644,
+    "compress_cpu_s": 2.19,
+    "decompress_cpu_s": 0.007
+   },
+   "bzip2 -9": {
+    "bytes": 396639,
+    "compress_cpu_s": 0.07,
+    "decompress_cpu_s": 0.041
+   }
+  },
+  "references": {
+   "lpaq1": {
+    "bytes": 337505,
+    "compress_cpu_s": 1.085,
+    "decompress_cpu_s": 1.132
+   },
+   "paq8px-9LT": {
+    "bytes": 235188,
+    "compress_cpu_s": 387.772,
+    "decompress_cpu_s": 404.373,
+    "peak_rss_mb": 3899,
+    "roundtrip_checked": true
+   },
+   "jpegxl-lossless": null,
+   "paq8px-12LT": null,
+   "cmix": null
+  },
+  "sota_bytes": 235188,
+  "sota_tool": "paq8px-9LT",
+  "surprise": true,
+  "source": "Ubuntu 24.04 libssl3t64 3.0.13-0ubuntu3 arm64, ./usr/lib/aarch64-linux-gnu/libcrypto.so.3 (4597928 bytes)",
+  "size": 1048576,
+  "sha256": "060743f6032cad7915f3c44af70bdcfac4a856d69d3d69d38c9036f670d87a4e",
+  "kind": "arm64"
+ },
+ "floats": {
+  "baseline_bytes": 868332,
+  "baseline_tool": "xz -9e",
+  "tools": {
+   "xz -9e": {
+    "bytes": 868332,
+    "compress_cpu_s": 0.277,
+    "decompress_cpu_s": 0.05
+   },
+   "zstd --ultra -22 --long=27": {
+    "bytes": 916407,
+    "compress_cpu_s": 0.114,
+    "decompress_cpu_s": 0.005
+   },
+   "brotli -q 11 -w 24": {
+    "bytes": 893673,
+    "compress_cpu_s": 2.685,
+    "decompress_cpu_s": 0.013
+   },
+   "bzip2 -9": {
+    "bytes": 926632,
+    "compress_cpu_s": 0.087,
+    "decompress_cpu_s": 0.06
+   }
+  },
+  "references": {
+   "lpaq1": {
+    "bytes": 876280,
+    "compress_cpu_s": 2.625,
+    "decompress_cpu_s": 1.357
+   },
+   "paq8px-9LT": {
+    "bytes": 767173,
+    "compress_cpu_s": 420.775,
+    "decompress_cpu_s": 402.14,
+    "peak_rss_mb": 3885,
+    "roundtrip_checked": true
+   },
+   "jpegxl-lossless": null,
+   "paq8px-12LT": null,
+   "cmix": null
+  },
+  "sota_bytes": 767173,
+  "sota_tool": "paq8px-9LT",
+  "surprise": true,
+  "source": "NASA FITS sample FOCx38i0101t_c0f.fits (HST FOC image, 1024x1024 big-endian float32)",
+  "size": 1048576,
+  "sha256": "d2de8f0761e749dade12513a920034971f9db7931d4320efaaf48d60c4bf45d6",
+  "kind": "floats"
+ },
+ "logs": {
+  "baseline_bytes": 62369,
+  "baseline_tool": "bzip2 -9",
+  "tools": {
+   "xz -9e": {
+    "bytes": 71824,
+    "compress_cpu_s": 0.311,
+    "decompress_cpu_s": 0.006
+   },
+   "zstd --ultra -22 --long=27": {
+    "bytes": 74510,
+    "compress_cpu_s": 0.355,
+    "decompress_cpu_s": 0.003
+   },
+   "brotli -q 11 -w 24": {
+    "bytes": 73315,
+    "compress_cpu_s": 1.339,
+    "decompress_cpu_s": 0.003
+   },
+   "bzip2 -9": {
+    "bytes": 62369,
+    "compress_cpu_s": 0.084,
+    "decompress_cpu_s": 0.021
+   }
+  },
+  "references": {
+   "lpaq1": {
+    "bytes": 41799,
+    "compress_cpu_s": 0.865,
+    "decompress_cpu_s": 0.894
+   },
+   "paq8px-9LT": {
+    "bytes": 28500,
+    "compress_cpu_s": 293.533,
+    "decompress_cpu_s": 293.283,
+    "peak_rss_mb": 3447,
+    "roundtrip_checked": true
+   },
+   "jpegxl-lossless": null,
+   "paq8px-12LT": null,
+   "cmix": null
+  },
+  "sota_bytes": 28500,
+  "sota_tool": "paq8px-9LT",
+  "surprise": true,
+  "source": "NASA Kennedy Space Center web server access log, July 1995",
+  "size": 1048576,
+  "sha256": "a2fc9dfae65eab0fa60f8c1c135b40b89338d983854fab77a95ad12ed978e685",
+  "kind": "logs"
+ },
+ "audio2": {
+  "baseline_bytes": 539763,
+  "baseline_tool": "bzip2 -9",
+  "tools": {
+   "xz -9e": {
+    "bytes": 616652,
+    "compress_cpu_s": 0.32,
+    "decompress_cpu_s": 0.03
+   },
+   "zstd --ultra -22 --long=27": {
+    "bytes": 679924,
+    "compress_cpu_s": 0.195,
+    "decompress_cpu_s": 0.006
+   },
+   "brotli -q 11 -w 24": {
+    "bytes": 626159,
+    "compress_cpu_s": 1.998,
+    "decompress_cpu_s": 0.009
+   },
+   "bzip2 -9": {
+    "bytes": 539763,
+    "compress_cpu_s": 0.068,
+    "decompress_cpu_s": 0.05
+   }
+  },
+  "references": {
+   "lpaq1": {
+    "bytes": 478722,
+    "compress_cpu_s": 2.459,
+    "decompress_cpu_s": 1.257
+   },
+   "paq8px-9LT": {
+    "bytes": 306202,
+    "compress_cpu_s": 71.58,
+    "decompress_cpu_s": 71.928,
+    "peak_rss_mb": 2588,
+    "roundtrip_checked": true
+   },
+   "jpegxl-lossless": null,
+   "paq8px-12LT": null,
+   "cmix": null
+  },
+  "sota_bytes": 306202,
+  "sota_tool": "paq8px-9LT",
+  "surprise": true,
+  "source": "archive.org LeviticusKJV 03002_Leviticus_2.wav (16-bit, 1 channel, 44100 Hz speech)",
+  "size": 1048576,
+  "sha256": "9d479634d733e75eacfb9ccc065bd3230a2c1e4bd7fce552363151c833bd6714",
+  "kind": "audio"
+ },
+ "audio3": {
+  "baseline_bytes": 804498,
+  "baseline_tool": "brotli -q 11 -w 24",
+  "tools": {
+   "xz -9e": {
+    "bytes": 860452,
+    "compress_cpu_s": 0.279,
+    "decompress_cpu_s": 0.049
+   },
+   "zstd --ultra -22 --long=27": {
+    "bytes": 941607,
+    "compress_cpu_s": 0.087,
+    "decompress_cpu_s": 0.005
+   },
+   "brotli -q 11 -w 24": {
+    "bytes": 804498,
+    "compress_cpu_s": 4.582,
+    "decompress_cpu_s": 0.011
+   },
+   "bzip2 -9": {
+    "bytes": 888478,
+    "compress_cpu_s": 0.085,
+    "decompress_cpu_s": 0.058
+   }
+  },
+  "references": {
+   "lpaq1": {
+    "bytes": 847775,
+    "compress_cpu_s": 2.6,
+    "decompress_cpu_s": 1.359
+   },
+   "paq8px-9LT": {
+    "bytes": 668159,
+    "compress_cpu_s": 418.691,
+    "decompress_cpu_s": 408.027,
+    "peak_rss_mb": 3884,
+    "roundtrip_checked": true
+   },
+   "jpegxl-lossless": null,
+   "paq8px-12LT": null,
+   "cmix": null
+  },
+  "sota_bytes": 668159,
+  "sota_tool": "paq8px-9LT",
+  "surprise": true,
+  "source": "archive.org Voyager1 495-AAB_8min10sec.wav (24-bit, 1 channel, 48000 Hz)",
+  "size": 1048574,
+  "sha256": "1d76642622b4458c38c9630f98c878d20728a8a7caa1972ef5a27c002020f7e7",
+  "kind": "audio"
+ },
+ "photo2": {
+  "baseline_bytes": 651231,
+  "baseline_tool": "bzip2 -9",
+  "tools": {
+   "xz -9e": {
+    "bytes": 733196,
+    "compress_cpu_s": 0.319,
+    "decompress_cpu_s": 0.041
+   },
+   "zstd --ultra -22 --long=27": {
+    "bytes": 806856,
+    "compress_cpu_s": 0.178,
+    "decompress_cpu_s": 0.006
+   },
+   "brotli -q 11 -w 24": {
+    "bytes": 755099,
+    "compress_cpu_s": 1.361,
+    "decompress_cpu_s": 0.01
+   },
+   "bzip2 -9": {
+    "bytes": 651231,
+    "compress_cpu_s": 0.074,
+    "decompress_cpu_s": 0.055
+   }
+  },
+  "references": {
+   "lpaq1": {
+    "bytes": 599198,
+    "compress_cpu_s": 1.253,
+    "decompress_cpu_s": 1.31
+   },
+   "paq8px-9LT": {
+    "bytes": 349785,
+    "compress_cpu_s": 289.954,
+    "decompress_cpu_s": 266.66,
+    "peak_rss_mb": 3044,
+    "roundtrip_checked": true
+   },
+   "jpegxl-lossless": {
+    "bytes": 378741,
+    "compress_cpu_s": 8.058,
+    "decompress_cpu_s": 0.128,
+    "note": "24-bit pixels of the BMP as a PPM, cjxl -d 0 -e 9 -I 100 -g 3"
+   },
+   "paq8px-12LT": null,
+   "cmix": null
+  },
+  "sota_bytes": 349785,
+  "sota_tool": "paq8px-9LT",
+  "surprise": true,
+  "source": "Library of Congress, Carol M. Highsmith Archive, highsm 66198 (Rio Grande near Embudo, 2021), 8-bit RGB master TIFF, 768x455 middle crop",
+  "size": 1048374,
+  "sha256": "c0434d37e5b87830318ac2579c1b9b518353db1e0b6cede1270243aa0ff505c8",
+  "kind": "photo"
+ },
+ "photo3": {
+  "baseline_bytes": 581675,
+  "baseline_tool": "bzip2 -9",
+  "tools": {
+   "xz -9e": {
+    "bytes": 656380,
+    "compress_cpu_s": 0.384,
+    "decompress_cpu_s": 0.034
+   },
+   "zstd --ultra -22 --long=27": {
+    "bytes": 703056,
+    "compress_cpu_s": 0.253,
+    "decompress_cpu_s": 0.006
+   },
+   "brotli -q 11 -w 24": {
+    "bytes": 665229,
+    "compress_cpu_s": 1.783,
+    "decompress_cpu_s": 0.009
+   },
+   "bzip2 -9": {
+    "bytes": 581675,
+    "compress_cpu_s": 0.068,
+    "decompress_cpu_s": 0.053
+   }
+  },
+  "references": {
+   "lpaq1": {
+    "bytes": 540263,
+    "compress_cpu_s": 1.209,
+    "decompress_cpu_s": 1.263
+   },
+   "paq8px-9LT": {
+    "bytes": 400132,
+    "compress_cpu_s": 211.631,
+    "decompress_cpu_s": 208.469,
+    "peak_rss_mb": 2631,
+    "roundtrip_checked": true
+   },
+   "jpegxl-lossless": {
+    "bytes": 449295,
+    "compress_cpu_s": 8.742,
+    "decompress_cpu_s": 0.142,
+    "note": "8-bit PGM as given, cjxl -d 0 -e 9 -I 100 -g 3"
+   },
+   "paq8px-12LT": null,
+   "cmix": null
+  },
+  "sota_bytes": 400132,
+  "sota_tool": "paq8px-9LT",
+  "surprise": true,
+  "source": "Library of Congress, FSA/OWI collection, fsa 8b29516 (Dorothea Lange, 1936), 8-bit grayscale master TIFF, 1024x1024 middle crop",
+  "size": 1048593,
+  "sha256": "17598d80ac0c4738ff652a8981d052d181f1abbf37cbf8613dcab1d7b35322e8",
+  "kind": "photo"
+ }
+}

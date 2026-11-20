@@ -1,0 +1,3 @@
+compressor/bin/
+*.o
+__pycache__/
