@@ -1,0 +1,206 @@
+{
+ "A124": {
+  "wake_group": "B",
+  "size_code": "F",
+  "span_m": 73.3,
+  "final_approach_speed_kt": 154
+ },
+ "A20N": {
+  "wake_group": "D",
+  "size_code": "C",
+  "span_m": 35.8,
+  "final_approach_speed_kt": 140
+ },
+ "A21N": {
+  "wake_group": "D",
+  "size_code": "C",
+  "span_m": 35.8,
+  "final_approach_speed_kt": 140
+ },
+ "A306": {
+  "wake_group": "B",
+  "size_code": "E",
+  "span_m": 60.3,
+  "final_approach_speed_kt": 140
+ },
+ "A310": {
+  "wake_group": "C",
+  "size_code": "D",
+  "span_m": 43.9,
+  "final_approach_speed_kt": 135
+ },
+ "A319": {
+  "wake_group": "D",
+  "size_code": "C",
+  "span_m": 35.8,
+  "final_approach_speed_kt": 130
+ },
+ "A320": {
+  "wake_group": "D",
+  "size_code": "C",
+  "span_m": 35.8,
+  "final_approach_speed_kt": 140
+ },
+ "A321": {
+  "wake_group": "D",
+  "size_code": "C",
+  "span_m": 35.8,
+  "final_approach_speed_kt": 146
+ },
+ "A332": {
+  "wake_group": "B",
+  "size_code": "E",
+  "span_m": 60.3,
+  "final_approach_speed_kt": 140
+ },
+ "A333": {
+  "wake_group": "B",
+  "size_code": "E",
+  "span_m": 60.3,
+  "final_approach_speed_kt": 142
+ },
+ "A343": {
+  "wake_group": "B",
+  "size_code": "E",
+  "span_m": 60.3,
+  "final_approach_speed_kt": 144
+ },
+ "A359": {
+  "wake_group": "B",
+  "size_code": "E",
+  "span_m": 64.75,
+  "final_approach_speed_kt": 150
+ },
+ "A388": {
+  "wake_group": "A",
+  "size_code": "F",
+  "span_m": 79.75,
+  "final_approach_speed_kt": 142
+ },
+ "AT76": {
+  "wake_group": "F",
+  "size_code": "B",
+  "span_m": 20.04,
+  "final_approach_speed_kt": 136
+ },
+ "B38M": {
+  "wake_group": "D",
+  "size_code": "C",
+  "span_m": 34.32,
+  "final_approach_speed_kt": 136
+ },
+ "B39M": {
+  "wake_group": "D",
+  "size_code": "C",
+  "span_m": 34.32,
+  "final_approach_speed_kt": 136
+ },
+ "B737": {
+  "wake_group": "D",
+  "size_code": "C",
+  "span_m": 34.32,
+  "final_approach_speed_kt": 136
+ },
+ "B738": {
+  "wake_group": "D",
+  "size_code": "C",
+  "span_m": 34.32,
+  "final_approach_speed_kt": 150
+ },
+ "B739": {
+  "wake_group": "D",
+  "size_code": "C",
+  "span_m": 34.32,
+  "final_approach_speed_kt": 152
+ },
+ "B744": {
+  "wake_group": "B",
+  "size_code": "E",
+  "span_m": 64.4,
+  "final_approach_speed_kt": 154
+ },
+ "B748": {
+  "wake_group": "B",
+  "size_code": "F",
+  "span_m": 68.4,
+  "final_approach_speed_kt": 154
+ },
+ "B752": {
+  "wake_group": "D",
+  "size_code": "D",
+  "span_m": 38.0,
+  "final_approach_speed_kt": 134
+ },
+ "B763": {
+  "wake_group": "C",
+  "size_code": "D",
+  "span_m": 47.57,
+  "final_approach_speed_kt": 144
+ },
+ "B772": {
+  "wake_group": "B",
+  "size_code": "E",
+  "span_m": 60.93,
+  "final_approach_speed_kt": 152
+ },
+ "B773": {
+  "wake_group": "B",
+  "size_code": "E",
+  "span_m": 60.93,
+  "final_approach_speed_kt": 152
+ },
+ "B77L": {
+  "wake_group": "B",
+  "size_code": "E",
+  "span_m": 64.8,
+  "final_approach_speed_kt": 152
+ },
+ "B77W": {
+  "wake_group": "B",
+  "size_code": "E",
+  "span_m": 64.8,
+  "final_approach_speed_kt": 152
+ },
+ "B788": {
+  "wake_group": "B",
+  "size_code": "E",
+  "span_m": 60.12,
+  "final_approach_speed_kt": 146
+ },
+ "B789": {
+  "wake_group": "B",
+  "size_code": "E",
+  "span_m": 60.12,
+  "final_approach_speed_kt": 150
+ },
+ "CRJ9": {
+  "wake_group": "F",
+  "size_code": "B",
+  "span_m": 23.24,
+  "final_approach_speed_kt": 136
+ },
+ "E190": {
+  "wake_group": "E",
+  "size_code": "C",
+  "span_m": 28.72,
+  "final_approach_speed_kt": 136
+ },
+ "E195": {
+  "wake_group": "E",
+  "size_code": "C",
+  "span_m": 28.72,
+  "final_approach_speed_kt": 136
+ },
+ "E75L": {
+  "wake_group": "F",
+  "size_code": "C",
+  "span_m": 26.0,
+  "final_approach_speed_kt": 136
+ },
+ "MD11": {
+  "wake_group": "B",
+  "size_code": "E",
+  "span_m": 60.93,
+  "final_approach_speed_kt": 152
+ }
+}
