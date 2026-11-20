@@ -1,0 +1,110 @@
+"""The capacity bound: the restoration index a scenario could reach if generation were the only limit. A scenario's
+score is its restoration index (with penalties) divided by this bound, so 1.0 is the physical maximum.
+
+Every available unit comes online as early as the physics could ever let it: black-start units commanded at minute
+0, a black-start retrofit (local equipment) once its diesel is ready, every other synchronous unit the moment the
+first of those is online (as if a cranking path reached every plant at once), each through its real start time from
+its real thermal state, its real failed attempts and retry times and its early-life trip; a unit on house load
+(local equipment) that moment, without a start, if its boiler still holds. Its output is at most its governor reserve
+(plus a house-load unit's block) at once plus twice its ramp rate since it came online (setpoint and AGC can both
+ramp it), up to its maximum. Wind and solar add what is available up to 30% of the synchronous capacity online, HVDC links their import
+(at their ramp rate, within their strength limit). Demand is served up to that supply, priority feeders first, with no
+network, cold load pickup, frequency limits, collapses or missed deadlines, and with SLACK more besides: a feeder draws
+less than its demand while the frequency is low (down to 95% at 57.5 Hz) and an island can carry a deficit for part of
+a step before it sheds or collapses. No restoration can serve more at any step, so no score can exceed 1.
+
+The bound depends only on the grid, the scenario and the number of steps scored; it is the same for every team.
+"""
+import math
+
+from . import scenario as SC
+from .equipment import value
+
+SYNC = ("hydro", "diesel", "ct", "ccgt", "coal")
+SLACK = 1.10
+RENEW_SHARE = 0.30
+
+
+def online_at(u, s, i, t0):
+    """When unit i would first be online if commanded at minute t0 and retried at once after every failed attempt."""
+    t = t0
+    seq = s["start_fail"].get(i, [])
+    off_since = -60.0 * s["offline_h"].get(i, 0.0)
+    for n in range(len(seq) + 1):
+        off_h = (t - off_since) / 60.0
+        dur = (u["start_hot"] if off_h <= u["hot_window_h"] else
+               u["start_warm"] if off_h <= u.get("warm_window_h", u["hot_window_h"]) else u["start_cold"])
+        if n < len(seq) and seq[n]:
+            t += dur + u.get("retry_min", 30)
+            continue
+        return t + dur
+    return math.inf
+
+
+def index_bound(grid, s, n_steps, priority_weight=3.0):
+    """The bound on the restoration index over the first n_steps steps, and the bound on each step's share."""
+    U = grid["units"]
+    out = set(s["unavailable"]) | set(s["damaged"])
+    equipment = [it for items in (grid.get("equipment") or {}).values() for it in items]
+    retrofit = {it["unit"]: value(it, "prep_min") for it in equipment if it["kind"] == "retrofit_crank"}
+    links = [dict(it, scr=value(it, "scr")) for it in equipment if it["kind"] == "lcc_hvdc"]
+    house = {it["unit"]: (value(it, "hold_min"), value(it, "block")) for it in equipment if it["kind"] == "house_load"}
+    sync = [i for i, u in enumerate(U) if u["kind"] in SYNC and i not in out]
+    first = {}
+    for i in sync:
+        u = U[i]
+        if u["black_start"]:
+            first[i] = online_at(u, s, i, 0.0)
+        elif u["id"] in retrofit:
+            first[i] = online_at(u, s, i, retrofit[u["id"]])
+    t_grid = min(first.values(), default=math.inf)
+    t_on = {}
+    block = {}
+    for i in sync:
+        t = online_at(U[i], s, i, t_grid) if t_grid < math.inf else math.inf
+        t_on[i] = min(t, first.get(i, math.inf))
+        hl = house.get(U[i]["id"])
+        if hl and t_grid <= hl[0] and i not in s["damaged"] and not s["offline_h"].get(i):
+            t_on[i], block[i] = min(t_on[i], t_grid), hl[1]
+    loads = grid["loads"]
+    mw = [l["mw"] for l in loads]
+    pri = [bool(l["priority"]) for l in loads]
+    p_mw = sum(m for m, p in zip(mw, pri) if p)
+    n_mw = sum(m for m, p in zip(mw, pri) if not p)
+    wind = sum(u["pmax"] for u in U if u["kind"] == "wind") * s["wind"]
+    solar = sum(u["pmax"] for u in U if u["kind"] == "solar") * s["solar"]
+    shares = []
+    sq = 0.0
+    for st in range(n_steps):
+        t = st * SC.STEP_S / 60.0              # the time the simulator scores step st at
+        tau = t + SC.STEP_S / 60.0             # generation has had this step to move
+        gen = cap = 0.0
+        for i in sync:
+            on = t_on[i]
+            if t < on:
+                continue
+            u = U[i]
+            trip = s["early_trip"].get(i)
+            back = None
+            if trip is not None and t >= on + trip:
+                back = on + trip + 10.0 + u["start_hot"]
+                if t < back:
+                    continue
+            since = tau - (back if back is not None else on)
+            cap += u["pmax"]
+            gen += min(u["pmax"], (u.get("gov_reserve", 0.0) + block.get(i, 0.0)) * u["pmax"]
+                       + 2.0 * u["ramp_mw_min"] * since)
+        if cap <= 0:
+            shares.append(0.0)
+            continue
+        ren = min(wind + solar * SC.solar_profile(s["start_hour"], t), RENEW_SHARE * cap)
+        dc = sum(min(L["mw_max"], L["ramp_mw_min"] * (tau - t_grid), cap / L["scr"]) for L in links)
+        supply = SLACK * (gen + ren + max(0.0, dc))
+        scale = SC.load_profile(s["start_hour"], t) * s["load_scale"]
+        P, N = p_mw * scale, n_mw * scale
+        served_p = min(P, supply)
+        served_n = min(N, supply - served_p)
+        share = (priority_weight * served_p + served_n) / (priority_weight * P + N)
+        shares.append(share)
+        sq += share * share
+    return (sq / n_steps if n_steps else 0.0), shares
