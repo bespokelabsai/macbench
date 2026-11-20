@@ -1,0 +1,7 @@
+{
+	"name": "LEGION replay",
+	"description": "Re-posts a LEGION AI's logged commands, for the reproducibility check.",
+	"constructor": "LegionReplay",
+	"filename": "_replay.js",
+	"useShared": true
+}

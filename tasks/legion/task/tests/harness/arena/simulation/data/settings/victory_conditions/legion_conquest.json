@@ -1,0 +1,16 @@
+{
+	"TranslatedKeys": ["Title", "Description"],
+	"Data":
+	{
+		"Title": "LEGION conquest",
+		"Description": "Conquest under the LEGION referee: Petra handicaps applied by the referee and a game-time limit.",
+		"Scripts":
+		[
+			"scripts/TriggerHelper.js",
+			"scripts/ConquestCommon.js",
+			"scripts/Conquest.js",
+			"scripts/LegionReferee.js"
+		],
+		"GUIOrder": 100
+	}
+}

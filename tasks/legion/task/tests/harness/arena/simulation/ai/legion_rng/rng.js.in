@@ -1,0 +1,42 @@
+// LEGION per-player random streams. Generated per match by the match runner,
+// which also rewrites Petra's calls to the global random helpers
+// (globalscripts/random.js) to use these. A stream is chosen by the PlayerID
+// whose turn it is, so one AI's draws can never shift another AI's.
+const LEGION_RNG_SEED = /*SEED*/1;
+const streams = new Map();
+
+function next()
+{
+	const player = typeof PlayerID === "number" ? PlayerID : -1;
+	let state = streams.get(player);
+	if (state === undefined)
+		state = ((Math.imul(LEGION_RNG_SEED ^ 0x5BD1E995, 0x9E3779B1) ^ Math.imul(player + 7, 0x85EBCA6B)) >>> 0) || 1;
+	state ^= state << 13;
+	state >>>= 0;
+	state ^= state >>> 17;
+	state ^= state << 5;
+	state >>>= 0;
+	streams.set(player, state);
+	return state / 4294967296;
+}
+
+export const LegionRNG = Object.freeze({
+	"random": next,
+	"pickRandom": source => source.length ? source[Math.floor(source.length * next())] : undefined,
+	"randFloat": (min, max) => min + next() * (max - min),
+	"randIntInclusive": (min, max) => Math.floor(min + next() * (max + 1 - min)),
+	"randIntExclusive": (min, max) => Math.floor(min + next() * (max - min)),
+	"randBool": (p = 0.5) => next() < p,
+	"shuffleArray": source => {
+		if (!source.length)
+			return [];
+		const result = [source[0]];
+		for (let i = 1; i < source.length; ++i)
+		{
+			const j = Math.floor(next() * (i + 1));
+			result[i] = result[j];
+			result[j] = source[i];
+		}
+		return result;
+	}
+});
