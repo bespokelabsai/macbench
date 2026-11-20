@@ -1,0 +1,6 @@
+# model credentials and run outputs
+.env
+.venv/
+jobs/
+__pycache__/
+*.pyc

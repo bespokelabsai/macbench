@@ -1,0 +1,73 @@
+{
+  "day_length_s": 43200,
+  "day_start_local": "06:00",
+  "time_step_s": 1,
+  "fleet": ["D1", "D2", "D3", "D4", "D5", "D6", "D7", "D8"],
+  "airspace": {
+    "alt_min_m": 30.0,
+    "alt_max_m": 120.0,
+    "building_clearance_m": 10.0,
+    "separation_m": 15.0,
+    "pad_zone_radius_m": 30.0
+  },
+  "drone": {
+    "airspeed_max_mps": 18.0,
+    "airspeed_min_mps": 1.0,
+    "climb_rate_max_mps": 5.0,
+    "descent_rate_max_mps": 3.0,
+    "battery_J": 151650.0,
+    "power_model": "rotary_wing_zeng2019",
+    "power_params": {
+      "P0_W": 79.86,
+      "Pi_W": 88.63,
+      "U_tip_mps": 120.0,
+      "v0_mps": 4.03,
+      "d0": 0.6,
+      "rho_kgpm3": 1.225,
+      "s": 0.05,
+      "A_m2": 0.503,
+      "weight_N": 20.0
+    },
+    "climb_efficiency": 0.7,
+    "card_capacity": 80
+  },
+  "pads": {
+    "slots_per_pad": 2,
+    "charge_time_full_s": 5400.0,
+    "min_turnaround_s": 180.0
+  },
+  "photo": {
+    "hover_s": 2.0,
+    "range_m": [20.0, 60.0],
+    "static_cone_deg": 45.0,
+    "moving_min_elevation_deg": 20.0,
+    "repeat_min_angle_deg": 60.0,
+    "repeat_multipliers": [1.0, 0.5, 0.25],
+    "light": {"min": 0.5, "max": 1.5},
+    "moving_sync_window_s": 3.0,
+    "moving_sync_min_angle_deg": 60.0,
+    "repeat_multipliers_moving": [1.0, 1.0, 0.5],
+    "quality": {"far_factor": 0.5, "edge_factor": 0.5}
+  },
+  "plan_limits": {
+    "max_rows_per_drone": 5000
+  },
+  "mapping": {
+    "scan_hover_s": 2.0,
+    "scan_range_m": [20.0, 150.0],
+    "scan_fov_half_deg": 40.0,
+    "max_incidence_deg": 65.0,
+    "min_views": 3,
+    "min_spread_deg": 20.0,
+    "bonus": [[0.80, 0.25], [0.95, 0.25]],
+    "min_drones": 3,
+    "sync_window_s": 10.0,
+    "coverage_exponent": 2.0
+  },
+  "shows": {
+    "slot_tol_m": 1.0
+  },
+  "scoring": {
+    "loss_fine": 500.0
+  }
+}
