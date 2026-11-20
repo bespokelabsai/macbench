@@ -1,0 +1,40 @@
+schema_version = "1.3"
+# Captured after the agents end, before grading: the team repo with the design, flight software,
+# test results and notes.
+artifacts = ["/app"]
+
+[task]
+name = "bespokelabsai/mars-return"
+description = "Mars sample return: design, test and fly a whole Mars sample return mission under hardware and R&D budgets"
+authors = [{ name = "Bespoke Labs" }]
+keywords = ["multi-agent", "aerospace", "rocket-design", "mars", "long-horizon", "program-budget", "r-and-d"]
+
+[metadata]
+author_name = "Bespoke Labs"
+task_id = "mars-return"
+display_title = "MARS RETURN: a Mars sample return program"
+category = "engineering"
+difficulty = "hard"
+language = "python"
+
+[agent]
+# 4 hours (the manual says "You have 4 hours.").
+timeout_sec = 14400.0
+network_mode = "no-network"
+# Agents work as an unprivileged user; the hub and the verifier run as root.
+user = "agent"
+
+[verifier]
+# The 48 fixed hidden worlds (tests/seeds.json), up to 25 minutes each, then the engine-out and failure checks.
+# tests/verify.py ends everything within 5400 s, so a flight that starts late gets only the time left. It runs on
+# the hub, where the program office's ledger and secret are (shared verifier mode), and flies as many worlds at
+# once as the hub's CPUs and memory allow (set the hub's size for grading with --ek hub_cpus and hub_memory_mb).
+timeout_sec = 6000.0
+network_mode = "no-network"
+
+[environment]
+network_mode = "public"
+build_timeout_sec = 3600.0
+cpus = 4
+memory_mb = 8192
+storage_mb = 30720

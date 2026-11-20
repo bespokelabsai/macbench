@@ -1,0 +1,3 @@
+# NASA CEA v3 (Apache-2.0) and plotting. Installed into the marsflight conda env.
+cea==3.3.4
+matplotlib==3.10.7

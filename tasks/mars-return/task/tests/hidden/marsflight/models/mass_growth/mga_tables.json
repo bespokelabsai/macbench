@@ -1,0 +1,54 @@
+{
+  "_about": "Mass growth allowance tables and the hidden growth distribution. Percent of basic mass.",
+
+  "mga_percent": {
+    "source": "ANSI/AIAA R-020A-1999, Recommended Practice for Mass Properties Control for Satellites, Missiles, and Launch Vehicles, Table 1, as printed in NASA/TM-2010-216218 (McGuire and Oleson, COMPASS Final Report: Low Cost Robotic Lunar Lander, NTRS 20110004181), Table 2.2, PDF p. 11. AIAA S-120-2006 and S-120A-2015 keep this table's structure (maturity codes E1/E2/C3/C4/A5/A6); S-120A itself is paywalled. Rows: E estimated (preliminary sketches), L layout (or major modification of existing hardware), P pre-release drawings (or minor modification), C released drawings, X existing hardware (actual mass from another program), A actual mass (measured flight hardware).",
+    "columns": ["elec_0_5", "elec_5_15", "elec_15", "structure", "thermal", "propulsion", "batteries", "harness", "mechanisms", "instrumentation"],
+    "E": [30, 20, 15, 18, 18, 18, 20, 50, 18, 50],
+    "L": [25, 20, 15, 12, 12, 12, 15, 30, 12, 30],
+    "P": [20, 15, 10, 8, 8, 8, 10, 25, 8, 25],
+    "C": [10, 5, 5, 4, 4, 4, 5, 5, 4, 5],
+    "X": [3, 3, 3, 2, 2, 2, 3, 3, 2, 3],
+    "A": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  },
+
+  "system_margin": {
+    "value": 15,
+    "source": "AIAA S-120A-2015 Table 2 (mass risk assessment), as tailored in SMC-T-002 (16 Jul 2018), Sec. 5.1.10: at the proposal milestone, MGA above 15% plus mass margin above 15% (MGA + margin above 30%) is graded green. NASA COMPASS carries growth up to 30% of dry mass (NTRS 20110004181, Sec. 2.3)."
+  },
+
+  "growth_distribution": {
+    "maturity": "E",
+    "median_row": "L",
+    "p90_row": "E",
+    "existing_median_row": "X",
+    "source": "Hidden growth g of one category of one part, as a fraction of basic mass: lognormal with its median at the layout-row MGA and its 90th percentile at the estimated-row MGA, so sigma_ln = ln(E/L) / 1.2816 (0.316 for structure, thermal, propulsion and mechanisms). A team design is a parametric concept (S-120A maturity 'estimated'), so the allowance an S-120A mass engineer would carry, the E row, covers 9 parts in 10. Existing hardware (catalog engines, RTGs): median at the X row, same sigma_ln. Why not larger: the historical growth of whole programs is larger (mean 28% over 36 vehicles, 30% of them above 32.5%: Wilhite, Acta Astronautica 66, 2010, doi:10.1016/j.actaastro.2009.10.013, abstract; Mercury 30%, Gemini 18%, Apollo CM about 50%: Heineman, NASA TN D-6349, 1971, PDF p. 37; NRO unit-level growth 1.5 to 2 times the S-120 'estimated' MGA: MacKenzie and Burgess, ICEAA 2016, slide 13), but those include changed requirements, which the slides say MGA does not cover, and this game's requirements never change."
+  },
+
+  "category_of_item": {
+    "_note": "Each vehicle.py mass_breakdown item maps to one R-020A column, or to null when it is not hardware that grows (propellant, pressurant gas, ballast picked by the team).",
+    "fuel_tank": "structure", "ox_tank": "structure", "common_bulkhead": "structure", "intertank": "structure",
+    "fuel_tank_head": "structure", "ox_tank_head": "structure", "thrust_structure": "structure",
+    "interstage": "structure", "interstage_above": "structure", "fairing_shell": "structure",
+    "aeroshell_structure": "structure", "backshell_structure": "structure", "structure_and_containment": "structure",
+    "secondary_structure_and_systems": "structure", "crushable_impact_absorber": "structure",
+    "fuel_tank_mli": "thermal", "ox_tank_mli": "thermal", "fuel_tank_foam": "thermal", "ox_tank_foam": "thermal",
+    "fuel_tank_insulation": "thermal", "ox_tank_insulation": "thermal", "surface_insulation": "thermal",
+    "tps_forebody": "thermal", "backshell_tps": "thermal",
+    "engines": "propulsion", "copv": "propulsion", "rcs_tanks_and_thrusters": "propulsion", "pogo_accumulators": "propulsion",
+    "avionics": "elec_15", "terrain_relative_navigation": "elec_5_15",
+    "battery": "batteries", "solar_array": "batteries",
+    "landing_legs": "mechanisms", "canopy_and_mortar": "mechanisms",
+    "rtg": "existing:structure",
+    "residual_propellant": null, "helium": null, "trim_ballast_jettisoned_before_parachute": null
+  },
+  "unknown_item_category": "structure",
+
+  "weighing": {
+    "sd": 0.001,
+    "cost_fraction_of_element": 0.25,
+    "fixed_usd": 250000,
+    "minutes": 6.0,
+    "source": "A weighing reveals the as-built dry mass of one element. 0.1% (1 sigma) is an assumption for load-cell platform scales; the MSFC mass uncertainty slides give the remaining measured-mass uncertainty (A6) as about 0.1% to 0.2% (NTRS 20130014267, slide 4). Cost: a flight-like article must be built first, so a quarter of the element's cost plus a fixed fee (a game number, like the other test costs)."
+  }
+}

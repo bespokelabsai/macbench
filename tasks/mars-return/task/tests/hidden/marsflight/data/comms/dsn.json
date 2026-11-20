@@ -1,0 +1,33 @@
+{
+  "_source": "JPL DSN Telecommunications Link Design Handbook 810-005: module 301 rev N (station coordinates, Table 5; generic elevation limits, sec. 2.2.2), module 104 rev L (34-m BWG, Tables 3 and 7), module 101 rev H (70-m, Tables 1, 2 and 4), module 105 rev E (atmosphere, eqs. 1 and 2, Tables 13 to 18), module 106 rev B (solar corona, eq. 7 and sec. 2.3). Public documents, https://deepspace.jpl.nasa.gov/dsndocs/810-005/",
+  "complexes": {
+    "goldstone": {"lat": 35.33989, "lon": -116.87479, "h_m": 951.5, "antennas": {"34m": "DSS 24 to 26", "70m": "DSS 14"}},
+    "canberra":  {"lat": -35.39887, "lon": 148.98196, "h_m": 692.0, "antennas": {"34m": "DSS 34, 35, 36", "70m": "DSS 43"}},
+    "madrid":    {"lat": 40.42618, "lon": -4.25126, "h_m": 837.1, "antennas": {"34m": "DSS 54, 55, 56", "70m": "DSS 63"}}
+  },
+  "_complexes_note": "WGS 84 geodetic coordinates of DSS 24 (Goldstone), DSS 34 (Canberra) and DSS 54 (Madrid), 301 Table 5, rounded to 1e-5 deg (about 1 m).",
+  "elevation_limit_deg": {"receive": 6.0, "transmit_low_power": 10.0, "transmit_high_power": 13.5},
+  "antennas": {
+    "34m": {
+      "X":  {"rx_gain_dBi": 68.32, "rx_f0_MHz": 8425.0, "tamw_K": 16.28, "pointing_loss_dB": 0.1,
+              "tx_gain_dBi": 67.03, "tx_f0_MHz": 7167.0, "tx_power_W": 20000.0, "tx_waveguide_loss_dB": 0.6},
+      "Ka": {"rx_gain_dBi": 79.0, "rx_f0_MHz": 32050.0, "tamw_K": 19.38, "pointing_loss_dB": 0.1}
+    },
+    "70m": {
+      "X":  {"rx_gain_dBi": 74.36, "rx_f0_MHz": 8420.0, "tamw_K": 12.59, "pointing_loss_dB": 0.1,
+              "tx_gain_dBi": 73.23, "tx_f0_MHz": 7145.0, "tx_power_W": 20000.0, "tx_waveguide_loss_dB": 0.5}
+    }
+  },
+  "_antennas_note": "34m X: DSS-34 X/Ka feed (104 Table 7: 68.32 dBi, TAMW 16.28 K RCP; Table 3: 67.03 dBi transmit, 20 kW, 0.6 dB waveguide). 70m X: DSS-43 S/X mode (101 Table 2: 74.36 dBi, Table 4: TAMW 13.32 K; DSS-14 12.59 K used as the three-station value) and Table 1 (73.23 dBi transmit, 20 kW). No 70-m Ka-band.",
+  "atmosphere_zenith_dB": {
+    "X":  {"goldstone": {"0.50": 0.040, "0.90": 0.045}, "canberra": {"0.50": 0.047, "0.90": 0.057}, "madrid": {"0.50": 0.045, "0.90": 0.058}},
+    "Ka": {"goldstone": {"0.50": 0.171, "0.90": 0.239}, "canberra": {"0.50": 0.238, "0.90": 0.384}, "madrid": {"0.50": 0.221, "0.90": 0.407}}
+  },
+  "_atmosphere_note": "Year-average zenith attenuation at cumulative distribution CD = 0.50 and 0.90 (105 Tables 13 to 18). Attenuation at elevation theta is Azen / sin(theta) (eq. 2); its noise is TM (1 - 10^(-A/10)) with TM = 255 + 25 CD kelvin (eq. 1); the cosmic background (2.725 K) is attenuated by the same factor.",
+  "solar_corona": {
+    "X":  {"a1": 2.0, "a2": 0.14, "a3": -0.03, "a4": 0.0, "theta_t_deg": 1.35, "telemetry_min_sep_deg": 2.3},
+    "Ka": {"a1": 4.0, "a2": 0.07, "a3": -0.25, "a4": 0.002, "theta_t_deg": 0.68, "telemetry_min_sep_deg": 1.0},
+    "command_moratorium_sep_deg": 2.0,
+    "_note": "Scintillation index m(theta) = min(1, exp(-a1 d + a2 + a3 d + a4 d^2)) with d = theta - theta_t, from 106 eq. 7 (m = 1 below theta_t). The printed equation lost its minus sign in the PDF text; it is read as a decay because Figures 5 and 6 show m falling with SEP angle. It is a reported diagnostic only: contact rules use the section 2.3 limits below. Section 2.3: X-band data return works down to at least 2.3 deg SEP, Ka-band down to 1 deg. The command moratorium below 2 deg is NASA's Mars practice (for example the 2019, 2021 and 2023 Mars solar conjunctions: no commands sent while Mars is within about 2 deg of the Sun as seen from Earth)."
+  }
+}

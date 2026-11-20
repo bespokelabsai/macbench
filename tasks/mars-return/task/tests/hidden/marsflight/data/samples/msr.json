@@ -1,0 +1,49 @@
+{
+  "about": "Mars Sample Return samples, their temperature limit and planetary protection rules. ",
+  "tubes": {
+    "count": 30,
+    "count_source": "MSR returns up to 30 tubes: 'The Mars Sample Return mission has the capability to return 30 sample tubes to the Earth' (Mars 2020 sample tube thermal design paper, ICES 2021, TTU repository, Section II); NASA's Orbiting Sample page: 'Would carry up to 30 sample tubes'.",
+    "tube_mass_kg": 0.055,
+    "tube_source": "'Made chiefly of titanium, each sample tube has a mass of about 55 grams and is about 140 mm long' (ICES 2021 sample tube paper, Section III); JPL: 'less than 2 ounces (57 grams)' (PIA24808, 2021).",
+    "sample_mass_kg": 0.015,
+    "sample_source": "'about 35 samples that each weigh about 15 grams' (K. Farley, JPL video 'Perseverance's Sample Tubes Ready for Mars', 2020). Rock cores are 13 mm across and up to 76 mm long (ICES 2021, Section II); Moeller et al. 2021 (Space Sci. Rev. 217:5) describe the caching system.",
+    "audit_check": "The audit's 'about 0.5 kg in all' is the samples alone: 30 x 15 g = 0.45 kg. With tubes, 2.1 kg."
+  },
+  "orbiting_sample": {
+    "loaded_mass_kg": 11.0,
+    "source": "NASA Mars Sample Return, Mars Ascent Vehicle page, 'Orbiting Sample Container' tech specs: about 0.24 m high, 0.23 m wide, about 11 kg, up to 30 tubes (science.nasa.gov, 2024). MSFC's 2020 MAV study carried 'a 16 kg payload of 30 tubes' (NTRS 20200002328), which includes the OS's MAV interface.",
+    "note": "data.SAMPLE_MASS_KG today is 30 kg."
+  },
+  "temperature": {
+    "limit_C": 30.0,
+    "goal_C": -20.0,
+    "source": "MSR L1.5 requirement: 'The external temperature of the RSTAs ... shall be maintained below an Allowable Flight Temperature (AFT) of -20 C except for periods of unavoidable operational transients for which the AFT is +30 C' (Sephton, Dworkin et al., 'Thresholds of Temperature and Time for Mars Sample Return: Final Report of the Mars Sample Return Temperature-Time Tiger Team', NTRS 20220010268, Section 1.2). NASA's Orbiting Sample page: the container keeps its contents 'at less than about 86 F (30 C)'. Mars 2020's own tube limit on the surface was 60 C (ICES 2021, abstract).",
+    "expected_C": {
+      "about": "Worst-case sample temperatures the campaign expected (Tiger Team report, Table 1).",
+      "MAV launch": [30, 30], "OS orbit": [-60, -40], "Return cruise": [-40, -40], "Pre-EDL": [-40, -40],
+      "EDL": [-40, 25], "Recovery": [-1000, 30]
+    },
+    "edl_anchor": {
+      "about": "The MSR Earth entry vehicle's TPS bondline limit was 370 C (Mitcheltree et al., 'An Earth entry vehicle for returning samples from Mars', NTRS 20010059026, Section on TPS). The Tiger Team expected the samples to go from -40 C to at most +25 C during EDL. With the bondline at its limit, the samples rise (25 - (-40)) / (370 - (-40)) = 0.16 of the bondline's rise; the bondline's rise is taken in proportion to the heat load over the TPS capacity (engineering assumption).",
+      "bondline_limit_C": 370.0,
+      "coupling": 0.1585
+    }
+  },
+  "containment": {
+    "cna_requirement": 1e-6,
+    "cna_source": "Probability of containment not assured below 1e-6 (Corliss, Kellas and Maddock, 'The Multi-Mission Earth Entry Vehicle for sample return missions', IAC-19-A3.3A.3, NTRS 20200002828, Section 2.1); ESA's ERO standard: release of an unsterilized particle of 50 nm or more below one in a million (Cataldo et al. 2024, J. Space Safety Eng. 11, 374-384, Section 4.1.2).",
+    "impact_g_science": 2500.0,
+    "impact_g_containment": 3500.0,
+    "impact_source": "'the sample canister accelerations during impact must not exceed 2500 g's to preserve the scientific integrity of the samples and must not be subjected to greater than 3500 g's to prevent rupture of the container' (Mitcheltree et al., NTRS 20010059026, Impact section); Corliss et al. 2019 Section 2.2. The 42 kg EEV dropped on UTTR at 39.5 m/s saw about 1,500 g at the mock sample container.",
+    "eev_terminal_mps": [40.0, 45.0],
+    "parachute_note": "The EEV has no parachute so that no parachute failure can breach containment (Mitcheltree et al. 2001, abstract). Rule here: whatever the capsule lands with, its sample container must survive the impact at the capsule's speed without a parachute.",
+    "break_the_chain": "The OS is sealed inside a primary and a secondary containment vessel before Earth return ('Breaking the Chain', MSPG2 final report, Meyer et al. 2022, Astrobiology 22(S1), Section 2.2.5)."
+  },
+  "earth_avoidance": {
+    "intercept_window_days": 7.0,
+    "release_days": 3.0,
+    "source": "'ERO would remain on a trajectory that avoids Earth until about one week before closest approach, when ERO would maneuver onto an Earth-intercept trajectory. Then, approximately three days before Earth arrival, ERO and CCRS would release the EES and perform an Earth avoidance maneuver' (Cataldo et al. 2024, Section 3, p. 376).",
+    "entry_interface_km": 120.0
+  },
+  "license": "Published NASA, ESA and journal material; numbers quoted with citation."
+}

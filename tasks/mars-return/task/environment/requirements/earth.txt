@@ -1,0 +1,5 @@
+# Earth environment. pymsis is MIT; it wraps the NRL MSIS 2.1 Fortran model, whose NRL
+# license does not allow commercial use, so the task is offered for non-commercial research use only (see
+# NOTICE.md). No network at run time: space weather comes from marsflight/data/earth/, never from pymsis's
+# own download.
+pymsis==0.13.0
