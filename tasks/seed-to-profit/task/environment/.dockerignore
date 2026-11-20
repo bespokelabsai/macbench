@@ -1,0 +1,3 @@
+# Hub-only files (the market office, the orchestration): never copied into the agents' image.
+hub/
+**/__pycache__/
