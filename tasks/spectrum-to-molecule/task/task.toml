@@ -1,0 +1,49 @@
+schema_version = "1.4"
+# The team's tree. On a team run the hub's /app is a clean checkout of main by now; Harbor copies
+# it into the verifier at the same path.
+artifacts = ["/app"]
+
+[task]
+name = "bespokelabsai/spectrum-to-molecule"
+description = "Build an offline program that identifies the compound behind an MS/MS spectrum, graded on held-out spectra of structurally novel molecules"
+authors = [{ name = "Bespoke Labs" }]
+keywords = ["multi-agent", "mass-spectrometry", "cheminformatics", "machine-learning", "long-horizon"]
+
+[metadata]
+author_name = "Bespoke Labs"
+task_id = "spectrum-to-molecule"
+display_title = "Spectrum to molecule: MS/MS structure identification"
+category = "machine-learning"
+difficulty = "frontier"
+tags = ["spectrum-to-molecule", "mass-spectrometry", "cheminformatics", "ml"]
+description = "Build an offline program that ranks candidate structures for unknown MS/MS spectra; graded on held-out spectra in a separate verifier."
+
+[agent]
+# 4 hours of agent time. A team run passes its own --ak timeout_sec (see README.md).
+timeout_sec = 14400.0
+# Agents reach only the hub (board, model proxy, git).
+network_mode = "no-network"
+
+[verifier]
+# 5 batches of ~1,300 spectra, 3600 s each (verify.py: MS2_PREDICT_TIMEOUT_SEC, MS2_BATCH_TARGET),
+# plus staging and scoring: 6.5 h.
+timeout_sec = 23400.0
+environment_mode = "separate"
+network_mode = "no-network"
+
+# The machine the program runs on: the same for every team size.
+[verifier.environment]
+build_timeout_sec = 1800.0
+network_mode = "no-network"
+cpus = 8
+memory_mb = 16384
+storage_mb = 20480
+
+# Per agent sandbox (and the hub).
+[environment]
+build_timeout_sec = 1800.0
+network_mode = "public"   # setup only: hub runtime and agent CLIs install here
+workdir = "/app"
+cpus = 3
+memory_mb = 6144
+storage_mb = 20480
