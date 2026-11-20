@@ -1,0 +1,14 @@
+184df7de518bcd9b305337dcada32dda062a885a4c2baf61f31f4bc704177dc7  raw/rfam-15.0/family.sql
+d238563403e45d7b6a5293fe916e18b328494182e3161e8157d3e21e4a3ae668  raw/rfam-15.0/family.txt.gz
+4366e90e0da3df45363e4c1d1bba140b3036ff3f78967f1b5f9ba23685b889d5  raw/rfam-15.1/COPYING
+3644c076ee3420a6b37bd8f7b8759dff408eea64067e4973ac5e0d54ec72a807  raw/rfam-15.1/README
+e2e636e9ce138dae506769aa74d067ce35466e94002818cfe125ea2a3cab8168  raw/rfam-15.1/Rfam.cm.gz
+41f014f4ab5628620935f089b1bb77987ebc162fda7c72bff368a32c9cccabac  raw/rfam-15.1/Rfam.seed.gz
+7732839ff920dda831a26b247d3366a64fe87b21bf44444e724403d06712e262  raw/rfam-15.1/database_files/clan.sql
+92f8e35c8f7fea9f52d028418e5b933b275682b98ced791eaf23bf7af2415438  raw/rfam-15.1/database_files/clan.txt.gz
+360eb6d0cd839f4df9f23da0cc6bb87b8a6e920077ed1763e489bc994483b96b  raw/rfam-15.1/database_files/clan_membership.sql
+2f199aaaa0a1e340145acb8fa20639427d1c0a38f4dedce29901888f222afbec  raw/rfam-15.1/database_files/clan_membership.txt.gz
+f4c4b1bd0d3fc5d99ee2678cda6e5996800a7de77e2319bd597816ace45e34b0  raw/rfam-15.1/database_files/family.sql
+5662343d24b6f8dab566977fabebeb9df4bbec47fb8991400749fc642f03df69  raw/rfam-15.1/database_files/family.txt.gz
+57ae48a6476817945f3770557d9e314dd4e7ecd0f637a6cfc5d0acf664d2df39  homolog/raw/Rfam.fa.gz
+a6031ac71dd9af3d307d05667a78a85f33594969bfae994392d73767a14e7c12  homolog/raw/Rfam.full_region.gz

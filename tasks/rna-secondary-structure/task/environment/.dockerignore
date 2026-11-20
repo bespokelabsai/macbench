@@ -1,0 +1,5 @@
+# Only app/ (the agents' starting /app) goes into the image.
+hub/
+dataset/
+__pycache__
+*.pyc

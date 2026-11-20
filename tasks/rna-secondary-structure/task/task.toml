@@ -1,0 +1,61 @@
+schema_version = "1.4"
+# The team's tree. On a team run the hub's /app is a clean checkout of main by now; Harbor copies
+# it into the verifier at the same path.
+artifacts = ["/app"]
+
+[task]
+name = "bespokelabsai/rna-secondary-structure"
+description = "Build an offline RNA secondary-structure predictor for Rfam families held out of the training data"
+authors = [{ name = "Bespoke Labs" }]
+keywords = ["multi-agent", "rna-secondary-structure", "computational-biology", "machine-learning", "long-horizon"]
+
+[metadata]
+author_name = "Bespoke Labs"
+category = "machine-learning"
+difficulty = "frontier"
+tags = ["rna-secondary-structure", "rfam", "open-world", "computational-biology", "ml"]
+description = "Build an offline program that predicts RNA secondary structure (dot-bracket, pseudoknots allowed) from a single sequence, for RNA families held out of the training data, with a sequence-only database (about 285,000 unlabelled Rfam sequences, near-copies of held-out sequences removed, at most 200 per family) that the program may search at prediction time (70% of eligible Rfam units held out, no RNA class above 10% of held-out families, no held-out family labelled by a single-sequence or alignment-folding program, held-out RNAs up to 1,000 nt, no pairs closing a hairpin under 3 nt). Graded in a separate verifier, one sequence per family per batch, as exact base-pair F1 averaged within each family and then across families."
+
+[agent]
+# Default run length (4 h). Team launches override it with --ak timeout_sec. It sets both Harbor's
+# limit (times --agent-timeout-multiplier) and the harness's sandbox TTL.
+timeout_sec = 14400.0
+# Agents reach only the hub (board, model proxy, git).
+network_mode = "no-network"
+
+[verifier]
+# 8 batches (one per member of the largest held-out family; at most 8 hidden sequences per family), each with
+# a hidden safety cap of 3600 s (verify.py: RNA_PREDICT_TIMEOUT_SEC; the instruction states no time limit), plus
+# a 30 s kill grace, 90 s for the outer wait's slack, and about 60 s of staging and clean-up per batch, and up to
+# 30 min of setup and scoring: 8 x (3,600 + 30 + 90 + 60) s + 1,800 s = 32,040 s, rounded up to 32,400 s (9 h).
+# The dataset: 1,496 sequences in 261 families (138 with 8), so 8 batches of 187; the longest 754 nt (21 above
+# 500 nt, 1-5 per batch). Staging and scrubbing take about 0.3 s per batch and scoring about 2 s; IPknot, the
+# slowest classical baseline, needs about 34 s per batch serially, so a normal grading is well under 1 h. The
+# program may also search data/sequences.fa.gz (285k sequences, 34 Mnt, 11 MB gzipped; copied fresh to /app/data
+# with each batch, so any index not committed to the repo is rebuilt per batch). An off-the-shelf BLASTN + MAFFT +
+# RNAalifold pipeline took 230 s for all 1,496 queries against this database at 10 CPU, so a search-based program
+# fits well inside the 3,600 s cap even with a slow aligner and a per-batch index build.
+# If a dataset raises the per-family cap, raise this (verify.py flags
+# over_sized_for_verifier_timeout when n_batches > MAX_BATCHES_SIZED).
+timeout_sec = 32400.0
+environment_mode = "separate"
+network_mode = "no-network"
+
+# The machine the program runs on: the same size as an agent sandbox. Keep cpus / memory_mb
+# equal to [environment] below (Harbor would copy [environment] if this table were absent, but
+# with its public network). Grading tools read the size from here.
+[verifier.environment]
+build_timeout_sec = 1800.0
+network_mode = "no-network"
+cpus = 4
+memory_mb = 8192
+storage_mb = 20480
+
+# Per agent sandbox (and the hub).
+[environment]
+build_timeout_sec = 1800.0
+network_mode = "public"   # setup only: hub runtime and agent CLIs install here
+workdir = "/app"
+cpus = 4
+memory_mb = 8192
+storage_mb = 20480
