@@ -146,7 +146,7 @@ Every data file is cut from a public source and keeps that source's terms. The l
 | `dna` | NCBI RefSeq NC_000964.3, the genome of *Bacillus subtilis* 168 | NCBI places no restrictions on use | |
 | `english` | Project Gutenberg ebook 5231, *The Way We Live Now* | Public domain in the US | `Project-Gutenberg-License.txt` |
 | `floats` | NASA's FITS sample `FOCx38i0101t_c0f.fits`, a Hubble image from the MAST archive (NASA, STScI) | Public domain under MAST's data-use policy | |
-| `json` | [GH Archive](https://www.gharchive.org/), the first 1 MiB of the hour 2024-01-15-12 of public GitHub events. Not in this repository; the image build downloads it from GH Archive. | No licence stated for the data. It holds account names, e-mail addresses and text written by GitHub users. | |
+| `json` | [GH Archive](https://www.gharchive.org/), the first 1 MiB of the hour 2024-01-15-12 of public GitHub events. Not in this repository; the image build downloads it from GH Archive. | No licence stated for the data | |
 | `logs` | The web server log of NASA's Kennedy Space Center for July 1995, from the Internet Traffic Archive (collected by Jim Dumoulin, contributed by Martin Arlitt and Carey Williamson) | "The traces may be freely redistributed." It holds the clients' host names. | |
 | `mri` | OpenNeuro ds000002, the T1-weighted image of sub-01 | PDDL 1.0 | `PDDL-1.0.txt` |
 | `photo` | ["Ares Tower Vienna from SW on 2015-07-10.png"](https://commons.wikimedia.org/wiki/File:Ares_Tower_Vienna_from_SW_on_2015-07-10.png) by Robert F. Tobler, from Wikimedia Commons. Changed: cropped to the middle 1024×341 pixels. | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | `CC-BY-SA-4.0.txt` |
