@@ -134,9 +134,9 @@ Every data file is cut from a public source and keeps that source's terms. The l
 | File | Source | Terms | Text in `task/environment/licenses/` |
 |---|---|---|---|
 | `arm64` | `libcrypto.so.3` of the Ubuntu 24.04 `libssl3t64` package (OpenSSL 3.0.13), arm64 | Apache 2.0 | `Apache-2.0.txt`, `ubuntu-copyright-openssl.txt` |
-| `audio` | archive.org item `MEGranHistoriadeAmor`, `AMOR.wav` | Marked public domain by its uploader | |
-| `audio2` | archive.org item `LeviticusKJV`, a reading by Duane Alan Paulson (The Bible Reading) | Dedicated to the public domain by its creator | |
-| `audio3` | archive.org item `Voyager1`, from NASA's audio collection | Public domain (Public Domain Mark) | |
+| `audio` | archive.org item [`MEGranHistoriadeAmor`](https://archive.org/details/MEGranHistoriadeAmor), *Gran Historia de Amor*, `AMOR.wav`, uploaded in 2007 to the Ourmedia collection (creator given only as "ME") | Creative Commons public domain dedication by its uploader. archive.org does not verify it. | |
+| `audio2` | archive.org item [`LeviticusKJV`](https://archive.org/details/LeviticusKJV), *The Bible Reading: Leviticus* (King James Version), read by Duane Alan Paulson, 2006 | Creative Commons public domain dedication by its creator | |
+| `audio3` | archive.org item [`Voyager1`](https://archive.org/details/Voyager1), `495-AAB_8min10sec`, from NASA's audio collection (digitized by the Houston Audio Control Room, NASA Johnson Space Center). NASA describes 494-AAB and 495-AAB as parts one and two of the Voyager Golden Record. | NASA, marked with the Public Domain Mark 1.0 | |
 | `chemistry` | PubChem compound records 60000 to 61499, in SDF | NCBI places no restrictions on use; submitters of the data may hold rights | `NCBI-PubChem-README.txt` |
 | `chinese` | Project Gutenberg ebook 24264, 紅樓夢 | Public domain in the US | `Project-Gutenberg-License.txt` |
 | `csv` | Our World in Data, `owid-co2-data.csv`, collected and documented by Pablo Rosado, Hannah Ritchie, Max Roser, Edouard Mathieu and Bobbie Macdonald | CC BY 4.0 | `CC-BY-4.0.txt` |
@@ -146,17 +146,32 @@ Every data file is cut from a public source and keeps that source's terms. The l
 | `dna` | NCBI RefSeq NC_000964.3, the genome of *Bacillus subtilis* 168 | NCBI places no restrictions on use | |
 | `english` | Project Gutenberg ebook 5231, *The Way We Live Now* | Public domain in the US | `Project-Gutenberg-License.txt` |
 | `floats` | NASA's FITS sample `FOCx38i0101t_c0f.fits`, a Hubble image from the MAST archive (NASA, STScI) | Public domain under MAST's data-use policy | |
-| `json` | GH Archive, the hour 2024-01-15-12 of public GitHub events | No licence stated for the data. It holds account names and text written by GitHub users. | |
+| `json` | [GH Archive](https://www.gharchive.org/), the hour 2024-01-15-12 of public GitHub events | No licence stated for the data | |
 | `logs` | The web server log of NASA's Kennedy Space Center for July 1995, from the Internet Traffic Archive (collected by Jim Dumoulin, contributed by Martin Arlitt and Carey Williamson) | "The traces may be freely redistributed." It holds the clients' host names. | |
 | `mri` | OpenNeuro ds000002, the T1-weighted image of sub-01 | PDDL 1.0 | `PDDL-1.0.txt` |
-| `photo` | Wikimedia Commons, "Ares Tower Vienna from SW on 2015-07-10.png" by Robert F. Tobler, cropped | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | `CC-BY-SA-4.0.txt` |
+| `photo` | ["Ares Tower Vienna from SW on 2015-07-10.png"](https://commons.wikimedia.org/wiki/File:Ares_Tower_Vienna_from_SW_on_2015-07-10.png) by Robert F. Tobler, from Wikimedia Commons. Changed: cropped to the middle 1024×341 pixels. | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | `CC-BY-SA-4.0.txt` |
 | `photo2` | Library of Congress, Prints & Photographs Division, photograph by Carol M. Highsmith, LC-DIG-highsm-66198, cropped | Public domain | |
 | `photo3` | Library of Congress, Prints & Photographs Division, FSA/OWI Collection, LC-DIG-fsa-8b29516 (Dorothea Lange, 1936), cropped | No known restrictions | |
 | `polish` | Fourteen Polish-language Project Gutenberg ebooks | Public domain in the US | `Project-Gutenberg-License.txt` |
 | `programs` | Files of the Ubuntu 24.04 `libavcodec60` package (FFmpeg 6.1.1) | GPL 2 or later | `GPL-2.txt`, `ubuntu-copyright-ffmpeg.txt` |
 | `source` | redis 7.2.5 source | BSD 3-Clause. Copyright © 2006-2020 Salvatore Sanfilippo | `BSD-3-Clause-redis.txt` |
-| `stars` | Stellarium's star catalogue file `stars_2_0v0_17.cat`, built from Hipparcos and Gaia DR3 (credit: ESA, Gaia DPAC) | GPL 2 or later for Stellarium. ESA distributes Gaia data under [CC BY-NC 3.0 IGO](https://creativecommons.org/licenses/by-nc/3.0/igo/). | `GPL-2.txt` |
+| `stars` | Stellarium's star catalogue file `stars_2_0v0_17.cat`, which the Stellarium project built from Hipparcos and Gaia DR3. It was taken from Stellarium, not downloaded from the Gaia archive. | GPL 2 or later for Stellarium. The Gaia data are open and free to use with credit to ESA/Gaia/DPAC ([Gaia data licence](https://www.cosmos.esa.int/web/gaia-users/license)). | `GPL-2.txt` |
 | `xml` | The PubMed baseline file `pubmed26n0001.xml`, courtesy of the U.S. National Library of Medicine | NLM's terms. This copy does not reflect the most current data available from NLM, and some abstracts may be protected by copyright. | `NLM-PubMed-terms.txt` |
 | `xray` | pydicom-data `RG1_UNCI.dcm`, from the NEMA WG04 compression samples | MIT for the repository; the NEMA set states no terms | `MIT-pydicom-data.txt` |
+
+**Required credits.** The files below come with a credit their licence or source asks for:
+
+- `photo`: "Ares Tower Vienna from SW on 2015-07-10" by Robert F. Tobler, Wikimedia Commons, licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0). Cropped.
+- `stars`, two credits:
+  - Gaia: Contains data from the European Space Agency (ESA) mission Gaia (https://www.cosmos.esa.int/gaia), processed by the Gaia Data Processing and Analysis Consortium (DPAC). Credit: ESA/Gaia/DPAC.
+  - Stellarium: Star catalogue file `stars_2_0v0_17.cat` from [Stellarium](https://stellarium.org/), by the Stellarium developers, licensed under the GNU GPL version 2 or later (text in `task/environment/licenses/GPL-2.txt`). Changed: cut to about 1 MiB.
+- `audio`: *Gran Historia de Amor*, uploaded to archive.org (item `MEGranHistoriadeAmor`) with a Creative Commons public domain dedication.
+- `audio2`: *The Bible Reading: Leviticus*, read by Duane Alan Paulson, archive.org item `LeviticusKJV`, dedicated to the public domain.
+- `audio3`: NASA, Voyager 1 audio, archive.org item `Voyager1` (NASA Audio Collection), public domain.
+- `csv`: Our World in Data, CO₂ and greenhouse gas emissions dataset (`owid-co2-data.csv`), licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+- `json`: Data from [GH Archive](https://www.gharchive.org/), by Ilya Grigorik.
+- `xml`: Courtesy of the U.S. National Library of Medicine.
+- `logs`: NASA Kennedy Space Center WWW server log, July 1995, from the Internet Traffic Archive; collected by Jim Dumoulin, contributed by Martin Arlitt and Carey Williamson.
+- `chemistry` (practice file): ChEBI, EMBL-EBI, licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
 **Reference solution**, `task/solution/reference/paq8px/`: paq8px v217 by Matt Mahoney and the paq8px contributors, GPL 2 or later (`LICENSE` in that folder), with the zlib copy (zlib licence, in `zlib/zlib.h`) and the word lists it ships with.

@@ -108,7 +108,7 @@ container; do not compare plain Harbor scores of real agents.
 | `task/environment/` | The agent image (`Dockerfile`; `data/` becomes `/app`: the API docs and `tools/game.py`; the image downloads the public Mindustry server JAR) |
 | `task/environment/hub/` | Hub only, never copied into the image: the board's game plugin (`game_plugin.py`), the keepalive orchestration (`keepalive.py`) and its plugin, and `make_hub_plugin.py` |
 | `task/tests/` | The verifier: `test.sh`, `run_verifier.py`, the grading rule `grade.py` and its tests `test_state.py` |
-| `task/tests/hidden/` | The hidden game: the game host (`host.py`: one Mindustry server per world, per-unit rate limits, the grading state), a standalone server for it (`standalone.py`), the world profile and the bridge plugin's Java source (`bridge/`) |
+| `task/tests/hidden/` | The hidden game: the game host (`host.py`: one Mindustry server per world, per-unit rate limits, the grading state), a standalone server for it (`standalone.py`), the world profile and the bridge plugin's Java source (`bridge/`, GPL-3.0-only) |
 | `task/solution/` | The oracle: `solve.sh` and the scripted bot `reference/bot.py` |
 
 ## Credits
@@ -117,3 +117,11 @@ The game is [Mindustry](https://github.com/Anuken/Mindustry) v160.7 by Anuken an
 download its official, unmodified server JAR. The bridge in `task/tests/hidden/bridge/` is adapted from
 [olamlabs/multi-agent-mindustry](https://github.com/olamlabs/multi-agent-mindustry) (commit 1374e46) by Olam Labs,
 under GPL-3.0-only. This is not an official Mindustry project.
+
+## License
+
+The bridge in `task/tests/hidden/bridge/` is licensed under **GPL-3.0-only**, with its own
+[LICENSE](task/tests/hidden/bridge/LICENSE) and [NOTICE.md](task/tests/hidden/bridge/NOTICE.md). It runs inside
+Mindustry as a plugin and uses Mindustry's code directly, so it is a work based on Mindustry and is distributed under
+the GPL. The rest of the task is licensed under the Apache License 2.0, like the rest of this repository. The GPL
+allows commercial use, so the bridge's licence does not limit how the task can be used.

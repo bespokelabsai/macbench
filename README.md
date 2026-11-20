@@ -43,12 +43,19 @@ README in each task's folder has the setup and the exact commands.
 ## License
 
 The code written by Bespoke Labs in this repository, the tasks and [multi-agent-harness](harness/), is licensed under
-the [Apache License 2.0](LICENSE). See [NOTICE](NOTICE).
+the [Apache License 2.0](LICENSE). See [NOTICE](NOTICE). One part of our code is the exception: the Mindustry task's
+bridge plugin ([`tasks/mindustry/task/tests/hidden/bridge/`](tasks/mindustry/task/tests/hidden/bridge/)) is licensed
+under GPL-3.0-only, because it runs inside Mindustry and is built on its code. It has its own LICENSE file.
 
 Some tasks bundle or download third-party data and code, which keep their own licenses and are not covered by the
 Apache License 2.0. Among them are GPL code (paq8px in SOTA Compressor; the Mindustry server that the Mindustry task
-builds against), CC BY-SA files (the 0 A.D. Petra AI) and ODbL data (the OpenStreetMap-derived files in Dubai ATC and
-Chicago Skyline Survey). Each task's `NOTICE.md` or the Credits section of its README lists its sources and their terms.
+downloads), CC BY-SA data (the 0 A.D. Petra AI; the Mars dust climatology in Mars Return) and ODbL data (the
+OpenStreetMap-derived files in Dubai ATC and Chicago Skyline Survey). Each task's `NOTICE.md` or the Credits section
+of its README lists every outside file with its source, licence and required credit.
+
+**Commercial use.** Mars Return is offered for non-commercial research use only: it runs NRL's MSIS 2.1 Earth
+atmosphere model (installed through pymsis, not bundled), and NRL's licence does not allow commercial use. See
+[`tasks/mars-return/NOTICE.md`](tasks/mars-return/NOTICE.md).
 
 ## Citation
 

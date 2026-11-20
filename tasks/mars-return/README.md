@@ -127,7 +127,15 @@ from a fresh secret every run. The score is in the trial's `verifier/reward.txt`
 Astrodynamics: [Tudat](https://github.com/tudat-team/tudat) (TU Delft, BSD-3) and its data release
 tudat-resources; JPL DE440 ephemerides. Engines: NASA CEA (Apache-2.0). Slosh, avionics and power checks:
 Basilisk (AVS Lab, University of Colorado Boulder, ISC). Earth atmosphere: NRLMSISE-00 and NRLMSIS 2.1 through
-pymsis (MIT; the NRL model allows non-commercial research use). Earth winds: NOAA NCEI Integrated Global Radiosonde
-Archive (public domain). Space weather: CelesTrak, with Kp and ap from GFZ Potsdam (CC BY 4.0). Jezero terrain:
-USGS products (public domain, CC0). Mars dust: Montabone et al.'s dust climatology. Every other number in
-`task/tests/hidden/marsflight/data/` names its published source next to it.
+pymsis (MIT; NRL's licence for MSIS 2.0 and 2.1 does not allow commercial use). Earth winds: NOAA NCEI Integrated
+Global Radiosonde Archive (public domain). Space weather: CelesTrak, with Kp and ap from GFZ Potsdam (CC BY 4.0).
+Jezero terrain: USGS products (public domain, CC0). Mars dust: Montabone et al. (2015, 2020), from the
+[LMD Mars Climate Database dust climatology](https://www-mars.lmd.jussieu.fr/mars/dust_climatology), CC BY-SA 3.0;
+`task/tests/hidden/marsflight/data/mars/dust_montabone.npz` stays under CC BY-SA 3.0, separate from the Apache-licensed
+code. Every other number in `task/tests/hidden/marsflight/data/` names its published source next to it.
+
+[NOTICE.md](NOTICE.md) lists every source with its licence and required credit.
+
+**Commercial use.** Mars Return runs NRL's MSIS 2.1 Earth atmosphere model through pymsis, and NRL's licence does not
+allow commercial use. pymsis is installed when the image is built, not bundled, but the task is offered for
+non-commercial research use only.
